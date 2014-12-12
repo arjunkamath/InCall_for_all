@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
   <title>InCall Visualisation</title>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -11,25 +11,16 @@
 </head>
 <body>
 
-<div class="container well well-large">
-	<h1 class="text-center"> Phone Call Visualizer </h1>
-	<div class="row-fluid">
-		<div class="row-fluid span12">
-			<div class="span6 well well-large" id="Aparty">
-				<h1>A-party</h1>
-			</div>
-			<div class="span6 well well-large" id="Bparty">
-				<h1>B-party</h1>
-			</div>
-		</div>	
+<div class="container">
+	<h1>InCall Visualisation</h1>
+	<div class="row">
+	  <div class="col-md-6 well">A party</div>
+	  <div class="col-md-6 well">B party</div>
 	</div>
-	<div class="row-fluid">
-		<div class="row-fluid span12 ">
-			<div class="span12 well well-large" id="call_timeline"></div>
-		</div>	
+	<div class="row well">
+	  <div class="col-md-12" id="call_timeline"></div>
 	</div>
 </div>
-
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
   var call_timeline = document.getElementById('call_timeline');
