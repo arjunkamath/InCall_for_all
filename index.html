@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>InCall Visualisation</title>
-  <script src="js/bootstrap.min.js"></script>
-    <script src="js/vis.js"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  
+  <script src="js/vis.js"></script>
   <link href="css/vis.css" rel="stylesheet" type="text/css" />
   
 </head>
@@ -14,12 +15,16 @@
 	<h1 class="text-center"> Phone Call Visualizer </h1>
 	<div class="row-fluid">
 		<div class="row-fluid span12">
-			<div class="span6 well well-large" id="Aparty"></div>
-			<div class="span6 well well-large" id="Bparty"></div>
+			<div class="span6 well well-large" id="Aparty">
+				<h1>A-party</h1>
+			</div>
+			<div class="span6 well well-large" id="Bparty">
+				<h1>B-party</h1>
+			</div>
 		</div>	
 	</div>
 	<div class="row-fluid">
-		<div class="row-fluid span12">
+		<div class="row-fluid span12 ">
 			<div class="span12 well well-large" id="call_timeline"></div>
 		</div>	
 	</div>
