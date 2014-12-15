@@ -21,11 +21,9 @@
 	<div class="row well">
 	  <div class="col-md-12" id="participants">
 		<svg width="1100" height="100" viewBox="0 0 1000 100">
-			<rect id="rect" width="270" height="40" x="30" y="25" fill="white" stroke="blue" stroke-width="2"></rect>
-			
-			<circle id="acircle" cx="0" cy="50" r="40" style="fill: yellow"></circle>
-			<circle id="bcircle" cx="1000" cy="50" r="40" style="fill: green"></circle>
-			
+			<rect id="rect1" width="270" height="40" x="30" y="25" fill="white" stroke="blue" stroke-width="2"></rect>
+			<circle id="circlea" cx="0" cy="50" r="40" style="fill: yellow"></circle>
+			<circle id="circleb" cx="1000" cy="50" r="40" style="fill: blue"></circle>
 			<text id="statustext" x="50" y="55" style="fill: #999999; stroke: #000000;  font-size: 36px;">call incoming...</text>
 		</svg>
 	  </div>
@@ -34,32 +32,12 @@
 	  <div class="col-md-12" id="call_timeline"></div>
 	</div>
 	
-	<button onclick="moveCircleA()">Action 1</button>
-	<button onclick="moveText()">Action 2</button>
-	<button onclick="moveNow()">Action 3</button>
-	<button onclick="moveCircleA()">Action 4</button>
+	<button onclick="incoming()">Incoming</button>
+	<button onclick="connected()">Connected</button>
+	<button onclick="ongoing()">Ongoing</button>
+	<button onclick="disconnected()">Disconnected</button>
 	
-	 <div id="element1">
-      First element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-    </div>
-    <div id="element2">
-      Second element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-    </div>
-    <div id="element3">
-      Third element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-    </div>
-    <div id="element4">
-      Fourth element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-    </div>
-    <div id="element5">
-      Fifth element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-    </div>
-    <div id="element6">
-      Sixth element. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-    </div>
 </div>
-
-   
 
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
@@ -81,6 +59,5 @@
   // Create a Timeline
   var timeline = new vis.Timeline(call_timeline, items, options);
 </script>
-
 </body>
 </html>
