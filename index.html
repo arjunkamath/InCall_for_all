@@ -2,24 +2,38 @@
 <html lang="en">
 <head>
   <title>InCall Visualisation</title>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   
-  <script src="js/vis.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="css/vis.css" rel="stylesheet" type="text/css" />
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="js/vis.js"></script>
+  <script src="js/animate.js"></script>
+  <script src="js/velocity.min.js"></script>
+
 </head>
 <body>
 
 <div class="container">
 	<h1>InCall Visualisation</h1>
-	<div class="row">
-	  <div class="col-md-6 well">A party</div>
-	  <div class="col-md-6 well">B party</div>
+	<div class="row well">
+	  <div class="col-md-12" id="participants">
+		<svg width="1100" height="100" viewBox="0 0 1000 100">
+			<text id="statustext" x="50" y="50">Call Incoming</text>
+			<rect id="rect" width="110" height="25" x="30" y="33" fill="none" stroke="blue" stroke-width="2" />
+			<circle id="acircle" cx="0" cy="50" r="40" style="fill: yellow"></circle>
+			<circle id="bcircle" cx="1000" cy="50" r="40" style="fill: green"></circle>
+		</svg>
+	  </div>
 	</div>
 	<div class="row well">
 	  <div class="col-md-12" id="call_timeline"></div>
 	</div>
+	<button onclick="moveCircleA()">Action 1</button>
+	<button onclick="moveText()">Action 2</button>
+	<button onclick="moveCircleA()">Action 3</button>
+	<button onclick="moveCircleA()">Action 4</button>
 </div>
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
@@ -40,11 +54,6 @@
 
   // Create a Timeline
   var timeline = new vis.Timeline(call_timeline, items, options);
-</script>
-
-<script type="text/javascript">
-  var Aparty = document.getElementById('Aparty');
-  var Bparty = document.getElementById('Bparty');
 </script>
 
 </body>
