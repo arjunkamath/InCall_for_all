@@ -1,6 +1,8 @@
+var int1, int2, int3;
+
 function incoming() {
 	
-	setInterval(function in1() {
+	int1 = setInterval(function in1() {
   	$("#statustext")
       	.velocity("transition.slideRightIn", 750)
       	.delay(150)
@@ -10,7 +12,7 @@ function incoming() {
 	}(), 1500);
 
 	
-	setInterval(function in2() {
+	int2 = setInterval(function in2() {
   	$("#rect1")
       	.velocity("transition.slideRightIn", 750)
       	.delay(150)
@@ -24,32 +26,18 @@ function incoming() {
 
 
 function connected() {
-	$("#rect1")
-	.velocity({ x: "+=200"});
+	clearInterval(int1);
+	clearInterval(int2);
 	
-	$("#circle1")
-	.velocity({ cx: "+=200"});
-	
-	$("#statustext")
-	.velocity({ x: "+=200"});
+	int3 = setInterval(function in2() {
+  	$("#line1")
+      	.velocity("transition.slideRightIn", 750)
+      	.delay(250)
+      	.velocity({ opacity: 0.5 }, 1000);
+	}, 1500);
 	
 	console.log('connected');
 }
-
-
-function ongoing() {
-	$("#rect1")
-	.velocity({ x: "+=200"});
-	
-	$("#circle1")
-	.velocity({ cx: "+=200"});
-	
-	$("#statustext")
-	.velocity({ x: "+=200"});
-	
-	console.log('ongoing');
-}
-
 
 function disconnected() {
 	$("#rect1")

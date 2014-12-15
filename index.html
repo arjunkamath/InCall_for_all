@@ -21,11 +21,12 @@
 	<h1>InCall Visualisation</h1>
 	<div class="row well">
 	  <div class="col-md-12" id="participants">
-		<svg width="1100" height="100" viewBox="0 0 1000 100">
-			<rect id="rect1" width="270" height="40" x="700" y="25" fill="white" stroke="blue" stroke-width="2"></rect>
+		<svg id="svg" width="1100" height="100" viewBox="0 0 1000 100">
+			<rect id="rect1" width="320" height="75" x="680" y="13" rx="20" ry="20" fill="white" opacity="0" stroke="#4169E1" stroke-width="2"></rect>
+			<line id="line1" x1="0" y1="50" x2="1000" y2="50" opacity="0" style="stroke:#999999;stroke-width:10"></line>
 			<circle id="circlea" cx="0" cy="50" r="40" style="fill: #32CD32"></circle>
 			<circle id="circleb" cx="1000" cy="50" r="40" style="fill: #4169E1"></circle>
-			<text id="statustext" x="710" y="55" style="fill: #999999; stroke: #000000;  font-size: 36px;">call incoming...</text>
+			<text id="statustext" x="710" y="57" opacity="0" style="fill: #999999; font-size: 36px;">call incoming...</text>
 			<text id="aparty" x="-15" y="65" style="font-size: 48px;">A</text>
 			<text id="bparty" x="985" y="65" style="font-size: 48px;">B</text>
 		</svg>
@@ -37,7 +38,6 @@
 	
 	<button onclick="incoming()">Incoming</button>
 	<button onclick="connected()">Connected</button>
-	<button onclick="ongoing()">Ongoing</button>
 	<button onclick="disconnected()">Disconnected</button>
 	
 </div>
