@@ -1,13 +1,22 @@
 function moveCircleA() {
 	$("rect")
-	.velocity({ x: "+=200", y: "25%" });
+	.velocity({ x: "+=200"});
 	
-	console.log('moved circle');
+	$("acircle")
+	.velocity({ r: "+=200"});
+	
+	console.log('moved rect');
 }
 
 function moveText() {
-	$("statustext")
+	$("h1")
 	.velocity({ x: "+=200", y: "25%" });
 	
 	console.log('moved text');
+}
+
+function moveNow() {
+	$("element1")
+	.velocity({ x: "+=200"});
+
 }
