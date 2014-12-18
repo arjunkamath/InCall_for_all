@@ -29,25 +29,27 @@ function connected() {
 	clearInterval(int1);
 	clearInterval(int2);
 	
-	int3 = setInterval(function in2() {
-  	$("#line1")
-      	.velocity("transition.slideRightIn", 750)
-      	.delay(250)
-      	.velocity({ opacity: 0.5 }, 1000);
-	}, 1500);
+	int3 = setTimeout(function in2() {
+  	$("#line1").velocity("transition.slideRightIn", 750)
+	}, 1000);
 	
 	console.log('connected');
 }
 
 function disconnected() {
-	$("#rect1")
-	.velocity({ x: "+=200"});
+	int3 = setTimeout(function in2() {
+  	$("#line1").velocity("transition.fadeOut", 750)
+	}, 1000);
 	
-	$("#circle1")
-	.velocity({ cx: "+=200"});
-	
-	$("#statustext")
-	.velocity({ x: "+=200"});
+	console.log('disconnected');
+}
+
+function send_sms() {
+	int3 = setTimeout(function in2() {
+  	$("#sms_box")
+	.velocity({ x: "-=1000"}, 2000)
+	.velocity("transition.perspectiveRightIn", 750)
+	}, 1000);
 	
 	console.log('disconnected');
 }

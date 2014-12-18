@@ -24,6 +24,7 @@
 		<svg id="svg" width="1100" height="100" viewBox="0 0 1000 100">
 			<rect id="rect1" width="320" height="75" x="680" y="13" rx="20" ry="20" fill="white" opacity="0" stroke="#4169E1" stroke-width="2"></rect>
 			<line id="line1" x1="0" y1="50" x2="1000" y2="50" opacity="0" style="stroke:#999999;stroke-width:10"></line>
+			<rect id="sms_box" width="30" height="20" x="1000" y="40" rx="5" ry="5" fill="white" stroke="#4169E1" stroke-width="2"></rect>
 			<circle id="circlea" cx="0" cy="50" r="40" style="fill: #32CD32"></circle>
 			<circle id="circleb" cx="1000" cy="50" r="40" style="fill: #4169E1"></circle>
 			<text id="statustext" x="710" y="57" opacity="0" style="fill: #999999; font-size: 36px;">call incoming...</text>
@@ -39,6 +40,7 @@
 	<button onclick="incoming()">Incoming</button>
 	<button onclick="connected()">Connected</button>
 	<button onclick="disconnected()">Disconnected</button>
+	<button onclick="send_sms()">Send SMS</button>
 	
 </div>
 
