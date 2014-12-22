@@ -33,6 +33,8 @@ function connected() {
   	$("#line1").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
+	document.getElementById("translation1").innerHTML = "whatever";
+	
 	console.log('connected');
 }
 

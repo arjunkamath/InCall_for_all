@@ -1,0 +1,31 @@
+#phone {
+    position:relative; /* make this relative to have the inner div absolute without breaking out */
+    width: 200px;  /* fix the width or else it'll be the entire page's width */
+}
+
+#translation {
+    position: absolute; 
+    width: 40px; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    color:red
+}
+
+#translation1 {
+    position: absolute; 
+    width: 40px; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    color:red
+}
+
+#translation2 {
+    position: absolute; 
+    width: 40px; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    color:red
+}
