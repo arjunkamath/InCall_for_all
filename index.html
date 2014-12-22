@@ -15,9 +15,13 @@
 
 </head>
 <body>
+	<br>
+	<button onclick="incoming()">Incoming</button>
+	<button onclick="connected()">Connected</button>
+	<button onclick="disconnected()">Disconnected</button>
+	<button onclick="send_sms()">Send SMS</button>
 
-
-<div class="container">
+<div class="container fluid">	
 	<h1>InCall Visualisation</h1>
 	<div class="row well">
 	  <div class="col-md-12" id="participants">
@@ -33,41 +37,15 @@
 		</svg>
 	  </div>
 	</div>
-	
 	<div class="row well">
-	<div class="col-md-12" id="timeline"></div>
+	  <div class="col-md-12" id="phone">
+		<svg id="svg" width="1100" height="2000">
+			<image x="50%" y="50%" width="822" height="1646" transform="translate(-411,-823)" xlink:href="img/phone_frame.png" />
+			<circle cx="0" cy="0" r="40" stroke="green" stroke-width="4" fill="yellow" />
+		</svg>
+	  </div>
 	</div>
-	
-	<button onclick="incoming()">Incoming</button>
-	<button onclick="connected()">Connected</button>
-	<button onclick="disconnected()">Disconnected</button>
-	<button onclick="send_sms()">Send SMS</button>
-	
 </div>
-
-<!--
-<script type="text/javascript">
-  // DOM element where the Timeline will be attached
-  var call_timeline = document.getElementById('call_timeline');
-
-  // Create a DataSet (allows two way data-binding)
-  var itemsa = new vis.DataSet([
-    {id: 1, content: 'item 1', start: '2014-04-20'},
-    {id: 2, content: 'item 2', start: '2014-04-14'},
-    {id: 3, content: 'item 3', start: '2014-04-18'},
-    {id: 4, content: 'item 4', start: '2014-04-16', end: '2014-04-19'},
-    {id: 5, content: 'item 5', start: '2014-04-25'},
-    {id: 6, content: 'item 6', start: '2014-04-27', type: 'point'}
-  ]);
-
-  // Configuration for the Timeline
-  var optionsa = {};
-
-  // Create a Timeline
-  var timelinea = new vis.Timeline(call_timeline, itemsa, optionsa);
-</script>
-
--->
 
 <script src="js/animate.js"></script>
 
