@@ -33,9 +33,11 @@ function connected() {
 	$("#line1").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
-	document.getElementById("translation1").innerHTML = "test";
+	var frame = document.getElementById("frame");
+	frame.src = "http://developerfusion.com/";
+	frame.style.width = 640+"px"; 
+	frame.style.height = 480+"px"; 
 	
-	makeFrame();
 	
 	console.log('connected');
 }
@@ -56,11 +58,3 @@ function send_sms() {
 	
 	console.log('disconnected');
 }
-
-function makeFrame() { 
-   ifrm = document.createElement("IFRAME"); 
-   ifrm.setAttribute("src", "http://developerfusion.com/"); 
-   ifrm.style.width = 640+"px"; 
-   ifrm.style.height = 480+"px"; 
-   document.body.appendChild(ifrm); 
-} 
