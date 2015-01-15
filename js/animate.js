@@ -30,10 +30,12 @@ function connected() {
 	clearInterval(int2);
 	
 	int3 = setTimeout(function in2() {
-  	$("#line1").velocity("transition.slideRightIn", 750)
+	$("#line1").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
-	document.getElementById("translation1").innerHTML = "whatever";
+	document.getElementById("translation1").innerHTML = "test";
+	
+	makeFrame();
 	
 	console.log('connected');
 }
@@ -55,3 +57,10 @@ function send_sms() {
 	console.log('disconnected');
 }
 
+function makeFrame() { 
+   ifrm = document.createElement("IFRAME"); 
+   ifrm.setAttribute("src", "http://developerfusion.com/"); 
+   ifrm.style.width = 640+"px"; 
+   ifrm.style.height = 480+"px"; 
+   document.body.appendChild(ifrm); 
+} 
