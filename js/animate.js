@@ -1,6 +1,15 @@
-var int1, int2, int3;
+var int1, int2, int3, int4;
 
 function incoming() {
+	
+	document.getElementById("shr_button").style.visibility = 'visible';
+	document.getElementById("ann_button").style.visibility = 'visible';
+	document.getElementById("rec_button").style.visibility = 'visible';
+	
+	int4 = setTimeout(function in2() {
+  	$("#app_space")
+	.velocity({ x: "-=1000"}, 2000)
+	}, 10);
 	
 	int1 = setInterval(function in1() {
   	$("#statustext")
@@ -34,10 +43,12 @@ function connected() {
 	}, 1000);
 	
 	var frame = document.getElementById("frame");
-	frame.src = "http://developerfusion.com/";
+	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
 	frame.style.width = 640+"px"; 
-	frame.style.height = 480+"px"; 
+	frame.style.height = 480+"px";
 	
+	document.getElementById("shr_button").innerHTML = "SHARING...";
+	document.getElementById("shr_button").className = "btn green";
 	
 	console.log('connected');
 }
