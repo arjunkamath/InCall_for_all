@@ -2,15 +2,6 @@ var int1, int2, int3, int4;
 
 function incoming() {
 	
-	document.getElementById("shr_button").style.visibility = 'visible';
-	document.getElementById("ann_button").style.visibility = 'visible';
-	document.getElementById("rec_button").style.visibility = 'visible';
-	
-	int4 = setTimeout(function in2() {
-  	$("#app_space")
-	.velocity({ x: "-=1000"}, 2000)
-	}, 10);
-	
 	int1 = setInterval(function in1() {
   	$("#statustext")
       	.velocity("transition.slideRightIn", 750)
@@ -22,7 +13,7 @@ function incoming() {
 
 	
 	int2 = setInterval(function in2() {
-  	$("#rect1")
+  	$("#rect_incoming")
       	.velocity("transition.slideRightIn", 750)
       	.delay(150)
       	.velocity({ opacity: 0 }, 750);
@@ -38,6 +29,12 @@ function connected() {
 	clearInterval(int1);
 	clearInterval(int2);
 	
+	// Punos capability buttons
+	
+	$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
+	$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
+	$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
+	
 	int3 = setTimeout(function in2() {
 	$("#line1").velocity("transition.slideRightIn", 750)
 	}, 1000);
@@ -45,11 +42,9 @@ function connected() {
 	var frame = document.getElementById("frame");
 	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
 	frame.style.width = 640+"px"; 
-	frame.style.height = 480+"px";
-	
-	document.getElementById("shr_button").innerHTML = "SHARING...";
-	document.getElementById("shr_button").className = "btn green";
-	
+	frame.style.height = 600+"px";
+	//frame.style.align = "center";
+		
 	console.log('connected');
 }
 
