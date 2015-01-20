@@ -10,7 +10,6 @@ function incoming() {
 
 	return in1;
 	}(), 1500);
-
 	
 	console.log('incoming');
 }
@@ -30,6 +29,18 @@ function connected() {
 	$("#connect_line").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
+	$('#app_area_wrapper').css({
+		'border-style': 'solid',
+		'border-width': '30px',
+		'border-color': '#4169E1',
+		'border-radius': '25px'
+	});
+
+	//$('#app_area_wrapper').velocity({
+	//	"transition.slideRightIn": 67
+	//}, 600);
+
+
 	var frame = document.getElementById("frame");
 	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
 	frame.style.width = 640+"px"; 
@@ -40,7 +51,7 @@ function connected() {
 
 function disconnected() {
 	int3 = setTimeout(function in2() {
-  	$("#line1").velocity("transition.fadeOut", 750)
+  	$("#connect_line").velocity("transition.fadeOut", 750)
 	}, 1000);
 		
 	console.log('disconnected');
