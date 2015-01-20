@@ -43,7 +43,6 @@ function connected() {
 	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
 	frame.style.width = 640+"px"; 
 	frame.style.height = 600+"px";
-	//frame.style.align = "center";
 		
 	console.log('connected');
 }

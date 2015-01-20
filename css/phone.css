@@ -7,27 +7,3 @@
   width:100%;
 }
 
-.btn {
-  border-radius: 5px;
-  padding: 15px 25px;
-  font-size: 22px;
-  text-decoration: none;
-  margin: 20px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-}
-
-.btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-}
-
-.blue {
-  background-color: #55acee;
-}
-
-.green {
-  background-color: #55ee97;
-}
-
