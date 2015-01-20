@@ -3,7 +3,7 @@ var int1, int2, int3, int4;
 function incoming() {
 	
 	int1 = setInterval(function in1() {
-  	$("#statustext")
+  	$("#connecting_line")
       	.velocity("transition.slideRightIn", 750)
       	.delay(150)
       	.velocity({ opacity: 0 }, 750);
@@ -11,15 +11,6 @@ function incoming() {
 	return in1;
 	}(), 1500);
 
-	
-	int2 = setInterval(function in2() {
-  	$("#rect_incoming")
-      	.velocity("transition.slideRightIn", 750)
-      	.delay(150)
-      	.velocity({ opacity: 0 }, 750);
-
-	return in2;
-	}(), 1500);
 	
 	console.log('incoming');
 }
@@ -36,7 +27,7 @@ function connected() {
 	$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
 	
 	int3 = setTimeout(function in2() {
-	$("#line1").velocity("transition.slideRightIn", 750)
+	$("#connect_line").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
 	var frame = document.getElementById("frame");
@@ -56,9 +47,10 @@ function disconnected() {
 }
 
 function send_sms() {
+	
 	int3 = setTimeout(function in2() {
   	$("#sms_box")
-	.velocity({ x: "-=1000"}, 2000)
+	.velocity({ x: "-=700"}, 2000)
 	}, 10);
 	
 	console.log('disconnected');
