@@ -9,7 +9,7 @@ function incoming() {
       	.velocity({ opacity: 0 }, 750);
 
 	return in1;
-	}(), 1500);
+	}(), 1000);
 	
 	console.log('incoming');
 }
@@ -17,28 +17,25 @@ function incoming() {
 
 function connected() {
 	clearInterval(int1);
-	clearInterval(int2);
-	
+		
 	// Punos capability buttons
 	
-	$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
-	$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
-	$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(750);
+	$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
+	$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
+	$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
 	
-	int3 = setTimeout(function in2() {
+	setTimeout(function () {
 	$("#connect_line").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
-	$('#app_area_wrapper').css({
-		'border-style': 'solid',
-		'border-width': '30px',
-		'border-color': '#4169E1',
-		'border-radius': '25px'
-	});
-
-	//$('#app_area_wrapper').velocity({
-	//	"transition.slideRightIn": 67
-	//}, 600);
+	setTimeout(function () {
+	$("#vertical_line")
+		.velocity("transition.slideDownBigIn")
+	}, 1000);
+	
+	$('#app_area_wrapper').velocity({
+		borderColor: "#4169E1"
+	}, 2000);
 
 
 	var frame = document.getElementById("frame");
