@@ -4,12 +4,15 @@ function incoming() {
 	
 	int1 = setInterval(function in1() {
   	$("#connecting_line")
+		.delay(250)
       	.velocity("transition.slideRightIn", 750)
       	.delay(150)
       	.velocity({ opacity: 0 }, 750);
 
 	return in1;
 	}(), 1000);
+	
+	$("#telcocloud").velocity("transition.swoopIn", { drag: true }).delay(1000);
 	
 	console.log('incoming');
 }
@@ -33,10 +36,11 @@ function connected() {
 		.velocity("transition.slideDownBigIn")
 	}, 1000);
 	
-	$('#app_area_wrapper').velocity({
-		borderColor: "#4169E1"
-	}, 2000);
-
+	document.getElementById("webcloud").style.opacity = "1";
+	$('#telcocloud').velocity({translateX: "55px"}, 2000);
+	$('#webcloud').velocity({translateX: "-55px"}, 2000);
+	
+	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
 
 	var frame = document.getElementById("frame");
 	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
@@ -53,6 +57,16 @@ function disconnected() {
 		
 	console.log('disconnected');
 }
+
+function converge() {
+	
+  	$("#webcloud").velocity("transition.fadeOut", 750);
+	$("#telcocloud").velocity("transition.fadeOut", 750);
+	$("#convergedcloud").velocity("transition.whirlIn", 500);
+			
+	console.log('converge');
+}
+
 
 function send_sms() {
 	

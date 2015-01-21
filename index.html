@@ -33,34 +33,34 @@
 	<br>
 	<button onclick="incoming()">Incoming</button>
 	<button onclick="connected()">Connected</button>
+	<button onclick="converge()">Converge</button>
 	<button onclick="disconnected()">Disconnected</button>
 	<button onclick="send_sms()">Send SMS</button>
 
-	<h1 align="center">InCall Visualisation</h1>
+	<h1 align="center">INCALL VISUALISATION</h1>
 	<div>
 		<svg id="call_area" width="100%" height="500" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
-		    <line id="connecting_line" x1="450" y1="50" x2="850" y2="50" opacity="0" stroke="#4169E1" stroke-width="20" stroke-linecap="round" stroke-dasharray="1, 30"/>
-			<line id="connect_line" x1="150" y1="50" x2="850" y2="50" opacity="0" stroke="#4169E1" stroke-width="10"></line>
-			<line id="vertical_line" x1="500" y1="75" x2="500" y2="150" opacity="0" stroke="#4169E1" stroke-width="10" />
-			<rect id="sms_box" width="30" height="20" x="850" y="40" rx="5" ry="5" fill="white" stroke="#4169E1" stroke-width="2" opacity="100"></rect>
+		    <line id="connecting_line" x1="550" y1="50" x2="850" y2="50" opacity="0" stroke="#00285F" stroke-width="20" stroke-linecap="round" stroke-dasharray="1, 30"/>
+			<line id="connect_line" x1="150" y1="50" x2="850" y2="50" opacity="0" stroke="#00285F" stroke-width="10"></line>
+			<line id="vertical_line" x1="500" y1="75" x2="500" y2="150" opacity="0" stroke="#00285F" stroke-width="10" />
+			<rect id="sms_box" width="30" height="20" x="850" y="40" rx="5" ry="5" fill="white" stroke="#00285F" stroke-width="2" opacity="100"></rect>
 			<image id="user1" x="100" y="0" width="100" height="100" xlink:href="img/user1.png" />
 			<image id="user2" x="800" y="0" width="100" height="100" xlink:href="img/user2.png" />
-			<image id="telcocloud" x="420" y="0" width="161" height="100" xlink:href="img/telcocloud.png" />
-			<image id="webcloud" x="300" y="0" width="161" height="100" opacity="0" xlink:href="img/webcloud.png" />
+			<image id="webcloud" x="420" y="0" width="161" height="100" opacity="0" xlink:href="img/webcloud.png" />
+			<image id="telcocloud" x="420" y="0" width="161" height="100" opacity="0" xlink:href="img/telcocloud.png" />
+			<image id="convergedcloud" x="360" y="0" width="281" height="100" opacity="0" xlink:href="img/convergedcloud.png" />
 		</svg>
 		<div id="app_area_wrapper">
 			<svg id="app_area" width="100%" height="100" viewBox="0 0 1000 100">
-				<rect id="rect_sharing" width="150" height="50" x="200" y="25" fill="white" stroke="#4169E1" stroke-width="2" opacity="0"></rect>
-				<rect id="rect_announcing" width="150" height="50" x="425" y="25" fill="white" stroke="#4169E1" stroke-width="2" opacity="0"></rect>
-				<rect id="rect_recording" width="150" height="50" x="650" y="25" fill="white" stroke="#4169E1" stroke-width="2" opacity="0"></rect>
+				<rect id="rect_sharing" width="150" height="50" x="200" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
+				<rect id="rect_announcing" width="150" height="50" x="425" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
+				<rect id="rect_recording" width="150" height="50" x="650" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
 			</svg>
 			<div id="iframe-wrapper">
 				<iframe id="frame" width="0px" height="0px" style="float:center" scrolling="auto"></iframe>
 			</div>
 		</div>
 	</div>
-
-
 <script src="js/animate.js"></script>
 
 </body>
