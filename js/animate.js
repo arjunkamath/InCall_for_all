@@ -44,8 +44,8 @@ function connected() {
 
 	var frame = document.getElementById("frame");
 	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
-	frame.style.width = 1000+"px"; 
-	frame.style.height = 1000+"px";
+	frame.style.width = 2000+"px"; 
+	frame.style.height = 2000+"px";
 		
 	console.log('connected');
 }
@@ -72,8 +72,8 @@ function connected_translate() {
 
 	var frame = document.getElementById("frame");
 	frame.src = "translate.html";
-	frame.style.width = 1000+"px"; 
-	frame.style.height = 1000+"px";
+	frame.style.width = 2000+"px"; 
+	frame.style.height = 2000+"px";
 		
 	console.log('connected');
 }
