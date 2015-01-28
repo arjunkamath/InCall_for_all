@@ -29,6 +29,10 @@ p {
 	margin-bottom: 0px;
 }
 
+a {
+  color: #00B7FF;
+}
+
 #imageArea {
 	position: absolute;
         left: 0px;
