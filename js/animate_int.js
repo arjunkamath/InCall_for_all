@@ -5,20 +5,21 @@ function incoming() {
 	int1 = setInterval(function in1() {
   	$("#connecting_line")
 		.delay(250)
-      	.velocity("transition.slideLeftIn", 750)
+      	.velocity("transition.slideLeftIn", 500)
       	.velocity({ opacity: 0.5 }, 450);
 
 	return in1;
-	}(), 1000);
+	}(), 500);
 	
 	$("#telcocloud").velocity("transition.fadeIn", { drag: true }).delay(1000);
 	
 	console.log('incoming');
 }
 
-function connected(urllink) {
+// remove incoming line, bring in connected line, bring in both clouds
+function connected() {
 	clearInterval(int1);
-	document.getElementById("connecting_line").style.opacity = "0";
+	//document.getElementById("connecting_line").style.opacity = "0";
 	$("#connecting_line").velocity("transition.fadeOut");
 		
 	// Punos capability buttons
@@ -31,49 +32,45 @@ function connected(urllink) {
 	$("#connect_line").velocity("transition.slideRightIn", 750)
 	}, 1000);
 	
-	setTimeout(function () {
-	$("#vertical_line")
-		.velocity("transition.slideDownBigIn")
-	}, 1000);
-	
     $('#telcocloud').velocity({translateX: "55px"}, 2000);
 	$('#webcloud').velocity({translateX: "-55px"}, 2000);
 	document.getElementById("webcloud").style.opacity = "1";
 	
-	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
-
-	var frame = document.getElementById("frame");
-	frame.src = "https://tabin1.punosmobile.com/pma-cloud/#/54ae393ce4b0fe65dc65ff1b";
-	frame.style.width = 2000+"px"; 
-	frame.style.height = 2000+"px";
-		
 	console.log('connected');
 }
 
-function connected_translate() {
-	clearInterval(int1);
-		
-	// Punos capability buttons
-	
-	setTimeout(function () {
-	$("#connect_line").velocity("transition.slideRightIn", 750)
-	}, 1000);
-	
+function punos_frame(urllink) {
 	setTimeout(function () {
 	$("#vertical_line")
 		.velocity("transition.slideDownBigIn")
 	}, 1000);
 	
-	$('#telcocloud').velocity({translateX: "55px"}, 2000);
-	$('#webcloud').velocity({translateX: "-55px"}, 2000);
-	document.getElementById("webcloud").style.opacity = "1";
+	var link = 'https://tabin1.punosmobile.com/pma-cloud/#/' + urllink.slice(3);
+	console.log('link');
 	
 	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
 
-	var frame = document.getElementById("frame");
+	var frame = document.getElementById("frame_pma");
+	frame.src = link;
+	frame.style.width = 800+"px"; 
+	frame.style.height = 1000+"px";
+		
+	console.log('punos frame');
+}
+
+
+function translate_frame() {
+		setTimeout(function () {
+	$("#vertical_line")
+		.velocity("transition.slideDownBigIn")
+	}, 1000);
+	
+	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
+
+	var frame = document.getElementById("frame_translate");
 	frame.src = "translate.html";
-	frame.style.width = 2000+"px"; 
-	frame.style.height = 2000+"px";
+	frame.style.width = 800+"px"; 
+	frame.style.height = 1000+"px";
 		
 	console.log('connected');
 }
@@ -90,7 +87,7 @@ function converge() {
 	
   	$("#webcloud").velocity("transition.fadeOut", 750);
 	$("#telcocloud").velocity("transition.fadeOut", 750);
-	$("#convergedcloud").velocity("transition.fadeIn", 1000);
+	$("#convergedcloud").velocity("transition.fadeIn", 2000);
 			
 	console.log('converge');
 }

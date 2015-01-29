@@ -14,14 +14,20 @@
   <script src="js/velocity.ui.js"></script>
 
   <style>
-	div#iframe-wrapper iframe {
+	div#translate-iframe-wrapper iframe {
 		display:block;
 		margin:auto;
 	}
+	
+	div#pma-iframe-wrapper iframe {
+		display:block;
+		margin:auto;
+	}
+	
 	div#app_area_wrapper {
 		display:block;
 		margin:auto;
-		width: 2200px;
+		width: 2000px;
 		border-style: solid;
 		border-width: 30px;
 		border-color: #ffffff;
@@ -33,7 +39,8 @@
 	<br>
 	<button onclick="incoming()">Incoming</button>
 	<button onclick="connected()">Connected</button>
-	<button onclick="connected_translate()">Translate</button>
+	<button onclick="punos_frame('url54ca07f1e4b0cfe4ab5ce253')">PMA</button>
+	<button onclick="translate_frame()">Translate</button>
 	<button onclick="converge()">Converge</button>
 	<button onclick="disconnected()">Disconnected</button>
 	<button onclick="send_sms()">SendSMS</button>
@@ -51,14 +58,21 @@
 			<image id="telcocloud" x="420" y="0" width="161" height="100" opacity="0" xlink:href="img/telcocloud.png" />
 			<image id="convergedcloud" x="360" y="0" width="281" height="100" opacity="0" xlink:href="img/convergedcloud.png" />
 		</svg>
-		<div id="app_area_wrapper">
-			<svg id="app_area" width="100%" height="100" viewBox="0 0 1000 100">
-				<rect id="rect_sharing" width="150" height="50" x="200" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
-				<rect id="rect_announcing" width="150" height="50" x="425" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
-				<rect id="rect_recording" width="150" height="50" x="650" y="25" fill="white" stroke="#00285F" stroke-width="2" opacity="0"></rect>
-			</svg>
-			<div id="iframe-wrapper">
-				<iframe id="frame" width="0px" height="0px" style="float:center"></iframe>
+		<div id="app_area_wrapper" class="container">
+		    <div class="row">
+			    <div id="pma-iframe-wrapper" class="col-lg-6">
+				    <iframe id="frame_pma" width="800px" height="800px" src = "https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253"></iframe>
+			    </div>
+				<div id="pma-remote-wrapper" class="col-lg-6">
+			        <svg id="pma_remote_area" width="100%" height="100%" viewBox="0 0 100 100" align="right" xmlns="http://www.w3.org/2000/svg">
+				        <rect id="pma_moderator" width="100" height="100" x="0" y="0" fill="red" opacity="100"></rect>
+		            </svg>
+				</div>
+			</div>
+			<div class="row">
+				<div id="translate-iframe-wrapper" class="col-lg-12">
+				    <iframe id="frame_translate" width="800px" height="800px" src="translate.html" style="float:center"></iframe>
+			    </div>
 			</div>
 		</div>
 	</div>
