@@ -52,8 +52,8 @@ function punos_frame(urllink) {
 
 	var frame = document.getElementById("frame_pma");
 	frame.src = link;
-	frame.style.width = 800+"px"; 
-	frame.style.height = 1000+"px";
+	frame.style.width = 100+"%"; 
+	frame.style.height = 100+"%"; 
 		
 	console.log('punos frame');
 }
@@ -69,8 +69,8 @@ function translate_frame() {
 
 	var frame = document.getElementById("frame_translate");
 	frame.src = "translate.html";
-	frame.style.width = 800+"px"; 
-	frame.style.height = 1000+"px";
+	frame.style.width = 100+"%"; 
+	frame.style.height = 100+"%"; 
 		
 	console.log('connected');
 }
