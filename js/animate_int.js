@@ -5,27 +5,27 @@ function incoming() {
 	int1 = setInterval(function in1() {
   	$("#connecting_line")
 		.delay(250)
-      	.velocity("transition.slideRightIn", 750)
-      	.delay(150)
-      	.velocity({ opacity: 0 }, 750);
+      	.velocity("transition.slideLeftIn", 750)
+      	.velocity({ opacity: 0.5 }, 450);
 
 	return in1;
 	}(), 1000);
 	
-	$("#telcocloud").velocity("transition.swoopIn", { drag: true }).delay(1000);
+	$("#telcocloud").velocity("transition.fadeIn", { drag: true }).delay(1000);
 	
 	console.log('incoming');
 }
 
-
-function connected() {
+function connected(urllink) {
 	clearInterval(int1);
+	document.getElementById("connecting_line").style.opacity = "0";
+	$("#connecting_line").velocity("transition.fadeOut");
 		
 	// Punos capability buttons
 	
-	$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
-	$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
-	$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
+	//$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
+	//$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
+	//$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
 	
 	setTimeout(function () {
 	$("#connect_line").velocity("transition.slideRightIn", 750)
@@ -36,9 +36,9 @@ function connected() {
 		.velocity("transition.slideDownBigIn")
 	}, 1000);
 	
+    $('#telcocloud').velocity({translateX: "55px"}, 2000);
+	$('#webcloud').velocity({translateX: "-55px"}, 2000);
 	document.getElementById("webcloud").style.opacity = "1";
-	$('#telcocloud').velocity({translateX: "-55px"}, 2000);
-	$('#webcloud').velocity({translateX: "55px"}, 2000);
 	
 	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
 
@@ -64,9 +64,9 @@ function connected_translate() {
 		.velocity("transition.slideDownBigIn")
 	}, 1000);
 	
+	$('#telcocloud').velocity({translateX: "55px"}, 2000);
+	$('#webcloud').velocity({translateX: "-55px"}, 2000);
 	document.getElementById("webcloud").style.opacity = "1";
-	$('#telcocloud').velocity({translateX: "-55px"}, 2000);
-	$('#webcloud').velocity({translateX: "55px"}, 2000);
 	
 	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
 
@@ -90,7 +90,7 @@ function converge() {
 	
   	$("#webcloud").velocity("transition.fadeOut", 750);
 	$("#telcocloud").velocity("transition.fadeOut", 750);
-	$("#convergedcloud").velocity("transition.whirlIn", 500);
+	$("#convergedcloud").velocity("transition.fadeIn", 1000);
 			
 	console.log('converge');
 }
