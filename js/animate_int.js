@@ -22,12 +22,6 @@ function connected() {
 	//document.getElementById("connecting_line").style.opacity = "0";
 	$("#connecting_line").velocity("transition.fadeOut");
 		
-	// Punos capability buttons
-	
-	//$("#rect_sharing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
-	//$("#rect_announcing").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
-	//$("#rect_recording").velocity("transition.slideDownBigIn", { drag: true }).delay(1000);
-	
 	setTimeout(function () {
 	$("#connect_line").velocity("transition.slideRightIn", 750)
 	}, 1000);
@@ -53,8 +47,20 @@ function punos_frame(urllink) {
 	var frame = document.getElementById("frame_pma");
 	frame.src = link;
 	frame.style.width = 100+"%"; 
-	frame.style.height = 100+"%"; 
-		
+	frame.style.height = 260+"px"; 
+
+	var remote = document.getElementById("pma_remote_area");
+	remote.style.width = 100+"%"; 
+	remote.style.height = 260+"px"; 
+
+	var line_1 = document.getElementById("pma_user1_line");
+	line_1.style.width = 100+"%"; 
+	line_1.style.height = 200+"px"; 
+
+	var line_2 = document.getElementById("pma_user2_line");
+	line_2.style.width = 100+"%"; 
+	line_2.style.height = 200+"px"; 
+
 	console.log('punos frame');
 }
 
