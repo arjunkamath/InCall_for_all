@@ -43,8 +43,7 @@
 	<button onclick="translate_frame()">Translate</button>
 	<button onclick="converge()">Converge</button>
 	<button onclick="disconnected()">Disconnected</button>
-	<button onclick="send_sms()">SendSMS</button>
-	<button onclick="user1_line()">User1_line</button>
+	<button onclick="share_meeting('url54ca07f1e4b0cfe4ab5ce253')">Share Meeting</button>
 	<button onclick="wake_tablet()">Wake Tablet</button>
 	
 	<h1 align="center">INCALL VISUALISATION</h1>
@@ -56,9 +55,9 @@
 				<line id="connect_line" x1="50" y1="50" x2="950" y2="50" opacity="0" stroke="#00285F" stroke-width="10"></line>
 				<rect id="sms_box" width="30" height="20" x="950" y="40" rx="5" ry="5" fill="white" stroke="#00285F" stroke-width="2" opacity="100"></rect>
 
-				<line id="vertical_line_left" x1="400" y1="50" x2="400" y2="150" opacity="0" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 13"/>
-				<line id="vertical_line_center" x1="500" y1="50" x2="500" y2="150" opacity="0" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 13"/>
-				<line id="vertical_line_right" x1="600" y1="100" x2="600" y2="100" opacity="0" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 13"/>
+				<line id="vertical_line_left" x1="400" y1="50" x2="400" y2="150" opacity="0" stroke="#00285F" stroke-width="13" stroke-linecap="round" stroke-dasharray="1, 15"/>
+				<line id="vertical_line_center" x1="500" y1="50" x2="500" y2="150" opacity="0" stroke="#00285F" stroke-width="13" stroke-linecap="round" stroke-dasharray="1, 15"/>
+				<line id="vertical_line_right" x1="600" y1="100" x2="600" y2="100" opacity="0" stroke="#00285F" stroke-width="11.5" stroke-linecap="round" stroke-dasharray="1, 15"/>
 
 				<image id="user1" x="0" y="-35" width="170" height="170" xlink:href="img/user1.png" />
 				<image id="user2" x="830" y="-35" width="170" height="170" xlink:href="img/user2.png" />
@@ -70,25 +69,27 @@
 		</div>
 		<div id="pma_app_area_wrapper" class="row">
 			<div class="col-xs-3 nopadding">
-				<svg id="pma_user1_line" width="100%" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-					<line id="vertical_line_user1" x1="30" y1="-5" x2="30" y2="-5" opacity="1" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
-					<line id="horizontal_line_user1" x1="30" y1="50" x2="30" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 8"/>
+				<svg id="pma_user1_line" width="100%" height="260" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+					<line id="vertical_line_user1" x1="30" y1="50" x2="30" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
+					<line id="horizontal_line_user1" x1="150" y1="50" x2="150" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 8"/>
 				</svg>
 			</div>
 			<div id="pma-iframe-wrapper" class="col-xs-3">
 			    <iframe id="frame_pma" width="0" height="0" src = "https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253"></iframe>
 			</div>
-			<div id="pma-remote-wrapper" class="col-xs-3">
-			    <svg id="pma_remote_area" width="100%" height="260" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" opacity="0" xmlns="http://www.w3.org/2000/svg">
-				    <rect id="pma_moderator" width="100%" height="100" x="0" y="0" style="fill:rgb(255,255,255);stroke-width:5;stroke:rgb(0,0,0)" opacity="100"></rect>
-				    <text x="5" y="15" fill="black" font-size="11px">Moderator Remote</text>
+			<div id="pma-remote-wrapper" class="col-xs-3 nopadding">
+			    <svg id="pma_remote_area" width="100" height="260" viewBox="0 0 100 100" align="right" opacity="1" xmlns="http://www.w3.org/2000/svg">
+				    <rect id="pma_moderator" width="100%" height="100" x="0" y="0" style="fill:rgb(255,255,255);stroke-width:5;stroke:rgb(0,0,0)" opacity="0"></rect>
+				    <text x="5" y="15" fill="black" font-size="11px" opacity="0">Moderator Remote</text>
+	 	                    <line id="vertical_line_pma_remote" x1="39" y1="0" x2="39" y2="0" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
+				    <line id="horizontal_line_pma_remote" x1="45" y1="50" x2="45" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
 		            </svg>
 			</div>
 			<div class="col-xs-3 nopadding">
-				<svg id="pma_user2_line" width="100%" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+				<svg id="pma_user2_line" width="100%" height="260" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 					<line id="horizontal_line_user2" x1="-20" y1="50" x2="-20" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
 					<line id="vertical_line_user2" x1="70" y1="0" x2="70" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
-					<image id="tablet" x="40" y="30" width="67" height="41" opacity="0" xlink:href="img/tablet.png" />
+					<image id="tablet" x="30" y="30" width="67" height="41" opacity="0" xlink:href="img/tablet.png" />
 				</svg>
 			</div>
 		</div>
