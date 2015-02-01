@@ -72,6 +72,14 @@ function wake_tablet(){
 	remote.style.height = 260+"px";
 	remote.style.opacity = "1";
 
+	var line_1 = document.getElementById("pma_user1_line");
+	line_1.style.width = 100+"%"; 
+	line_1.style.height = 260+"px";
+
+	var line_2 = document.getElementById("pma_user2_line");
+	line_2.style.width = 100+"%"; 
+	line_2.style.height = 260+"px"; 
+
 	$('#vertical_line_right').velocity({ opacity: 1 }, 0);
 	$('#vertical_line_right').velocity({ y2: 135 }, 500, function(){
 		$('#vertical_line_pma_remote').velocity({ opacity: 1 }, 0);
@@ -79,9 +87,10 @@ function wake_tablet(){
 			$('#horizontal_line_pma_remote').velocity({ opacity: 1 }, 0);
 			$('#horizontal_line_pma_remote').velocity({ x2: 105 }, 600, function(){
 				$('#horizontal_line_user2').velocity({ opacity: 1 }, 0);
-				$('#horizontal_line_user2').velocity({ x2: 70 }, 500, function(){
+				$('#horizontal_line_user2').velocity({ x2: 70 }, 650, function(){
 					$('#tablet').velocity("callout.tada", function(){
 						$('#pma_moderator').velocity({ opacity: 1 }, 1250);
+						$('#pma_moderator_title').velocity({ opacity: 1 }, 1250);
 					});
 				});
 
@@ -138,10 +147,11 @@ function share_meeting(urllink) {
 		$('#vertical_line_left').velocity({ opacity: 1 }, 0);
 		$('#vertical_line_left').velocity({ y2: 135 }, 500, function(){
 			var frame = document.getElementById("frame_pma");
-			frame.src = link;
-			frame.style.width = 100+"%"; 
-			frame.style.height = 260+"px";
 			frame.style.opacity = "0";
+			frame.src = link;
+			frame.style.height = 260+"px";
+			frame.style.width = 100+"%"; 
+		//	frame.style.border="medium double rgb(0,0,0)";
 			$('#frame_pma').velocity({ opacity: 1 }, 1250, function(){
 				$('#horizontal_line_user1').velocity({ opacity: 1 }, 0);
 				$('#horizontal_line_user1').velocity({ x1: 30 }, 2000, function(){
