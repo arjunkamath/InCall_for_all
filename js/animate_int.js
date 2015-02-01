@@ -34,6 +34,7 @@ function connected() {
 	console.log('connected');
 }
 
+/*
 function punos_frame(urllink) {
 	setTimeout(function () {
 	$("#vertical_line")
@@ -62,8 +63,7 @@ function punos_frame(urllink) {
 
 	console.log('punos frame');
 }
-
-
+*/
 
 function wake_tablet(){
 
@@ -102,19 +102,15 @@ function wake_tablet(){
 
 function translate_frame() {
 
-	setTimeout(function () {
-	$("#vertical_line")
-		.velocity("transition.slideDownBigIn")
-	}, 1000);
+	$('#vertical_line_center').velocity({ opacity: 1 }, 0);
+	$('#vertical_line_center').velocity({ y2: 135 }, 500);
 	
-	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
-
 	var frame = document.getElementById("frame_translate");
 	frame.src = "translate.html";
 	frame.style.width = 100+"%"; 
 	frame.style.height = 100+"%"; 
 		
-	console.log('connected');
+	console.log('translate');
 }
 
 function disconnected() {

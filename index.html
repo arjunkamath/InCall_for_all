@@ -13,27 +13,6 @@
   <script src="js/velocity.min.js"></script>
   <script src="js/velocity.ui.js"></script>
 
-  <style>
-	div#translate-iframe-wrapper iframe {
-		display:block;
-		margin:auto;
-	}
-	
-	div#pma-iframe-wrapper iframe {
-		display:block;
-		margin:auto;
-	}
-	
-	div#app_area_wrapper {
-		display:block;
-		margin:auto;
-		width: 2000px;
-		border-style: solid;
-		border-width: 30px;
-		border-color: #ffffff;
-		border-radius: 25px;
-	}
-	</style>
 </head>
 <body>
 	<br>
@@ -73,13 +52,13 @@
 				</svg>
 			</div>
 			<div id="pma-iframe-wrapper" class="col-xs-3">
-			    <iframe id="frame_pma" class="frame_pma" width="0" height="0" src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253"></iframe>
+			    <iframe id="frame_pma" class="frame_shadow" width="0" height="0" src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253"></iframe>
 			</div>
 			<div id="pma-remote-wrapper" class="col-xs-3 nopadding">
 			    <svg id="pma_remote_area" width="0" height="0" viewBox="0 0 100 100" align="right" opacity="1" xmlns="http://www.w3.org/2000/svg">
 	 	                    <line id="vertical_line_pma_remote" x1="39" y1="0" x2="39" y2="0" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
 				    <line id="horizontal_line_pma_remote" x1="45" y1="50" x2="45" y2="50" opacity="0" stroke="#00285F" stroke-width="5" stroke-linecap="round" stroke-dasharray="1, 7"/>
-				    <rect id="pma_moderator" class="frame_pma" width="100%" height="100" x="0" y="0" rx="10" ry="10" fill="#FFFFFF" stroke="#000000" stroke-width="5" opacity="0"></rect>
+				    <rect id="pma_moderator" class="shadow" width="100%" height="100" x="0" y="0" rx="10" ry="10" fill="#FFFFFF" stroke="#000000" stroke-width="5" opacity="0"></rect>
 				    <text id="pma_moderator_title" x="8" y="15" fill="black" font-size="10px" opacity="0">Moderator Remote</text>
 		            </svg>
 			</div>
@@ -94,7 +73,7 @@
 		<div id="translate_app_area_wrapper" class="row">
 			<div class="col-xs-2"></div>
 			<div id="translate-iframe-wrapper" class="col-xs-8">
-			    <iframe id="frame_translate" width="0px" height="0px" src="translate.html" style="float:center"></iframe>
+			    <iframe id="frame_translate" class="frame_shadow" width="0px" height="0px" src="translate.html" ></iframe>
 		    	</div>
 			<div class="col-xs-2"></div>
 		</div>
