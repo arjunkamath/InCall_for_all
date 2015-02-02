@@ -2,12 +2,13 @@ var int1, int2, int3, int4;
 
 function incoming() {
 	
+	
 	int1 = setInterval( function in1(){
-  	$("#connecting_line").velocity({ x2: 450 }, 2000, function(){
-		$("#connecting_line").velocity({ x2: 50 }, 2000)
+  	$("#connecting_line").velocity({ x2: 1000 }, 2000, function(){
+		$("#connecting_line").velocity({ x2: 50 }, 0)
 	});
 	return in1;
-	}(), 4000);
+	}(), 2000);
 
 
 	$("#telcocloud").velocity("transition.fadeIn", { drag: true }).delay(1000);
