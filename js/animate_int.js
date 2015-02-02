@@ -2,6 +2,7 @@ var int1, int2, int3, int4;
 
 function incoming() {
 	
+	$('#connecting_line').velocity({ opacity: 1 }, 0);
 	
 	int1 = setInterval( function in1(){
   	$("#connecting_line").velocity({ x2: 1000 }, 2000, function(){
@@ -89,9 +90,10 @@ function wake_tablet(){
 			$('#horizontal_line_pma_remote').velocity({ x2: 105 }, 600, function(){
 				$('#horizontal_line_user2').velocity({ opacity: 1 }, 0);
 				$('#horizontal_line_user2').velocity({ x2: 70 }, 650, function(){
-					$('#tablet').velocity("callout.tada", function(){
-						$('#pma_moderator').velocity({ opacity: 1 }, 1250);
-						$('#pma_moderator_title').velocity({ opacity: 1 }, 1250);
+					$('#tablet').velocity("callout.pulse", function(){
+						$('#pma_remote').velocity({ opacity: 1 }, 1250);
+						//$('#pma_moderator').velocity({ opacity: 1 }, 1250);
+						//$('#pma_moderator_title').velocity({ opacity: 1 }, 1250);
 					});
 				});
 
@@ -140,6 +142,9 @@ function share_meeting(urllink) {
 	
 	var link = 'https://tabin1.punosmobile.com/pma-cloud/#/' + urllink.slice(3);
 
+	var pma_remote_svg = document.getElementById('pma_remote');
+	pma_remote_svg.setAttribute('xlink:href',"img/pma_remote_share.svg");
+
   	$("#sms_box").velocity({ x: "-=1000"}, 2000, function(){
 		$('#vertical_line_left').velocity({ opacity: 1 }, 0);
 		$('#vertical_line_left').velocity({ y2: 135 }, 500, function(){
@@ -160,4 +165,31 @@ function share_meeting(urllink) {
 	});
 }
 
+function announce_notes(){
+	
+	var pma_remote_svg = document.getElementById('pma_remote');
+	pma_remote_svg.setAttribute('xlink:href',"img/pma_remote_announce.svg");
 
+	$('#soundwave_user1').velocity({opacity: 1}, 0);
+	$('#soundwave_user2').velocity({opacity: 1}, 0);
+	
+	//$('#soundwave_user1').velocity({translateX: "-200px"}, 1000, { loop: true });
+	//$('#soundwave_user2').velocity({translateX: "200px"}, 1000, { loop: true });	
+	
+	var int1 = setInterval( function in1(){
+	$("#soundwave_user1").velocity({translateX: "-400px"}, 1500, function(){
+		$("#soundwave_user1").velocity({translateX: "0px"}, 0);
+	});
+	return in1;
+	}(), 1500);
+	
+	var int2 = setInterval( function in2(){
+	$("#soundwave_user2").velocity({translateX: "400px"}, 1500, function(){
+		$("#soundwave_user2").velocity({translateX: "0px"}, 0);
+	});
+	return in2;
+	}(), 1500);
+	
+	
+	
+}
