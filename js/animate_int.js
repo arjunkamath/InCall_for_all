@@ -6,7 +6,7 @@ function incoming() {
 	
 	int1 = setInterval( function in1(){
   	$("#connecting_line").velocity({ x2: 1000 }, 2000, function(){
-		$("#connecting_line").velocity({ x2: 50 }, 0)
+		$("#connecting_line").velocity({ x2: 0 }, 0)
 	});
 	return in1;
 	}(), 2000);
