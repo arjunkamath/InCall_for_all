@@ -75,18 +75,30 @@ function pma_frame_appear(){
 
 function converge_now(){
 	
-	$("#circle_h").velocity({ translateY: "-30" }, 300);
-	$("#circle_i").velocity({ translateY: "-30" }, 300);
-	$("#circle_j").velocity({ translateY: "-30" }, 300);
-	$("#circle_k").velocity({ translateY: "-30" }, 300);
-	$("#circle_l").velocity({ translateY: "-30" }, 300);
+	//$("#it_group").velocity({ translateY: "-30" }, 300);
+	console.log('converge_now');
 	
-	console.log("just do this");
+	$("#circle_g").velocity("stop");
+	$("#circle_h").velocity("stop");
+	$("#circle_i").velocity("stop");
+	$("#circle_j").velocity("stop");
+	$("#circle_k").velocity("stop");
+	$("#circle_l").velocity("stop");
 	
-	user2
-	$("#user2").velocity({ translateY: "-30" }, 300);
+	$("#circle_g").velocity({ translateY: -50 }, { duration: 2000 });
+	$("#circle_h").velocity({ translateY: -50 }, { duration: 2000 });
+	$("#circle_i").velocity({ translateY: -50 }, { duration: 2000});
+	$("#circle_j").velocity({ translateY: -30 }, { duration: 2000 });
+	$("#circle_k").velocity({ translateY: -25 }, { duration: 2000 });
+	$("#circle_l").velocity({ translateY: -30 }, { duration: 2000 });
 	
-	
+	$("#circle_e")
+	.velocity({ r: 40 }, { duration: 0 });
+	//.velocity({ translateY: 20 }, { duration: 1000 });
+
+	$("#circle_k")
+	.velocity({ r: 40 }, { duration: 1000 })
+	.velocity({ translateY: -50 }, { duration: 1000 });;
 }
 
 
