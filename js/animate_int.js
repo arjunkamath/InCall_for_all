@@ -10,13 +10,69 @@ function incoming() {
 	return in1;
 	}(), 2000);
 
-	$("#frame_pma")
-    .velocity("scroll", { offset: "750px", mobileHA: false });
+	$("#circle_a").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_b").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_c").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_d").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_e").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_f").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	
+	$("#circle_g").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_h").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_i").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_j").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	
+	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_c").velocity({ r: 45 }, "7500")
+	.velocity("reverse", "7500");
+	
+	$("#circle_d").velocity({ r: 40 },"7500")
+	.velocity("reverse", "7500");
+	
+	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_i").velocity({ r: 45 }, "7500")
+	.velocity("reverse", "7500");
+	
+	$("#circle_j").velocity({ r: 40 },"7500")
+	.velocity("reverse", "7500");
+	
+	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 7500 })
+	.velocity("reverse", "7500");
+	
+	
+	
 
 	$("#telcocloud").velocity("transition.fadeIn", { drag: true }).delay(1000);
 	
 	console.log('incoming');
 }
+
+function pma_frame_appear(){
+	$("#frame_pma").velocity({ height: 400 }, { duration: 3000 });
+	
+}
+
 
 // remove incoming line, bring in connected line, bring in both clouds
 function connected() {
