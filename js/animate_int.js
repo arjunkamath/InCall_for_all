@@ -73,6 +73,22 @@ function pma_frame_appear(){
 	
 }
 
+function converge_now(){
+	
+	$("#circle_h").velocity({ translateY: "-30" }, 300);
+	$("#circle_i").velocity({ translateY: "-30" }, 300);
+	$("#circle_j").velocity({ translateY: "-30" }, 300);
+	$("#circle_k").velocity({ translateY: "-30" }, 300);
+	$("#circle_l").velocity({ translateY: "-30" }, 300);
+	
+	console.log("just do this");
+	
+	user2
+	$("#user2").velocity({ translateY: "-30" }, 300);
+	
+	
+}
+
 
 // remove incoming line, bring in connected line, bring in both clouds
 function connected() {
