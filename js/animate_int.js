@@ -2,13 +2,20 @@ var int1, int2, int3, int4;
 
 function incoming() {
 	
-	
+/*	
 	int1 = setInterval( function in1(){
   	$("#connecting_line").velocity({ x2: 1000 }, 2000, function(){
 		$("#connecting_line").velocity({ x2: 0 }, 0)
 	});
 	return in1;
 	}(), 2000);
+*/
+
+	$("#connecting_line").velocity({ x1: 400 }, {duration: 3000, loop:true, easing: "easeOutCirc"});
+
+	$("#user1").velocity({ rotateY:"15deg"}, {delay: 2700, duration: 300, easing:"swing", loop:true});
+  	//$("#user1").velocity({ height:25}, {loop:true});
+
 
 	$("#circle_a").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_b").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
@@ -24,52 +31,27 @@ function incoming() {
 	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	
-	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_c").velocity({ r: 45 }, "7500")
-	.velocity("reverse", "7500");
-	
-	$("#circle_d").velocity({ r: 40 },"7500")
-	.velocity("reverse", "7500");
-	
-	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_i").velocity({ r: 45 }, "7500")
-	.velocity("reverse", "7500");
-	
-	$("#circle_j").velocity({ r: 40 },"7500")
-	.velocity("reverse", "7500");
-	
-	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 7500 })
-	.velocity("reverse", "7500");
-	
-	
-	
-
-	$("#telcocloud").velocity("transition.fadeIn", { drag: true }).delay(1000);
+	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 8500, loop:true});
+	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 7500, loop:true});
+	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 9500, loop:true});
+	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 7000, loop:true});
+	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 7500, loop:true});
+	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 7500, loop:true});
+	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 9000, loop:true});
+	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 7500, loop:true});
+	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 5500, loop:true});
+	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 7500, loop:true});
+	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 8000, loop:true});
+	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 7500, loop:true});
 	
 	console.log('incoming');
 }
 
 function pma_frame_appear(){
-	$("#frame_pma").velocity({ height: 400 }, { duration: 3000 });
+	$("#frame_pma")
+	.velocity({ opacity: 1 }, { duration: 100 })
+	.velocity({ width: 300 }, { duration: 1000 })
+	.velocity({ height: 400 }, { duration: 3000 });
 	
 }
 
@@ -77,28 +59,31 @@ function converge_now(){
 	
 	//$("#it_group").velocity({ translateY: "-30" }, 300);
 	console.log('converge_now');
-	
-	$("#circle_g").velocity("stop");
-	$("#circle_h").velocity("stop");
-	$("#circle_i").velocity("stop");
-	$("#circle_j").velocity("stop");
+
+	$("#circle_e").velocity("stop");
 	$("#circle_k").velocity("stop");
-	$("#circle_l").velocity("stop");
 	
-	$("#circle_g").velocity({ translateY: -50 }, { duration: 2000 });
-	$("#circle_h").velocity({ translateY: -50 }, { duration: 2000 });
-	$("#circle_i").velocity({ translateY: -50 }, { duration: 2000});
-	$("#circle_j").velocity({ translateY: -30 }, { duration: 2000 });
-	$("#circle_k").velocity({ translateY: -25 }, { duration: 2000 });
-	$("#circle_l").velocity({ translateY: -30 }, { duration: 2000 });
+	//$("#circle_g").velocity("stop");
+	//$("#circle_h").velocity("stop");
+	//$("#circle_i").velocity("stop");
+	//$("#circle_j").velocity("stop");
+	//$("#circle_l").velocity("stop");
+	
+	$("#circle_g").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	$("#circle_h").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	$("#circle_i").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	$("#circle_j").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
+	$("#circle_k").velocity({ translateY: -25 }, { queue: false, duration: 2000 });
+	$("#circle_l").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
 	
 	$("#circle_e")
-	.velocity({ r: 40 }, { duration: 0 });
-	//.velocity({ translateY: 20 }, { duration: 1000 });
+	//.velocity({ r: 25 }, { queue: false, duration: 500 })
+	.velocity({ r: 40 }, { queue: false, duration: 2000 })
+	.velocity({ translateY: 20 }, { queue: false, duration: 2000 });
 
 	$("#circle_k")
-	.velocity({ r: 40 }, { duration: 1000 })
-	.velocity({ translateY: -50 }, { duration: 1000 });;
+	.velocity({ r: 40 }, { queue: false, duration: 2000 })
+	.velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 }
 
 
