@@ -86,6 +86,10 @@ function converge_now(){
 	.velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 }
 
+function text_box(){
+
+
+}
 
 // remove incoming line, bring in connected line, bring in both clouds
 function connected() {

@@ -24,6 +24,7 @@
 	<button onclick="translate_frame()">Translate</button>
 	<button onclick="pma_frame_appear()">PMA frame appear</button>
 	<button onclick="converge_now()">Converge</button>
+	<button onclick="text_box()">Text Box</button>
 	
 	<div class="container">
         <div class="row" style="height:100px"></div>
@@ -44,7 +45,7 @@
 				<div class="row nopadding" >
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
 						<line id="connecting_line" x1="0" y1="-170" x2="0" y2="-170" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 15"/>
-						
+
 						<g id="telco_group" transform="translate(25,-80) scale(1,1)" filter="url(#outline_up)">
 						<circle id="circle_a" cx="130" cy="-40" r="0" fill="red" stroke-width="0"/>
 						<circle id="circle_b" cx="180" cy="-70" r="0" fill="red" stroke-width="0"/>
@@ -73,6 +74,15 @@
 							<feMorphology operator="dilate" in="SourceAlpha" radius="3"/>
 							<feComposite in="SourceGraphic"/>
 						</filter>
+
+						<rect id="rect_lt" x="50" y="-100" width="150" height="50" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="rect_lt_text" x="70" y="-70">Hello World </text>
+						<rect id="rect_rt" x="200" y="-100" width="150" height="50" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="rect_rt_text" x="220" y="-70" >Hello World </text>
+						<rect id="rect_lb" x="50" y="-50" width="150" height="50" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="rect_lb_text" x="70" y="-20" >Hello World </text>
+						<rect id="rect_rb" x="200" y="-50" width="150" height="50" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="rect_rb_text" x="220" y="-20" >Hello World </text>
 					</svg>
 				</div>
 			</div>
