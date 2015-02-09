@@ -1,22 +1,19 @@
 var int1, int2, int3, int4;
 
 function incoming() {
+	connecting();
+	telco_cloud_appear();
+}
+
+function connecting() {
 	
-/*	
-	int1 = setInterval( function in1(){
-  	$("#connecting_line").velocity({ x2: 1000 }, 2000, function(){
-		$("#connecting_line").velocity({ x2: 0 }, 0)
-	});
-	return in1;
-	}(), 2000);
-*/
-
 	$("#connecting_line").velocity({ x1: 400 }, {duration: 3000, loop:true, easing: "easeOutCirc"});
-
 	$("#user1").velocity({ rotateY:"15deg"}, {delay: 2700, duration: 300, easing:"swing", loop:true});
-  	//$("#user1").velocity({ height:25}, {loop:true});
 
+	console.log('incoming');
+}
 
+function telco_cloud_appear(){
 	$("#circle_a").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_b").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_c").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
@@ -24,6 +21,17 @@ function incoming() {
 	$("#circle_e").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_f").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	
+	//animate telco cloud
+	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500, loop:true});
+	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
+	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 8500, loop:true});
+	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 6000, loop:true});
+	$("#circle_e").velocity({ r: 30 }, { delay: 0, duration: 6500, loop:true});
+	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
+	
+}
+
+function it_cloud_appear(){
 	$("#circle_g").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_h").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_i").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
@@ -31,20 +39,13 @@ function incoming() {
 	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	
-	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500, loop:true});
-	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
-	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 8500, loop:true});
-	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 6000, loop:true});
-	$("#circle_e").velocity({ r: 30 }, { delay: 0, duration: 6500, loop:true});
-	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
+	//animate IT cloud
 	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 8000, loop:true});
 	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 4500, loop:true});
 	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 6500, loop:true});
 	$("#circle_k").velocity({ r: 30 }, { delay: 0, duration: 7000, loop:true});
 	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
-	
-	console.log('incoming');
 }
 
 function pma_frame_appear(){
@@ -57,17 +58,10 @@ function pma_frame_appear(){
 
 function converge_now(){
 	
-	//$("#it_group").velocity({ translateY: "-30" }, 300);
 	console.log('converge_now');
 
 	$("#circle_e").velocity("stop");
 	$("#circle_k").velocity("stop");
-	
-	//$("#circle_g").velocity("stop");
-	//$("#circle_h").velocity("stop");
-	//$("#circle_i").velocity("stop");
-	//$("#circle_j").velocity("stop");
-	//$("#circle_l").velocity("stop");
 	
 	$("#circle_g").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 	$("#circle_h").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
@@ -99,28 +93,22 @@ function converge_now(){
 	
 }
 
-function text_box(){
-
-
-}
-
-// remove incoming line, bring in connected line, bring in both clouds
 function connected() {
-	clearInterval(int1);
-	//document.getElementById("connecting_line").style.opacity = "0";
+	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
-		$("#connect_line").velocity("transition.slideRightIn", 750, function(){
-			$('#telcocloud').velocity({translateX: "-55px"}, 1000);
-			$('#webcloud').velocity({translateX: "55px"}, 1000, function(){
-				converge();		
-			});
-		});
+		$("#connecting_line").velocity("stop");
+		$("#user1").velocity("stop");
+		$("#connect_line").velocity({ x2: 400 }, {duration: 750, easing: "easeOutCirc"});
 	});
-		
-
-
+	
 	console.log('connected');
 }
+
+function pma_app_appear(){
+	$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
+	$("#folder_pma").velocity({opacity:1}, { duration: 0 });
+}
+
 
 /*
 function punos_frame(urllink) {

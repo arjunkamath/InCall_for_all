@@ -16,28 +16,28 @@
 </head>
 <body>
 	<br>
-	<button onclick="incoming()">Incoming</button>
+	<button onclick="connecting()">Connecting Line</button>
+	<button onclick="telco_cloud_appear()">Telco Cloud</button>
+	<button onclick="it_cloud_appear()">IT Cloud</button>
+	<button onclick="converge_now()">Converge</button>
 	<button onclick="connected()">Connected</button>
+	<button onclick="pma_frame_appear()">PMA Frame Appear</button>
+	<button onclick="pma_app_appear()">PMA App Appear</button>
+	
+	
 	<button onclick="wake_tablet()">Wake Tablet</button>
 	<button onclick="share_meeting('url54ca07f1e4b0cfe4ab5ce253')">Share Meeting</button>
 	<button onclick="disconnected()">Disconnected</button>
 	<button onclick="translate_frame()">Translate</button>
-	<button onclick="pma_frame_appear()">PMA frame appear</button>
-	<button onclick="converge_now()">Converge</button>
+	
+	
 	<button onclick="text_box()">Text Box</button>
-	<button onclick="converge_2()">converge 2</button>
-	
-	<script>
-	function converge_2(){
-		document.getElementById("it_group").filter = "url(#outline_up)";
-	}
-	</script>
-	
 	
 	<div class="container">
         <div class="row" style="height:100px"></div>
 	   <div class="row">
 			<div class="col-xs-2 nopadding" id="usera_area">
+			<div class="row" style="height:80px"></div>
 				<div class="row">
 					<svg id="usera_svg" width="100%" height="200" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 						<image x="0" y="0" id="user1" width="100" height="50" xlink:href="img/user1.png" />
@@ -52,9 +52,10 @@
                         <div class="row" style="height:30px"></div>
 				<div class="row nopadding" >
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
-						<line id="connecting_line" x1="0" y1="-170" x2="0" y2="-170" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 15"/>
-
-						<g id="telco_group" transform="translate(30,-80) scale(1,1)">
+						<line id="connecting_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 15"/>
+						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" />
+						
+						<g id="telco_group" transform="translate(30,-87) scale(1,1)">
 						<circle id="circle_a" cx="130" cy="-40" r="0" fill="#00285f" stroke-width="0"/>
 						<circle id="circle_b" cx="180" cy="-70" r="0" fill="#00285f" stroke-width="0"/>
 						<circle id="circle_c" cx="180" cy="-35" r="0" fill="#00285f" stroke-width="0"/>
@@ -84,12 +85,13 @@
 						<rect id="rect_rb" x="200" y="-50" width="150" height="50" opacity="0" style="fill:#fff" stroke="#00285F" stroke-width="3" />
 						<text id="rect_rb_text" x="220" y="-20" opacity="0" >Hello World </text>
 						
-						<rect id="folder_pma_back" x="175" y="-75" width="95" height="30" rx="5" ry="5" opacity="1" style="fill:#7b0663" />
-						<image x="175" y="-100" id="folder_pma" width="100" height="100" xlink:href="img/folder_pma_nologo.svg" />							
+						<rect id="folder_pma_back" x="175" y="-75" width="95" height="30" rx="5" ry="5" opacity="0" style="fill:#7b0663" />
+						<image x="175" y="-100" id="folder_pma" width="100" height="100" opacity="0" xlink:href="img/folder_pma_nologo.svg" />							
 					</svg>
 				</div>
 			</div>
 			<div class="col-xs-2 nopadding" id="userb_area">
+			<div class="row" style="height:80px"></div>
 				<div class="row">
 					<svg id="userb_svg" width="100%" height="200" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 						<image id="user2" width="100" height="50" xlink:href="img/user2.png" />
