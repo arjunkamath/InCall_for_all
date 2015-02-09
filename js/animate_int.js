@@ -31,18 +31,18 @@ function incoming() {
 	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	
-	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 8500, loop:true});
-	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 7500, loop:true});
-	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 9500, loop:true});
-	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 7000, loop:true});
-	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 7500, loop:true});
-	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 7500, loop:true});
-	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 9000, loop:true});
-	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 7500, loop:true});
-	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 5500, loop:true});
-	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 7500, loop:true});
-	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 8000, loop:true});
-	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 7500, loop:true});
+	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500, loop:true});
+	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
+	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 8500, loop:true});
+	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 6000, loop:true});
+	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 6500, loop:true});
+	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
+	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 8000, loop:true});
+	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
+	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 4500, loop:true});
+	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 6500, loop:true});
+	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 7000, loop:true});
+	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 	
 	console.log('incoming');
 }
@@ -77,13 +77,26 @@ function converge_now(){
 	$("#circle_l").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
 	
 	$("#circle_e")
-	//.velocity({ r: 25 }, { queue: false, duration: 500 })
 	.velocity({ r: 40 }, { queue: false, duration: 2000 })
 	.velocity({ translateY: 20 }, { queue: false, duration: 2000 });
 
 	$("#circle_k")
 	.velocity({ r: 40 }, { queue: false, duration: 2000 })
 	.velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	
+	$("#circle_a").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_b").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_c").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_d").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_e").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_f").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_g").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_h").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_i").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_j").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_k").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_l").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	
 }
 
 function text_box(){
