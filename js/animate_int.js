@@ -35,13 +35,13 @@ function incoming() {
 	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 8500, loop:true});
 	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 6000, loop:true});
-	$("#circle_e").velocity({ r: 30 }, { delay: 5000, duration: 6500, loop:true});
+	$("#circle_e").velocity({ r: 30 }, { delay: 0, duration: 6500, loop:true});
 	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 8000, loop:true});
 	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 4500, loop:true});
 	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 6500, loop:true});
-	$("#circle_k").velocity({ r: 30 }, { delay: 5000, duration: 7000, loop:true});
+	$("#circle_k").velocity({ r: 30 }, { delay: 0, duration: 7000, loop:true});
 	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 	
 	console.log('incoming');
