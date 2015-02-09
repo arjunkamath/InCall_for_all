@@ -117,6 +117,14 @@ function pma_app_appear(){
 	
 }
 
+function audio_announce(){
+	
+	$("#audio_line_left_1").velocity({y2:-150}, { duration: 500, loop:true });
+	$("#audio_line_left_2").velocity({y2:-150}, { duration: 900, loop:true });
+	$("#audio_line_left_3").velocity({y2:-150}, { duration: 200, loop:true });
+	$("#audio_line_left_4").velocity({y2:-150}, { duration: 400, loop:true });
+	
+}
 
 /*
 function punos_frame(urllink) {
