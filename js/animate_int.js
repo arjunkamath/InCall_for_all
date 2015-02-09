@@ -117,8 +117,7 @@ function connected() {
 		});
 	});
 		
-	document.getElementById("webcloud").style.opacity = "1";
-	document.getElementById("tablet").style.opacity = "1";	
+
 
 	console.log('connected');
 }
