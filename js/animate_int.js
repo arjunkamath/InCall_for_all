@@ -8,7 +8,7 @@ function incoming() {
 function connecting() {
 	
 	$("#connecting_line").velocity({ x1: 400 }, {duration: 3000, loop:true, easing: "easeOutCirc"});
-	$("#user1").velocity({ rotateY:"15deg"}, {delay: 2700, duration: 300, easing:"swing", loop:true});
+	//$("#user1").velocity({ rotateY:"15deg"}, {delay: 2700, duration: 300, easing:"swing", loop:true});
 
 	console.log('incoming');
 }
@@ -26,7 +26,7 @@ function telco_cloud_appear(){
 	$("#circle_b").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_c").velocity({ r: 45 }, { delay: 1000, duration: 8500, loop:true});
 	$("#circle_d").velocity({ r: 35 }, { delay: 1500, duration: 6000, loop:true});
-	$("#circle_e").velocity({ r: 30 }, { delay: 0, duration: 6500, loop:true});
+	$("#circle_e").velocity({ r: 30 }, { delay: 1000, duration: 6500, loop:true});
 	$("#circle_f").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 	
 }
@@ -44,15 +44,15 @@ function it_cloud_appear(){
 	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 4500, loop:true});
 	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 6500, loop:true});
-	$("#circle_k").velocity({ r: 30 }, { delay: 0, duration: 7000, loop:true});
+	$("#circle_k").velocity({ r: 30 }, { delay: 1000, duration: 7000, loop:true});
 	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 }
 
 function pma_frame_appear(){
 	$("#frame_pma")
 	.velocity({ opacity: 1 }, { duration: 100 })
-	.velocity({ width: 300 }, { duration: 1000 })
-	.velocity({ height: 400 }, { duration: 3000 });
+	.velocity({ width: 300 }, { duration: 500 })
+	.velocity({ height: 350 }, { duration: 3000 });
 	
 }
 
@@ -97,7 +97,7 @@ function connected() {
 	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
-		$("#user1").velocity("stop");
+		//$("#user1").velocity("stop");
 		$("#connect_line").velocity({ x2: 400 }, {duration: 750, easing: "easeOutCirc"});
 	});
 	
@@ -107,6 +107,7 @@ function connected() {
 function pma_app_appear(){
 	$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
 	$("#folder_pma").velocity({opacity:1}, { duration: 0 });
+	$("#pma_left_line").velocity({opacity:1}, { duration: 0 });
 }
 
 
