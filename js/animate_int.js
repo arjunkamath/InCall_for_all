@@ -132,10 +132,12 @@ function audio_announce(){
 	$("#audio_line_left_2").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_3").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_4").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_left_5").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_1").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_2").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_3").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_4").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_5").velocity({opacity:1}, { duration: 0 });
 	/*
 	$("#audio_line_left_1").velocity({y2:-160}, { duration: 500, loop:true, queue: false});
 	$("#audio_line_left_2").velocity({y2:-150}, { duration: 900, loop:true });
@@ -149,69 +151,95 @@ function audio_announce(){
 		
 	function al1(){
 	$("#audio_line_left_1")
-	.velocity({y2:-160}, { duration: 500, loop:4})
-	.velocity({translateX:-225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function al2(){
 	$("#audio_line_left_2")
-	.velocity({y2:-160}, { duration: 900, loop:4})
-	.velocity({translateX:-225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function al3(){
 	$("#audio_line_left_3")
-	.velocity({y2:-160}, { duration: 200, loop:4})
-	.velocity({translateX:-225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-145}, { duration: 666, loop:3})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function al4(){
 	$("#audio_line_left_4")
-	.velocity({y2:-160}, { duration: 400, loop:4})
-	.velocity({translateX:-225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function al5(){
+	$("#audio_line_left_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function ar1(){
 	$("#audio_line_right_1")
-	.velocity({y2:-160}, { duration: 700, loop:4})
-	.velocity({translateX:225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-145}, { duration: 1000, loop:2})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function ar2(){
 	$("#audio_line_right_2")
-	.velocity({y2:-160}, { duration: 600, loop:4})
-	.velocity({translateX:225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-150}, { duration: 2000, loop:1})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function ar3(){
 	$("#audio_line_right_3")
-	.velocity({y2:-160}, { duration: 200, loop:4})
-	.velocity({translateX:225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-150}, { duration: 666, loop:3})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function ar4(){
 	$("#audio_line_right_4")
-	.velocity({y2:-160}, { duration: 500, loop:4})
-	.velocity({translateX:225}, { duration: 2000, queue: false})
-	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
+	function ar5(){
+	$("#audio_line_right_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
 	
-	setInterval(al1, 2040);
-	setInterval(al2, 2040);
-	setInterval(al3, 2040);
-	setInterval(al4, 2040);
-	setInterval(ar1, 2040);
-	setInterval(ar2, 2040);
-	setInterval(ar3, 2040);
-	setInterval(ar4, 2040);
+	al1();
+	al2();
+	al3();
+	al4();
+	al5();
+	ar1();
+	ar2();
+	ar3();
+	ar4();
+	ar5();
+	
+	setInterval(al1, 4030);
+	setInterval(al2, 4030);
+	setInterval(al3, 4030);
+	setInterval(al4, 4030);
+	setInterval(al5, 4030);
+	setInterval(ar1, 4030);
+	setInterval(ar2, 4030);
+	setInterval(ar3, 4030);
+	setInterval(ar4, 4030);
+	setInterval(ar5, 4030);
 	
 	/* $("#audio_line_left_2").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
 	$("#audio_line_left_3").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
