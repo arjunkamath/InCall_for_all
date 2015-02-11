@@ -61,12 +61,15 @@ function it_cloud_appear(){
 
 function pma_frame_appear(){
 	
-	$("#pma_right_line").velocity({ x1: 45 }, 1000);
+	$("#envelope").velocity({ opacity: 1 }, 0);
+	$("#envelope").velocity({ x: -30 }, 1000, function(){
+		$("#pma_left_line").velocity({ x1: 45 }, 1000);
 	
-	$("#frame_pma")
-	.velocity({ opacity: 1 }, { duration: 100 })
-	.velocity({ height: 350 }, { duration: 3000, queue: false})
-	.velocity({ width: 300 }, { duration: 500 });
+		$("#frame_pma")
+		.velocity({ opacity: 1 }, { duration: 100 })
+		.velocity({ height: 350 }, { duration: 3000, queue: false})
+		.velocity({ width: 300 }, { duration: 500 });
+	});
 	
 }
 
@@ -129,7 +132,11 @@ function connected() {
 function pma_app_appear(){
 	//$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
 	$("#folder_pma").velocity({opacity:1}, { duration: 0 });
-	$("#pma_app_drop").velocity({opacity:1}, { duration: 0 });
+	$("#pma_app_drop")
+	.velocity({opacity:1}, { duration: 0 });
+        //.velocity({scaleX:0.5}, { duration: 500 })
+	//.velocity({scaleX:1},{duration:500});
+	//.velocity("callout.shake",{duration:500});
 	
 	$("#pma_drop")
 	.velocity({ opacity:1 }, { duration: 0 })
