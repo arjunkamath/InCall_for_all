@@ -60,10 +60,14 @@ function it_cloud_appear(){
 }
 
 function pma_frame_appear(){
+	
+	$("#pma_right_line").velocity({ x1: 45 }, 1000, function(){
+	
 	$("#frame_pma")
 	.velocity({ opacity: 1 }, { duration: 100 })
 	.velocity({ width: 300 }, { duration: 500 })
 	.velocity({ height: 350 }, { duration: 3000 });
+	});
 	
 }
 
@@ -108,8 +112,16 @@ function connected() {
 	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
-		//$("#user1").velocity("stop");
-		$("#connect_line").velocity({ x2: 400 }, {duration: 750, easing: "easeOutCirc"});
+		$("#connect_line").velocity({ x2: 400 }, 1000, function(){
+			$("#circle_share").velocity({ r: 3 }, { queue: false, delay: 0, duration: 250 });
+			$("#circle_share").velocity({ r: 1.5 }, { queue: false, delay: 250, duration: 250 });
+			$("#circle_announce").velocity({ r: 3 }, { queue: false, delay: 500, duration: 250 });
+			$("#circle_announce").velocity({ r: 1.5 }, { queue: false, delay: 750, duration: 250 });
+			$("#circle_record").velocity({ r: 3 }, { queue: false, delay: 1250, duration: 250 });
+			$("#circle_record").velocity({ r: 1.5}, { queue: false, delay: 1500, duration: 250 });
+			$("#circle_play").velocity({ r: 3 }, { queue: false, delay: 1750, duration: 250 });
+			$("#circle_play").velocity({ r: 1.5 }, { queue: false, delay: 2000, duration: 250 });
+		});
 	});
 	
 	console.log('connected');
@@ -127,6 +139,7 @@ function pma_app_appear(){
 		$("#folder_pma").attr('xlink:href',logo_img);
 		$("#pma_right_line").velocity({ x2: 400 }, 1000, function(){
 			$("#tablet").attr('xlink:href',"img/tablet_pma_logo.svg");
+			//$("#circle_announce").velocity({ r: 3 }, { queue: false, duration: 1000 });
 		});
 		
 	});
