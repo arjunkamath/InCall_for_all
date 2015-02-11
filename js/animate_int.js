@@ -74,8 +74,8 @@ function converge_now(){
 	
 	console.log('converge_now');
 
-	$("#circle_e").velocity("stop");
-	$("#circle_k").velocity("stop");
+	$("#circle_e").velocity("stop", true);
+	$("#circle_k").velocity("stop", true);
 	
 	$("#circle_g").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 	$("#circle_h").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
@@ -337,20 +337,29 @@ function wake_tablet(){
 
 
 function translate_boxes() {
+	
+	$('#translate_area').velocity({ opacity: 1 }, 0);
+	
+}
 
-	$('#trans_rect_lt').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_lt_text').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_lb').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_lb_text').velocity({ opacity: 1 }, 0);
-	
-	$('#trans_rect_rt').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_rt_text').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_rb').velocity({ opacity: 1 }, 0);
-	$('#trans_rect_rb_text').velocity({ opacity: 1 }, 0);
-	
-	
-	
-	//$('#trans_rect_lt_text').setValue("lalalal");
+function enter_text_tl(text)
+{
+	document.getElementById("trans_tl").innerHTML = document.getElementById("textbox").value;
+}
+
+function enter_text_bl(text)
+{
+	document.getElementById("trans_bl").innerHTML = document.getElementById("textbox").value;
+}
+
+function enter_text_tr(text)
+{
+	document.getElementById("trans_tr").innerHTML = document.getElementById("textbox").value;
+}
+
+function enter_text_br(text)
+{
+	document.getElementById("trans_br").innerHTML = document.getElementById("textbox").value;
 }
 
 function disconnected() {
@@ -360,20 +369,6 @@ function disconnected() {
 		
 	console.log('disconnected');
 }
-
-function converge() {
-	
-  	$("#webcloud").velocity({opacity:"0.3"}, 750);
-	$("#telcocloud").velocity({opacity:"0.3"}, 750, function(){
-		$("#convergedcloud").velocity("transition.fadeIn", 2000, function(){
-		  	$("#webcloud").velocity({opacity: 0}, 250);
-		  	$("#telcocloud").velocity({opacity: 0}, 250);
-		});
-	});
-			
-	console.log('converge');
-}
-
 
 function share_meeting(urllink) {
 	
