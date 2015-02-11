@@ -2,18 +2,21 @@
 <!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="259.516px" height="169.033px" viewBox="0 0 259.516 169.033" enable-background="new 0 0 259.516 169.033"
+	 width="261.097px" height="189.404px" viewBox="0 0 261.097 189.404" enable-background="new 0 0 261.097 189.404"
 	 xml:space="preserve">
 <g>
-	<path fill="none" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" d="M222.818,116.464c11,0,19.995-9,19.989-20
-		l-0.033-62.048c-0.006-11-9.011-19.995-20.011-19.989L27.428,14.538c-11,0.006-19.995,9.011-19.989,20.011l0.033,61.915
-		c0.006,11,9.011,20,20.011,20H222.818z"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" d="M10.597,164.409
+		c0.006,11,9.011,19.995,20.011,19.989l206-0.111c11-0.006,19.995-9.012,19.989-20.012l-0.078-139.786
+		c-0.006-11-9.011-19.995-20.011-19.989l-206,0.112c-11,0.006-19.995,9.011-19.989,20.011L10.597,164.409z"/>
 </g>
 <g>
-	<path fill="#FFFFFF" d="M0,20.044c-0.039-11,8.93-20.005,19.93-20.011L82.963,0c11-0.006,27.023,5.617,35.607,12.496l24.275,19.455
-		c8.584,6.879,24.607,12.502,35.607,12.496l61.004-0.033c11-0.006,20.005,8.989,20.012,19.989l0.047,84.5
-		c0.007,11-8.988,20.005-19.988,20.011l-219.004,0.119c-11,0.006-20.031-8.988-20.07-19.988L0,20.044z"/>
+	<path fill="#FFFFFF" d="M0,40.416c-0.039-11,8.93-20.005,19.93-20.011l63.034-0.034c11-0.006,27.022,5.618,35.606,12.497
+		l24.276,19.454c8.583,6.879,24.606,12.502,35.606,12.497l61.004-0.033c11-0.006,20.005,8.989,20.012,19.989l0.047,84.499
+		c0.007,11-8.988,20.006-19.988,20.012l-219.004,0.119c-11,0.006-20.031-8.989-20.07-19.989L0,40.416z"/>
 </g>
+<path fill="#FFFFFF" d="M240.192,159.785c0.006,7.033-5.55,12.736-12.405,12.74L29.13,172.635
+	c-6.856,0.003-12.421-5.695-12.423-12.729l-0.035-63.664c-0.002-7.033,5.553-12.735,12.41-12.74l198.656-0.108
+	c6.855-0.004,12.418,5.694,12.42,12.727L240.192,159.785z"/>
 <image overflow="visible" width="626" height="150" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnIAAACWCAYAAABaZGUoAAAACXBIWXMAAC4jAAAuIwF4pT92AAAK
 T2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AU
 kSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXX
@@ -1629,6 +1632,6 @@ n+avVdP7s/DPYTRTd679TnJsEUFKviknlrh/S8E4sAdhhyrrPOF+lDsQ1ojqhrAWhj23Y8961rOe
 9axnPSA3lVWBtXa71AIWH5ijqgsQFgoyB5ivqrNEZK6q9iNSEtUKUBYhQPABDxFPVUVEvEzQIwE8
 Bc4tjTPLx5O57t6c3Ifk4WGaTFC09Kyk4Cz5gySJBwnAInN55uvxZmJxGb+ojhdaUFUVMSkaKLGK
 xAKRiNSBmiA10BqqY4jsAzkgqsPmMzsVhkV1r8GM0lNV61nPetaznvXsD8z+/wAim/5BJFWOCwAA
-AABJRU5ErkJggg==" transform="matrix(0.3236 0 0 0.3236 32.2021 82.2407)">
+AABJRU5ErkJggg==" transform="matrix(0.3236 0 0 0.3236 32.2021 102.6143)">
 </image>
 </svg>

@@ -116,13 +116,22 @@ function connected() {
 }
 
 function pma_app_appear(){
-	$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
+	//$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
 	$("#folder_pma").velocity({opacity:1}, { duration: 0 });
-	$("#pma_left_line").velocity({opacity:1}, { duration: 0 });
-	$("#pma_app_share").velocity({opacity:1}, { duration: 0 });
+	$("#pma_app_drop").velocity({opacity:1}, { duration: 0 });
+	
 	$("#pma_drop")
 	.velocity({ opacity:1 }, { duration: 0 })
-	.velocity({translateY : 100}, { duration: 1000 });
+	.velocity({translateY : 100}, 1500, function(){
+		var logo_img = "img/folder_pma_logo.svg";
+		$("#folder_pma").attr('xlink:href',logo_img);
+		$("#pma_right_line").velocity({ x2: 400 }, 1000, function(){
+			$("#tablet").attr('xlink:href',"img/tablet_pma_logo.svg");
+		});
+		
+	});
+	
+	
 	
 }
 
