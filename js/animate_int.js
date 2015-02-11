@@ -136,9 +136,9 @@ function audio_announce(){
 	$("#audio_line_right_2").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_3").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_4").velocity({opacity:1}, { duration: 0 });
-	
-	$("#audio_line_left_1").velocity({y2:-160}, { duration: 500, loop:true });
-	/*$("#audio_line_left_2").velocity({y2:-150}, { duration: 900, loop:true });
+	/*
+	$("#audio_line_left_1").velocity({y2:-160}, { duration: 500, loop:true, queue: false});
+	$("#audio_line_left_2").velocity({y2:-150}, { duration: 900, loop:true });
 	$("#audio_line_left_3").velocity({y2:-155}, { duration: 200, loop:true });
 	$("#audio_line_left_4").velocity({y2:-150}, { duration: 400, loop:true });
 	$("#audio_line_right_1").velocity({y2:-160}, { duration: 500, loop:true });
@@ -146,25 +146,17 @@ function audio_announce(){
 	$("#audio_line_right_3").velocity({y2:-155}, { duration: 200, loop:true });
 	$("#audio_line_right_4").velocity({y2:-150}, { duration: 400, loop:true }); */
 	
-	function al1(){
-	$("#audio_line_left_1")
-	.velocity({x1:0}, { duration: 2000, queue: false})
-	.velocity({x2:0}, { duration: 2000, queue: false})
-	.velocity({x1:195}, { delay: 2000, duration: 0})
-	.velocity({x2:195}, { delay: 2000, duration: 0});
-	}
-	
+		
 	function al2(){
 	$("#audio_line_left_1")
+	.velocity({y2:-160}, { duration: 500, loop:4})
 	.velocity({translateX:-195}, { duration: 2000, queue: false});
-	//.velocity({translateX:0}, { delay :2000, duration: 0, queue: false});
-		setTimeout(function(){ 
-			document.getElementById("audio_line_left_1").setAttribute("x1", "195");
-			document.getElementById("audio_line_left_1").setAttribute("x2", "195");
-		}, 2000);
+		
+	$("#audio_line_left_1")
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
 	}
 	
-	setInterval(al2, 2000);
+	setInterval(al2, 3000);
 	
 	/* $("#audio_line_left_2").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
 	$("#audio_line_left_3").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
