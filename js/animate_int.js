@@ -147,16 +147,71 @@ function audio_announce(){
 	$("#audio_line_right_4").velocity({y2:-150}, { duration: 400, loop:true }); */
 	
 		
-	function al2(){
+	function al1(){
 	$("#audio_line_left_1")
 	.velocity({y2:-160}, { duration: 500, loop:4})
-	.velocity({translateX:-195}, { duration: 2000, queue: false});
-		
-	$("#audio_line_left_1")
+	.velocity({translateX:-225}, { duration: 2000, queue: false})
 	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
 	}
 	
-	setInterval(al2, 3000);
+	function al2(){
+	$("#audio_line_left_2")
+	.velocity({y2:-160}, { duration: 900, loop:4})
+	.velocity({translateX:-225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function al3(){
+	$("#audio_line_left_3")
+	.velocity({y2:-160}, { duration: 200, loop:4})
+	.velocity({translateX:-225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function al4(){
+	$("#audio_line_left_4")
+	.velocity({y2:-160}, { duration: 400, loop:4})
+	.velocity({translateX:-225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function ar1(){
+	$("#audio_line_right_1")
+	.velocity({y2:-160}, { duration: 700, loop:4})
+	.velocity({translateX:225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function ar2(){
+	$("#audio_line_right_2")
+	.velocity({y2:-160}, { duration: 600, loop:4})
+	.velocity({translateX:225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function ar3(){
+	$("#audio_line_right_3")
+	.velocity({y2:-160}, { duration: 200, loop:4})
+	.velocity({translateX:225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	function ar4(){
+	$("#audio_line_right_4")
+	.velocity({y2:-160}, { duration: 500, loop:4})
+	.velocity({translateX:225}, { duration: 2000, queue: false})
+	.velocity({translateX:0}, { delay: 2000, duration: 0, queue: false});
+	}
+	
+	
+	setInterval(al1, 2040);
+	setInterval(al2, 2040);
+	setInterval(al3, 2040);
+	setInterval(al4, 2040);
+	setInterval(ar1, 2040);
+	setInterval(ar2, 2040);
+	setInterval(ar3, 2040);
+	setInterval(ar4, 2040);
 	
 	/* $("#audio_line_left_2").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
 	$("#audio_line_left_3").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
