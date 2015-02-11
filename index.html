@@ -24,6 +24,7 @@
 	<button onclick="pma_frame_appear()">PMA Frame Appear</button>
 	<button onclick="pma_app_appear()">PMA App Appear</button>
 	<button onclick="audio_announce()">PMA Announce</button>
+	<button onclick="translate_boxes()">Translate Box</button>
 	
 	
 	<!-- <button onclick="wake_tablet()">Wake Tablet</button>
@@ -92,15 +93,32 @@
 						<image x="205" y="-150" id="pma_drop" width="20" height="20" opacity="0" xlink:href="img/pma_drop.svg" />							
 						<image x="195" y="-160" id="pma_app_drop" width="40" height="40" opacity="0" xlink:href="img/pma_drop.svg" />							
 						
+						<!-- <rect id="translation_rect" x="40" y="-100" width="320" height="150" opacity="0.5" style="fill:#fff" stroke="#00285F" stroke-width="3" /> -->
+						<foreignobject x="40" y="-100" width="320" height="150">
+							<body xmlns="http://www.w3.org/1999/xhtml">
+								<div style="background-color:red; width:50%; height:auto; float:left">
+								ggggggg
+								</div>
+								<div style="background-color:blue; width:50%; height:auto; float:right">gggg
+								</div>
+								<div style="background-color:green; width:50%; height:auto; float:left">gggg
+								</div>
+								<div style="background-color:orange; width:50%; height:auto; float:right">ggg
+								</div>
+							</body>
+						</foreignobject>
 						
-						<rect id="rect_lt" x="30" y="-100" width="150" height="50" opacity="1" style="fill:#fff" stroke="#00285F" stroke-width="3" />
-						<text id="rect_lt_text" x="50" y="-70" opacity="1" >Hello World </text>
-						<rect id="rect_rt" x="220" y="-100" width="150" height="50" opacity="1" style="fill:#fff" stroke="#00285F" stroke-width="3" />
-						<text id="rect_rt_text" x="240" y="-70" opacity="1" >Hello World </text>
-						<rect id="rect_lb" x="30" y="-50" width="150" height="50" opacity="1" style="fill:#fff" stroke="#00285F" stroke-width="3" />
-						<text id="rect_lb_text" x="50" y="-20" opacity="1" >Hello World </text>
-						<rect id="rect_rb" x="220" y="-50" width="150" height="50" opacity="1" style="fill:#fff" stroke="#00285F" stroke-width="3" />
-						<text id="rect_rb_text" x="240" y="-20" opacity="1" >Hello World </text>
+						
+						<rect id="trans_rect_lt" x="40" y="-100" width="150" height="50" opacity="0" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="trans_rect_lt_text" x="60" y="-70" opacity="0" >Hello World </text> 
+						
+						<rect id="trans_rect_lb" x="40" y="-40" width="150" height="50" opacity="0" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="trans_rect_lb_text" x="60" y="-10" opacity="0" >Hello World </text>
+						
+						<rect id="trans_rect_rt" x="210" y="-100" width="150" height="50" opacity="0" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="trans_rect_rt_text" x="230" y="-70" opacity="0" >Hello World </text>
+						<rect id="trans_rect_rb" x="210" y="-40" width="150" height="50" opacity="0" style="fill:#fff" stroke="#00285F" stroke-width="3" />
+						<text id="trans_rect_rb_text" x="230" y="-10" opacity="0" >Hello World </text>
 						
 						<line id="pma_left_line" x1="200" y1="-25" x2="200" y2="-25" opacity="1" stroke="#00285F" stroke-width="5" />
 						<line id="pma_right_line" x1="210" y1="-25" x2="210" y2="-25" opacity="1" stroke="#00285F" stroke-width="5" />
