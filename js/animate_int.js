@@ -208,6 +208,22 @@ function pma_play(){
 	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000);
 }
 
+function pma_announce_stop(){
+	$("#audio_line_left_1").velocity("stop");
+	$("#audio_line_left_2").velocity("stop");
+	$("#audio_line_left_3").velocity("stop");
+	$("#audio_line_left_4").velocity("stop");
+	$("#audio_line_left_5").velocity("stop");
+	$("#audio_line_right_1").velocity("stop");
+	$("#audio_line_right_2").velocity("stop");
+	$("#audio_line_right_3").velocity("stop");
+	$("#audio_line_right_4").velocity("stop");
+	$("#audio_line_right_5").velocity("stop");
+
+
+
+}
+
 function pma_announce(){
 
 	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
@@ -312,16 +328,7 @@ function pma_announce(){
 	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
-	al1();
-	al2();
-	al3();
-	al4();
-	al5();
-	ar1();
-	ar2();
-	ar3();
-	ar4();
-	ar5();
+	al1(); al2(); al3(); al4(); al5(); ar1(); ar2(); ar3(); ar4(); ar5();
 	
 	setInterval(al1, 4030);
 	setInterval(al2, 4030);
