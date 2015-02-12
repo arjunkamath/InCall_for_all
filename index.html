@@ -79,36 +79,38 @@
 						<circle id="circle_l" cx="170" cy="30" r="0" fill="#5fbadd" stroke-width="0"/>
 						</g>
 						
-						<line id="connecting_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 15"/>
-						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" />
+						
 						
 						<line id="audio_line_left_1" x1="146" y1="-130" x2="146" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_2" x1="152" y1="-130" x2="152" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_left_3" x1="158" y1="-130" x2="158" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_left_3" x1="158" y1="-130" x2="158" y2="-135" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_4" x1="164" y1="-130" x2="164" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_5" x1="170" y1="-130" x2="170" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						
 						<line id="audio_line_right_1" x1="240" y1="-130" x2="240" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_2" x1="246" y1="-130" x2="246" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_3" x1="252" y1="-130" x2="252" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_3" x1="252" y1="-130" x2="252" y2="-135" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_4" x1="258" y1="-130" x2="258" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_5" x1="264" y1="-130" x2="264" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						
+						<line id="connecting_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="1, 15"/>
+						<line id="connect_line_border" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#fff" stroke-width="11" />
+						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" />
+
 						
 						<image x="205" y="-150" id="pma_drop" width="20" height="20" opacity="0" xlink:href="img/pma_drop.svg" />							
 						<image x="195" y="-160" id="pma_app_drop" width="40" height="40" opacity="0" xlink:href="img/pma_drop.svg" />							
 						
 						<!-- <rect id="translation_rect" x="40" y="-100" width="320" height="150" opacity="0.5" style="fill:#fff" stroke="#00285F" stroke-width="3" /> -->
-						<foreignobject id="translate_area" x="40" y="-100" width="320" height="150" opacity="1">
+						<foreignobject id="translate_area" x="40" y="-100" width="320" height="150" opacity="0">
 							<body xmlns="http://www.w3.org/1999/xhtml">
 							<div style="width:50%; float:left">
 							
-								<div id="trans_tl" style="background-color:red; height:auto"></div>
-								<div id="trans_bl" style="background-color:blue; height:auto"></div>
+								<div id="trans_tl" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
+								<div id="trans_bl" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
 							</div>
 							<div style="width:50%; float:right">
-								<div id="trans_tr" style="background-color:green; height:auto"></div>
-								<div id="trans_br" style="background-color:orange; height:auto"></div>
+								<div id="trans_tr" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
+								<div id="trans_br" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
 								</div>
 							</body>
 						</foreignobject>

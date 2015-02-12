@@ -114,6 +114,7 @@ function connected() {
 	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
+		$("#connect_line_border").velocity({ x2: 400 }, 1000);
 		$("#connect_line").velocity({ x2: 400 }, 1000, function(){
 			$("#circle_share").velocity({ r: 3 }, { queue: false, delay: 0, duration: 250 });
 			$("#circle_share").velocity({ r: 1.5 }, { queue: false, delay: 250, duration: 250 });
@@ -176,21 +177,21 @@ function audio_announce(){
 		
 	function al1(){
 	$("#audio_line_left_1")
-	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({y2:-145}, { duration: 1000, loop:2})
 	.velocity({translateX:-144}, { duration: 4000, queue: false})
 	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function al2(){
 	$("#audio_line_left_2")
-	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({y2:-150}, { duration: 2000, loop:1})
 	.velocity({translateX:-144}, { duration: 4000, queue: false})
 	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
 	
 	function al3(){
 	$("#audio_line_left_3")
-	.velocity({y2:-145}, { duration: 666, loop:3})
+	.velocity({y2:-155}, { duration: 1000, loop:2})
 	.velocity({translateX:-144}, { duration: 4000, queue: false})
 	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
@@ -225,7 +226,7 @@ function audio_announce(){
 	
 	function ar3(){
 	$("#audio_line_right_3")
-	.velocity({y2:-150}, { duration: 666, loop:3})
+	.velocity({y2:-155}, { duration: 1000, loop:2})
 	.velocity({translateX:140}, { duration: 4000, queue: false})
 	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
 	}
