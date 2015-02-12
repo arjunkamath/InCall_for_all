@@ -7,17 +7,21 @@ function incoming() {
 
 function connecting() {
 	
-	function connecting_line(){
+	function connecting_line_animate(){
 		$("#connecting_line")
-			.velocity({ x2: 400 }, {duration: 3000})
-			.velocity({ x2: 0 }, { duration: 0 });	
+			.velocity({ x2: 400 }, {duration: 1500})
+			.velocity({ x2: -56 }, { duration: 0 });	
+
+		//$("#connecting_line_border")
+		//	.velocity({ x2: 400 }, {duration: 1500})
+		//	.velocity({ x2: 10 }, { duration: 0 });	
 	}
 	
-	connecting_line();
+	connecting_line_animate();
 	
 	setInterval(function () {
-		connecting_line();
-	}, 3000);
+		connecting_line_animate();
+	}, 1500);
 	
 	
 
@@ -114,7 +118,7 @@ function connected() {
 	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
-		$("#connect_line_border").velocity({ x2: 400 }, 1000);
+		//$("#connect_line_border").velocity({ x2: 400 }, 1000);
 		$("#connect_line").velocity({ x2: 400 }, 1000, function(){
 			$("#circle_share").velocity({ r: 3 }, { queue: false, delay: 0, duration: 250 });
 			$("#circle_share").velocity({ r: 1.5 }, { queue: false, delay: 250, duration: 250 });
