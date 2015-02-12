@@ -20,9 +20,9 @@
 	<button onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button onclick="it_cloud_appear()">IT Cloud</button>
 	<button onclick="converge_now()">Converge</button>
+	<button onclick="pma_app_appear()">PMA Push</button>
 	<button onclick="connected()">Connected</button>
 	<button onclick="pma_frame_appear()">PMA Share</button>
-	<button onclick="pma_app_appear()">PMA Push</button>
 	<button onclick="audio_announce()">PMA Announce</button>
 	<button onclick="translate_boxes()">Translate Box</button>
 	<br>
@@ -60,33 +60,32 @@
 				<div class="row nopadding" >
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
 
-						<line id="connecting_line" x1="-56" y1="-130" x2="-56" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="30, 25"/>
-						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" />						
+						<g id="telco_group" transform="translate(10,-87) scale(1,1)">
 
-						<g id="telco_group" transform="translate(30,-87) scale(1,1)">
-
-						<circle id="circle_a" cx="130" cy="-40" r="0" fill="#5b6592" stroke-width="0"/>
-						<circle id="circle_b" cx="180" cy="-70" r="0" fill="#5b6592" stroke-width="0"/>
-						<circle id="circle_c" cx="180" cy="-35" r="0" fill="#5b6592" stroke-width="0"/>
-						<circle id="circle_d" cx="240" cy="-60" r="0" fill="#5b6592" stroke-width="0"/>
-						<circle id="circle_e" cx="255" cy="-30" r="0" fill="#5b6592" stroke-width="0"/>
-						<circle id="circle_f" cx="230" cy="-30" r="0" fill="#5b6592" stroke-width="0"/>
-						<text id="telco_text" x="150" y="-40" fill="#fff" font-family="arial" font-size="25" opacity="0">TELCO</text>
+						<circle id="circle_a" cx="130" cy="-40" r="0" fill="#00285F" stroke-width="0"/>
+						<circle id="circle_b" cx="180" cy="-70" r="0" fill="#00285F" stroke-width="0"/>
+						<circle id="circle_c" cx="180" cy="-35" r="0" fill="#00285F" stroke-width="0"/>
+						<circle id="circle_d" cx="240" cy="-60" r="0" fill="#00285F" stroke-width="0"/>
+						<circle id="circle_e" cx="255" cy="-30" r="0" fill="#00285F" stroke-width="0"/>
+						<circle id="circle_f" cx="230" cy="-30" r="0" fill="#00285F" stroke-width="0"/>
+						
 						</g>
 						
 						
-						<g id="it_group" transform="translate(10,-45) scale(1,1)">
+						<g id="it_group" transform="translate(-10,-45) scale(1,1)">
 						<circle id="circle_g" cx="270" cy="40" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_h" cx="220" cy="70" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_i" cx="220" cy="35" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_j" cx="160" cy="60" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_k" cx="145" cy="30" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_l" cx="170" cy="30" r="0" fill="#5fbadd" stroke-width="0"/>
-						<text id="it_text" x="190" y="60" fill="#fff" font-family="arial" font-size="40" opacity="0">IT</text>
+
 						</g>
-						
-						
-						
+
+						<line id="connecting_line" x1="-56" y1="-130" x2="-56" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="30, 25"/>						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8"/>								
+						<text id="telco_text" x="180" y="-120" fill="#fff" font-family="arial" font-size="25" opacity="0">TELCO</text>			
+						<text id="it_text" x="200" y="20" fill="#fff" font-family="arial" font-size="40" opacity="0">IT</text>
+
 						<line id="audio_line_left_1" x1="146" y1="-130" x2="146" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_2" x1="152" y1="-130" x2="152" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_3" x1="158" y1="-130" x2="158" y2="-135" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
@@ -104,11 +103,8 @@
 						<line id="connect_line_border" x1="2" y1="-130" x2="2" y2="-130" opacity="1" stroke="#fff" stroke-width="11" />						
 						-->
 
-						
-
-						
-						<image x="205" y="-150" id="pma_drop" width="20" height="20" opacity="0" xlink:href="img/pma_drop.svg" />							
-						<image x="195" y="-160" id="pma_app_drop" width="40" height="40" opacity="0" xlink:href="img/pma_drop.svg" />							
+						<circle id="pma_app_drop" cx="203" cy="-130" r="0" fill="#fff" stroke-width="3" stroke="#00285F"/>
+						<circle id="pma_drop" cx="203" cy="-130" r="0" fill="#00a9df" stroke-width="3" stroke="#fff"/>						
 						
 						<!-- <rect id="translation_rect" x="40" y="-100" width="320" height="150" opacity="0.5" style="fill:#fff" stroke="#00285F" stroke-width="3" /> -->
 						<foreignobject id="translate_area" x="40" y="-100" width="320" height="150" opacity="0">
@@ -125,12 +121,15 @@
 							</body>
 						</foreignobject>
 						
+						<line id="pma_left_line" x1="200" y1="-25" x2="200" y2="-25" opacity="1" stroke="#00a9d4" stroke-width="5" stroke-linecap="round" stroke-dasharray="10, 15"/>
+						<line id="pma_right_line" x1="210" y1="-25" x2="210" y2="-25" opacity="1" stroke="#00a9d4" stroke-width="5" />
 						
-						<line id="pma_left_line" x1="200" y1="-25" x2="200" y2="-25" opacity="1" stroke="#00285F" stroke-width="5" />
-						<line id="pma_right_line" x1="210" y1="-25" x2="210" y2="-25" opacity="1" stroke="#00285F" stroke-width="5" />
-						
-						<image x="175" y="-75" id="folder_pma" width="90" height="90" opacity="0" xlink:href="img/folder_pma_nologo.svg" />							
-						<image x="200" y="-150" id="envelope" width="25" height="25" opacity="0" xlink:href="img/envelope.svg" />							
+						<image x="160" y="-75" id="folder_pma" width="90" height="90" opacity="0" xlink:href="img/folder_pma_nologo.svg" />						
+						<image x="180" y="-150" id="envelope" width="35" height="35" opacity="0" xlink:href="img/envelope.svg" />
+						<image x="170" y="-160" id="pma_app_share" width="60" height="60" opacity="0" xlink:href="img/pma_app_share.svg" />
+						<image x="170" y="-160" id="pma_app_announce" width="60" height="60" opacity="0" xlink:href="img/pma_app_announce.svg" />
+						<image x="170" y="-160" id="pma_app_record" width="60" height="60" opacity="0" xlink:href="img/pma_app_record.svg" />
+						<image x="170" y="-160" id="pma_app_play" width="60" height="60" opacity="0" xlink:href="img/pma_app_play.svg" />
 					</svg>
 				</div>
 			</div>
