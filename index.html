@@ -22,8 +22,10 @@
 	<button onclick="converge_now()">Converge</button>
 	<button onclick="pma_app_appear()">PMA Push</button>
 	<button onclick="connected()">Connected</button>
-	<button onclick="pma_frame_appear()">PMA Share</button>
-	<button onclick="audio_announce()">PMA Announce</button>
+	<button onclick="pma_share()">PMA Share</button>
+	<button onclick="pma_announce()">PMA Announce</button>
+	<button onclick="pma_record()">PMA Record</button>
+	<button onclick="pma_play()">PMA Play</button>
 	<button onclick="translate_boxes()">Translate Box</button>
 	<br>
 	<button onclick="enter_text_tl()">Translate TL</button>
@@ -52,7 +54,7 @@
 				</div>
 				<div class="row" style="height:20px"></div>
 				<div class="row">
-					<iframe id="frame_pma" x="" y="" width="0" height="0" allowtransparency="true" style="border: 5px solid #7B0663;border-radius: 10px;"  src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253" marginwidth="30"></iframe>
+					<iframe id="frame_pma" x="" y="" width="0" height="0" opacity="0" allowtransparency="true" style="border: 5px solid #7B0663;border-radius: 10px;"  src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253" marginwidth="30"></iframe>
 				</div>
 			</div>
 			<div class="col-xs-8 nopadding" id="cloud_area">
@@ -82,19 +84,19 @@
 
 						</g>
 
-						<line id="connecting_line" x1="-56" y1="-130" x2="-56" y2="-130" opacity="1" stroke="#00285F" stroke-width="10" stroke-linecap="round" stroke-dasharray="30, 25"/>						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8"/>								
-						<text id="telco_text" x="180" y="-120" fill="#fff" font-family="arial" font-size="25" opacity="0">TELCO</text>			
-						<text id="it_text" x="200" y="20" fill="#fff" font-family="arial" font-size="40" opacity="0">IT</text>
+						<line id="connecting_line" x1="-56" y1="-130" x2="-56" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" stroke-linecap="round" stroke-dasharray="30, 25"/>						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8"/>								
+						<text id="telco_text" x="160" y="-120" fill="#fff" font-family="arial" font-size="25" opacity="0">TELCO</text>			
+						<text id="it_text" x="180" y="20" fill="#fff" font-family="arial" font-size="40" opacity="0">IT</text>
 
 						<line id="audio_line_left_1" x1="146" y1="-130" x2="146" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_2" x1="152" y1="-130" x2="152" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_left_3" x1="158" y1="-130" x2="158" y2="-135" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_left_3" x1="158" y1="-130" x2="158" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_4" x1="164" y1="-130" x2="164" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_5" x1="170" y1="-130" x2="170" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						
 						<line id="audio_line_right_1" x1="240" y1="-130" x2="240" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_2" x1="246" y1="-130" x2="246" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_3" x1="252" y1="-130" x2="252" y2="-135" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_3" x1="252" y1="-130" x2="252" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_4" x1="258" y1="-130" x2="258" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_right_5" x1="264" y1="-130" x2="264" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 					

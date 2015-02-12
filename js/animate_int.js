@@ -67,16 +67,24 @@ function it_cloud_appear(){
 	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 }
 
-function pma_frame_appear(){
+function pma_share(){
+
+	$("#circle_announce").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_record").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
 	$("#circle_share").velocity({ r: 3 }, { duration: 500, easing:"spring" });
+
+	//$("#pma_app_play").velocity("transition.fadeOut", 1000);
+	//$("#pma_app_announce").velocity("transition.fadeOut", 1000);
+	//$("#pma_app_record").velocity("transition.fadeOut", 1000);	
 	$("#pma_app_share").velocity("transition.slideUpBigIn", 1000, function(){
 		$("#envelope").velocity({ opacity: 1 }, 0);
 		$("#envelope").velocity({ x: -50 }, 2000, function(){
 			$("#pma_left_line").velocity({ x2: 45 }, 1750);	
 			$("#frame_pma")
-			.velocity({ opacity: 1 }, { duration: 100 })
-			.velocity({ height: 350 }, { duration: 3000, queue: false})
-			.velocity({ width: 300 }, { duration: 500 });
+			.velocity({ opacity: 1 }, { duration: 0 })
+			.velocity({ height: 350 }, { delay:1000, duration: 3000, queue: false})
+			.velocity({ width: 300 }, { delay:1000, duration: 500 });
 		});
 	});
 }
@@ -87,11 +95,11 @@ function converge_now(){
 
 	$("#telco_text")
 	.velocity({ opacity: 0 }, { duration: 2500})
-	.velocity({ y: -10 }, { duration: 2500, queue: false});	
+	.velocity({ y: -80 }, { duration: 2500, queue: false});	
 
 	$("#it_text")
 	.velocity({ opacity: 0 }, { duration: 2500})
-	.velocity({ y: 20 }, { duration: 2500, queue: false});
+	.velocity({ y: -80 }, { duration: 2500, queue: false});
 
 	$("#circle_e").velocity("stop", true);
 	$("#circle_k").velocity("stop", true);
@@ -167,7 +175,42 @@ function pma_app_appear(){
 	});
 }
 
-function audio_announce(){
+function pma_record(){
+	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_announce").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_record").velocity({ r: 3 }, { duration: 500, easing:"spring" });
+
+	$("#pma_app_play").velocity("transition.fadeOut", 1000);
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
+	$("#pma_app_record").velocity("transition.slideUpBigIn", 1000);
+
+}
+
+function pma_play(){
+	$("#circle_announce").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_record").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_play").velocity({ r: 3 }, { duration: 500, easing:"spring" });
+
+	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
+	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000);
+}
+
+function pma_announce(){
+
+	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_record").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_announce").velocity({ r: 3 }, { duration: 500, easing:"spring" });
+
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_play").velocity("transition.fadeOut", 1000);
+	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
+	$("#pma_app_announce").velocity("transition.slideUpBigIn", 1000, function(){
 	
 	$("#audio_line_left_1").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_2").velocity({opacity:1}, { duration: 0 });
@@ -291,7 +334,7 @@ function audio_announce(){
 	$("#audio_line_right_2").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false });
 	$("#audio_line_right_3").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false });
 	$("#audio_line_right_4").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false }); */
-	
+	});
 }
 
 /*
