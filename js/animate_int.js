@@ -89,8 +89,10 @@ function pma_share(){
 
 			$("#frame_pma")
 			.velocity({ opacity: 1 }, { duration: 0 })
-			.velocity({ width: 300 }, { delay:1000, duration: 500 })
-			.velocity({ height: 350 }, { delay:1000, duration: 3000});
+			//.velocity({ x: 0 }, { duration: 500 })
+			//.velocity({ y: 0 }, { duration: 500 })
+			.velocity({ width: 300 }, { delay:500, duration: 1000 })
+			.velocity({ height: 350 }, {delay:500, duration: 3000});
 
 		});
 	});
