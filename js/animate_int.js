@@ -35,6 +35,8 @@ function telco_cloud_appear(){
 	$("#circle_d").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_e").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_f").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+
+	$("#telco_text").velocity({ opacity: 1 }, { duration: 1000});
 	
 	//animate telco cloud
 	$("#circle_a").velocity({ r: 35 }, { delay: 3000, duration: 7500, loop:true});
@@ -53,7 +55,9 @@ function it_cloud_appear(){
 	$("#circle_j").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
-	
+
+	$("#it_text").velocity({ opacity: 1 }, { duration: 1000});	
+
 	//animate IT cloud
 	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 8000, loop:true});
 	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
@@ -80,6 +84,14 @@ function pma_frame_appear(){
 function converge_now(){
 	
 	console.log('converge_now');
+
+	$("#telco_text")
+	.velocity({ opacity: 0 }, { duration: 2500})
+	.velocity({ y: -10 }, { duration: 2500, queue: false});	
+
+	$("#it_text")
+	.velocity({ opacity: 0 }, { duration: 2500})
+	.velocity({ y: 20 }, { duration: 2500, queue: false});
 
 	$("#circle_e").velocity("stop", true);
 	$("#circle_k").velocity("stop", true);
