@@ -74,22 +74,29 @@ function pma_share(){
 	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
 	$("#circle_share").velocity({ r: 3 }, { duration: 500, easing:"spring" });
 
-	//$("#pma_app_play").velocity("transition.fadeOut", 1000);
-	//$("#pma_app_announce").velocity("transition.fadeOut", 1000);
-	//$("#pma_app_record").velocity("transition.fadeOut", 1000);	
+	
 	$("#pma_app_share").velocity("transition.slideUpBigIn", 1000, function(){
+		//$("#pma_app_play").velocity({opacity:0}, 0);
+		//$("#pma_app_announce").velocity({opacity:0}, 0);
+		//$("#pma_app_record").velocity({opacity:0}, 0);
 		$("#envelope").velocity({ opacity: 1 }, 0);
 		$("#envelope").velocity({ x: -50 }, 2000, function(){
-			$("#pma_left_line").velocity({ x2: 45 }, 1750);	
+			$("#pma_left_line").velocity({ opacity: 1 }, 0);
+			$("#pma_left_line").velocity({ x2: 49 }, 1750);
+
+			document.getElementById("frame_pma").style.border="5px solid #7B0663";
+			document.getElementById("frame_pma").style.borderRadius="10px";
+
 			$("#frame_pma")
 			.velocity({ opacity: 1 }, { duration: 0 })
-			.velocity({ height: 350 }, { delay:1000, duration: 3000, queue: false})
-			.velocity({ width: 300 }, { delay:1000, duration: 500 });
+			.velocity({ width: 300 }, { delay:1000, duration: 500 })
+			.velocity({ height: 350 }, { delay:1000, duration: 3000});
+
 		});
 	});
 }
 
-function converge_now(){
+function converge(){
 	
 	console.log('converge_now');
 
@@ -134,7 +141,7 @@ function converge_now(){
 	
 }
 
-function connected() {
+function pma_connected() {
 	
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
@@ -154,7 +161,7 @@ function connected() {
 	console.log('connected');
 }
 
-function pma_app_appear(){
+function pma_push(){
 	//$("#folder_pma_back").velocity({opacity:1}, { duration: 0 });
 	$("#folder_pma").velocity({opacity:1}, { duration: 0 });
 	//$("#folder_pma").velocity("callout.bounce");
@@ -181,8 +188,8 @@ function pma_record(){
 	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
 	$("#circle_record").velocity({ r: 3 }, { duration: 500, easing:"spring" });
 
-	$("#pma_app_play").velocity("transition.fadeOut", 1000);
 	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_play").velocity("transition.fadeOut", 1000);
 	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
 	$("#pma_app_record").velocity("transition.slideUpBigIn", 1000);
 
@@ -194,9 +201,9 @@ function pma_play(){
 	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
 	$("#circle_play").velocity({ r: 3 }, { duration: 500, easing:"spring" });
 
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
 	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
 	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
-	$("#pma_app_share").velocity("transition.fadeOut", 1000);
 	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000);
 }
 
@@ -337,36 +344,6 @@ function pma_announce(){
 	});
 }
 
-/*
-function punos_frame(urllink) {
-	setTimeout(function () {
-	$("#vertical_line")
-		.velocity("transition.slideDownBigIn")
-	}, 1000);
-	
-	var link = 'https://tabin1.punosmobile.com/pma-cloud/#/' + urllink.slice(3);
-	console.log('link');
-	
-	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
-
-	var frame = document.getElementById("frame_pma");
-	frame.src = link;
-	frame.style.width = 100+"%"; 
-	frame.style.height = 260+"px";
-	frame.style.opacity = "0";
-	$('#frame_pma').velocity({ opacity: 1 }, 1250);
-
-	var line_1 = document.getElementById("pma_user1_line");
-	line_1.style.width = 100+"%"; 
-	line_1.style.height = 260+"px";
-
-	var line_2 = document.getElementById("pma_user2_line");
-	line_2.style.width = 100+"%"; 
-	line_2.style.height = 260+"px"; 
-
-	console.log('punos frame');
-}
-*/
 
 
 
@@ -428,4 +405,34 @@ function share_meeting(urllink) {
 	});
 }
 
+/*
+function punos_frame(urllink) {
+	setTimeout(function () {
+	$("#vertical_line")
+		.velocity("transition.slideDownBigIn")
+	}, 1000);
+	
+	var link = 'https://tabin1.punosmobile.com/pma-cloud/#/' + urllink.slice(3);
+	console.log('link');
+	
+	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
+
+	var frame = document.getElementById("frame_pma");
+	frame.src = link;
+	frame.style.width = 100+"%"; 
+	frame.style.height = 260+"px";
+	frame.style.opacity = "0";
+	$('#frame_pma').velocity({ opacity: 1 }, 1250);
+
+	var line_1 = document.getElementById("pma_user1_line");
+	line_1.style.width = 100+"%"; 
+	line_1.style.height = 260+"px";
+
+	var line_2 = document.getElementById("pma_user2_line");
+	line_2.style.width = 100+"%"; 
+	line_2.style.height = 260+"px"; 
+
+	console.log('punos frame');
+}
+*/
 

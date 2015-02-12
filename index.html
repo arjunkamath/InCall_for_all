@@ -19,9 +19,9 @@
 	<button onclick="connecting()">Connecting Line</button>
 	<button onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button onclick="it_cloud_appear()">IT Cloud</button>
-	<button onclick="converge_now()">Converge</button>
-	<button onclick="pma_app_appear()">PMA Push</button>
-	<button onclick="connected()">Connected</button>
+	<button onclick="converge()">Converge</button>
+	<button onclick="pma_push()">PMA Push</button>
+	<button onclick="pma_connected()">PMA Connected</button>
 	<button onclick="pma_share()">PMA Share</button>
 	<button onclick="pma_announce()">PMA Announce</button>
 	<button onclick="pma_record()">PMA Record</button>
@@ -54,7 +54,7 @@
 				</div>
 				<div class="row" style="height:20px"></div>
 				<div class="row">
-					<iframe id="frame_pma" x="" y="" width="0" height="0" opacity="0" allowtransparency="true" style="border: 5px solid #7B0663;border-radius: 10px;"  src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253" marginwidth="30"></iframe>
+					<iframe id="frame_pma" width="0" height="0" opacity="0" allowtransparency="true" src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253" marginwidth="30"></iframe>
 				</div>
 			</div>
 			<div class="col-xs-8 nopadding" id="cloud_area">
@@ -94,11 +94,11 @@
 						<line id="audio_line_left_4" x1="164" y1="-130" x2="164" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						<line id="audio_line_left_5" x1="170" y1="-130" x2="170" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 						
-						<line id="audio_line_right_1" x1="240" y1="-130" x2="240" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_2" x1="246" y1="-130" x2="246" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_3" x1="252" y1="-130" x2="252" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_4" x1="258" y1="-130" x2="258" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
-						<line id="audio_line_right_5" x1="264" y1="-130" x2="264" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_1" x1="230" y1="-130" x2="230" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_2" x1="236" y1="-130" x2="236" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_3" x1="242" y1="-130" x2="242" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_4" x1="248" y1="-130" x2="248" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
+						<line id="audio_line_right_5" x1="254" y1="-130" x2="254" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 					
 						<!--
 						<line id="connecting_line_border" x1="10" y1="-130" x2="10" y2="-130" opacity="1" stroke="#fff" stroke-width="11"/>
@@ -123,15 +123,17 @@
 							</body>
 						</foreignobject>
 						
-						<line id="pma_left_line" x1="200" y1="-25" x2="200" y2="-25" opacity="1" stroke="#00a9d4" stroke-width="5" stroke-linecap="round" stroke-dasharray="10, 15"/>
+						<line id="pma_left_line" x1="200" y1="-25" x2="200" y2="-25" opacity="0" stroke="#00a9d4" stroke-width="5" stroke-linecap="round" stroke-dasharray="10, 13"/>
 						<line id="pma_right_line" x1="210" y1="-25" x2="210" y2="-25" opacity="1" stroke="#00a9d4" stroke-width="5" />
 						
 						<image x="160" y="-75" id="folder_pma" width="90" height="90" opacity="0" xlink:href="img/folder_pma_nologo.svg" />						
 						<image x="180" y="-150" id="envelope" width="35" height="35" opacity="0" xlink:href="img/envelope.svg" />
-						<image x="170" y="-160" id="pma_app_share" width="60" height="60" opacity="0" xlink:href="img/pma_app_share.svg" />
+				
+						<image x="170" y="-160" id="pma_app_play" width="60" height="60" opacity="0" xlink:href="img/pma_app_play.svg" />						
 						<image x="170" y="-160" id="pma_app_announce" width="60" height="60" opacity="0" xlink:href="img/pma_app_announce.svg" />
 						<image x="170" y="-160" id="pma_app_record" width="60" height="60" opacity="0" xlink:href="img/pma_app_record.svg" />
-						<image x="170" y="-160" id="pma_app_play" width="60" height="60" opacity="0" xlink:href="img/pma_app_play.svg" />
+						<image x="170" y="-160" id="pma_app_share" width="60" height="60" opacity="0" xlink:href="img/pma_app_share.svg" />
+				
 					</svg>
 				</div>
 			</div>
