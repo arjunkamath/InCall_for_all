@@ -89,11 +89,10 @@ function pma_share(){
 
 			$("#frame_pma")
 			.velocity({ opacity: 1 }, { duration: 0 })
-			//.velocity({ x: 0 }, { duration: 500 })
-			//.velocity({ y: 0 }, { duration: 500 })
-			.velocity({ width: 300 }, { delay:500, duration: 1000 })
-			.velocity({ height: 350 }, {delay:500, duration: 3000});
-
+			.velocity({ width: 300 }, 1750, function(){
+				$("#pma_frame_gap").velocity({ height: "20px" }, { duration: 1000});
+				$("#frame_pma").velocity({ height: 350 }, { duration: 1750});		
+			});			
 		});
 	});
 }
