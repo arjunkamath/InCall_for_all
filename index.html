@@ -32,6 +32,10 @@
 	<br>
 	<p>Translation</p>
 	<button onclick="translate_connecting()">Connecting</button>
+	<button onclick="telco_cloud_appear()">Telco Cloud</button>
+	<button onclick="it_cloud_appear()">IT Cloud</button>
+	<button onclick="converge()">Converge</button>
+	<button onclick="trans_connected()">Translation Connected</button>
 	<button onclick="translate_app()">Translate App</button>
 	<button onclick="enter_text_tl()">Translate TL</button>
 	<button onclick="enter_text_bl()">Translate BL</button>
@@ -114,16 +118,21 @@
 						<circle id="pma_drop" cx="203" cy="-130" r="0" fill="#00a9df" stroke-width="3" stroke="#fff"/>						
 						
 						<!-- <rect id="translation_rect" x="40" y="-100" width="320" height="150" opacity="0.5" style="fill:#fff" stroke="#00285F" stroke-width="3" /> -->
-						<foreignobject id="translate_area" x="40" y="-100" width="320" height="150" opacity="0">
+						<foreignobject id="translate_area" x="40" y="-70" width="320" height="150" opacity="0">
 							<body xmlns="http://www.w3.org/1999/xhtml">
-							<div style="width:50%; float:left">
-							
-								<div id="trans_tl" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
-								<div id="trans_bl" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
+							<div style="width:46%; float:left">
+								<div id="english_left" style="background-color:grey; height:auto; float:right; font-size: 70%">English</div>
+								<div id="trans_tl" style="background-color:grey; height:auto; border-radius: 5px;"></div>
+								<div id="left_gap" style="background-color:none; height:2px;"></div>
+								<div id="spanish_left" style="background-color:grey; height:auto; float:right; font-size: 70%">Spanish</div>
+								<div id="trans_bl" style="background-color:green; height:auto; border-radius: 5px;"></div>
 							</div>
-							<div style="width:50%; float:right">
-								<div id="trans_tr" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
-								<div id="trans_br" style="background-color:none; height:auto; border: 2px solid; border-radius: 5px;"></div>
+							<div style="width:46%; float:right">
+								<div id="spanish_right" style="background-color:grey; height:auto; float:left; font-size: 70%">Spanish</div>
+								<div id="trans_tr" style="background-color:green; height:auto;  border-radius: 5px;"></div>
+								<div id="right_gap" style="background-color:none; height:2px;"></div>
+								<div id="english_right" style="background-color:grey; height:auto; float:left; font-size: 70%">English</div>
+								<div id="trans_br" style="background-color:grey; height:auto;  border-radius: 5px;"></div>
 								</div>
 							</body>
 						</foreignobject>
