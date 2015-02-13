@@ -45,12 +45,20 @@ div#app_area_wrapper {
 	border-radius: 25px;
 }
 
-div#trans_left {
-	width:45%; 
-	float:left
+.trans_left_box {
+	width:46%; 
+	float:left;
 }
 
-div#trans_right {
-	width:45%; 
-	float:right
+.trans_right_box {
+	width:46%; 
+	float:right;
+}
+
+.trans_left {
+	float:left;
+}
+
+.trans_right {
+	float:right;
 }
