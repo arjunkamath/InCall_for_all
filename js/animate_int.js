@@ -5,27 +5,30 @@ function incoming() {
 	telco_cloud_appear();
 }
 
-function connecting() {
-	
+function connecting_line(){
 	function connecting_line_animate(){
 		$("#connecting_line")
 			.velocity({ x2: 400 }, {duration: 1500})
 			.velocity({ x2: -56 }, { duration: 0 });	
-
-		//$("#connecting_line_border")
-		//	.velocity({ x2: 400 }, {duration: 1500})
-		//	.velocity({ x2: 10 }, { duration: 0 });	
 	}
-	
 	connecting_line_animate();
 	
 	setInterval(function () {
 		connecting_line_animate();
 	}, 1500);
-	
-	
+}
 
-	console.log('incoming');
+function pma_connecting() {
+	connecting_line();
+	
+	$("#pma_tablet").velocity({ opacity: 1 }, { duration: 0});
+
+	
+}
+
+function translate_connecting() {
+	connecting_line()
+	
 }
 
 function telco_cloud_appear(){
@@ -352,12 +355,10 @@ function pma_announce(){
 	});
 }
 
-
-
-
-function translate_boxes() {
+function translate_app() {
 	
 	$('#translate_area').velocity({ opacity: 1 }, 0);
+	$("#trans_app").velocity("transition.slideUpBigIn", 1000);
 	
 }
 

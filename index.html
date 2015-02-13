@@ -16,7 +16,8 @@
 </head>
 <body>
 	<br>
-	<button onclick="connecting()">Connecting Line</button>
+	<p>PMA</p>
+	<button onclick="pma_connecting()">Connecting</button>
 	<button onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button onclick="it_cloud_appear()">IT Cloud</button>
 	<button onclick="converge()">Converge</button>
@@ -26,14 +27,17 @@
 	<button onclick="pma_announce()">PMA Announce</button>
 	<button onclick="pma_record()">PMA Record</button>
 	<button onclick="pma_play()">PMA Play</button>
-		<button onclick="pma_announce_stop()">PMA Announce Stop</button>
-	<button onclick="translate_boxes()">Translate Box</button>
+	<button onclick="pma_announce_stop()">PMA Announce Stop</button>
+	
 	<br>
+	<p>Translation</p>
+	<button onclick="translate_connecting()">Connecting</button>
+	<button onclick="translate_app()">Translate App</button>
 	<button onclick="enter_text_tl()">Translate TL</button>
 	<button onclick="enter_text_bl()">Translate BL</button>
 	<button onclick="enter_text_tr()">Translate TR</button>
 	<button onclick="enter_text_br()">Translate BR</button>
-        <input type="text" name="inputform" id="textbox" value="">	
+    <input type="text" name="inputform" id="textbox" value="">	
 	
 	<!-- <button onclick="wake_tablet()">Wake Tablet</button>
 	<button onclick="share_meeting('url54ca07f1e4b0cfe4ab5ce253')">Share Meeting</button>
@@ -134,6 +138,8 @@
 						<image x="170" y="-160" id="pma_app_announce" width="60" height="60" opacity="0" xlink:href="img/pma_app_announce.svg" />
 						<image x="170" y="-160" id="pma_app_record" width="60" height="60" opacity="0" xlink:href="img/pma_app_record.svg" />
 						<image x="170" y="-160" id="pma_app_share" width="60" height="60" opacity="0" xlink:href="img/pma_app_share.svg" />
+						
+						<image x="170" y="-160" id="trans_app" width="60" height="60" opacity="0" xlink:href="img/trans_app.svg" />
 				
 					</svg>
 				</div>
@@ -147,7 +153,7 @@
 				</div>
 				<div class="row">
 					<svg id="tablet_svg" width="100%" height="200" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-						<image x="25" y="0" id="tablet" width="50" height="50" xlink:href="img/tablet_pma_nologo.svg" />
+						<image x="25" y="0" id="pma_tablet" width="50" height="50" opacity="0" xlink:href="img/tablet_pma_nologo.svg" />
 						<circle id="circle_share" cx="34" cy="32" r="0" fill="#00a9d4" stroke-width="0"/>
 						<circle id="circle_announce" cx="43" cy="32" r="0" fill="#7b0663" stroke-width="0"/>
 						<circle id="circle_record" cx="52" cy="32" r="0" fill="#e32119" stroke-width="0"/>
