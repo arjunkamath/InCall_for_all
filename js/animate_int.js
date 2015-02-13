@@ -209,6 +209,19 @@ function pma_play(){
 }
 
 function pma_announce_stop(){
+	
+	clearInterval(al1_int);
+	clearInterval(al2_int);
+	clearInterval(al3_int);
+	clearInterval(al4_int);
+	clearInterval(al5_int);
+	
+	clearInterval(ar1_int);
+	clearInterval(ar2_int);
+	clearInterval(ar3_int);
+	clearInterval(ar4_int);
+	clearInterval(ar5_int);
+	
 	$("#audio_line_left_1").velocity("stop");
 	$("#audio_line_left_2").velocity("stop");
 	$("#audio_line_left_3").velocity("stop");
@@ -219,6 +232,8 @@ function pma_announce_stop(){
 	$("#audio_line_right_3").velocity("stop");
 	$("#audio_line_right_4").velocity("stop");
 	$("#audio_line_right_5").velocity("stop");
+	
+	
 
 
 
@@ -330,16 +345,16 @@ function pma_announce(){
 	
 	al1(); al2(); al3(); al4(); al5(); ar1(); ar2(); ar3(); ar4(); ar5();
 	
-	setInterval(al1, 4030);
-	setInterval(al2, 4030);
-	setInterval(al3, 4030);
-	setInterval(al4, 4030);
-	setInterval(al5, 4030);
-	setInterval(ar1, 4030);
-	setInterval(ar2, 4030);
-	setInterval(ar3, 4030);
-	setInterval(ar4, 4030);
-	setInterval(ar5, 4030);
+	var al1_int = setInterval(al1, 4030);
+	var al2_int = setInterval(al2, 4030);
+	var al3_int = setInterval(al3, 4030);
+	var al4_int = setInterval(al4, 4030);
+	var al5_int = setInterval(al5, 4030);
+	var ar1_int = setInterval(ar1, 4030);
+	var ar2_int = setInterval(ar2, 4030);
+	var ar3_int = setInterval(ar3, 4030);
+	var ar4_int = setInterval(ar4, 4030);
+	var ar5_int = setInterval(ar5, 4030);
 	
 	/* $("#audio_line_left_2").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
 	$("#audio_line_left_3").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
@@ -352,13 +367,8 @@ function pma_announce(){
 	});
 }
 
-
-
-
 function translate_boxes() {
-	
 	$('#translate_area').velocity({ opacity: 1 }, 0);
-	
 }
 
 function enter_text_tl(text)
