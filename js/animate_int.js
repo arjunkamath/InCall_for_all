@@ -176,7 +176,7 @@ function pma_push(){
 		$("#folder_pma").attr('xlink:href',logo_img);
 		//$("#folder_pma").velocity("callout.bounce", 1000);
 		$("#pma_right_line").velocity({ x2: 400 }, 1000, function(){
-			$("#tablet").attr('xlink:href',"img/tablet_pma_logo.svg");
+			$("#pma_tablet").attr('xlink:href',"img/tablet_pma_logo.svg");
 			//$("#circle_announce").velocity({ r: 3 }, { queue: false, duration: 1000 });
 		});
 	});
