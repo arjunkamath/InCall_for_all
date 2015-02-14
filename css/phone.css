@@ -62,3 +62,7 @@ div#app_area_wrapper {
 .trans_right {
 	float:right;
 }
+
+.trans_text:empty {
+   display: none;
+}
