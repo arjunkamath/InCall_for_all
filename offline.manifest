@@ -1,5 +1,4 @@
 CACHE MANIFEST
-index.html
 /img/user1.png
 /img/user2.png
 /img/user1.png
@@ -15,10 +14,15 @@ index.html
 /img/pma_app_play.svg
 /img/folder_pma_open.svg
 /img/folder_pma_logo.svg
-/js/animate_int.js
-/js/bootstrap.js  
-/js/jquery-ui.min.js
-/js/jquery.min.js
+/js/jquery-1.11.1.min.js
 /js/bootstrap.min.js
-/js/velocity.ui.js
+/js/vis.js
 /js/velocity.min.js
+/js/velocity.ui.js
+/css/bootstrap.min.css
+/css/vis.css
+/css/phone.css
+NETWORK:
+index.html
+js/animate_int.js
+
