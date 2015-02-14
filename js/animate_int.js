@@ -11,6 +11,8 @@ function connecting_line(){
 	}, 1500);
 }
 
+//comment
+
 function trans_connected(){
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
