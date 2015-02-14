@@ -44,3 +44,25 @@ div#app_area_wrapper {
 	border-color: #ffffff;
 	border-radius: 25px;
 }
+
+.trans_left_box {
+	width:46%; 
+	float:left;
+}
+
+.trans_right_box {
+	width:46%; 
+	float:right;
+}
+
+.trans_left {
+	float:left;
+}
+
+.trans_right {
+	float:right;
+}
+
+.trans_text:empty {
+   display: none;
+}

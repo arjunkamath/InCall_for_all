@@ -1,10 +1,3 @@
-var int1, int2, int3, int4;
-
-function incoming() {
-	connecting();
-	telco_cloud_appear();
-}
-
 function connecting_line(){
 	function connecting_line_animate(){
 		$("#connecting_line")
@@ -18,17 +11,22 @@ function connecting_line(){
 	}, 1500);
 }
 
+//comment
+
+function trans_connected(){
+	$("#connecting_line").velocity("transition.fadeOut", function(){
+		$("#connecting_line").velocity("stop");
+		$("#connect_line").velocity({ x2: 400 }, 1000);
+	});
+}
+
 function pma_connecting() {
 	connecting_line();
-	
 	$("#pma_tablet").velocity({ opacity: 1 }, { duration: 0});
-
-	
 }
 
 function translate_connecting() {
-	connecting_line()
-	
+	connecting_line();
 }
 
 function telco_cloud_appear(){
