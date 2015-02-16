@@ -26,21 +26,19 @@ function trans_connected(){
 	});
 }
 
-function translation_line_draw(){
+function translation_line_draw_left(){
 	
 	height = -10 + $('#trans_tl').height();
 	
 	$("#trans_horiz_line").velocity({y1:height}, 0);
 	$("#trans_horiz_line").velocity({y2:height}, 0);
 	$("#trans_horiz_line").velocity({opacity:1}, {delay:10});
-	$("#trans_horiz_line").velocity({x2:202}, 1500, function(){
+	$("#trans_horiz_line").velocity({x2:202}, 500, function(){
 		$("#trans_vert_line").velocity({y2:height}, 0);
 		$("#trans_vert_line").velocity({y1:height}, 0);
 		$("#trans_vert_line").velocity({opacity:1}, {delay:10});
 		$("#trans_vert_line").velocity({y1:-130}, 2000);
-	});
-	
-	
+	});	
 	
 }
 
@@ -397,10 +395,8 @@ function pma_announce(){
 }
 
 function translate_app() {
-	
 	$('#translate_area').velocity({ opacity: 1 }, 0);
 	$("#trans_app").velocity("transition.slideUpBigIn", 1000);
-	
 }
 
 function enter_text_tl(text)
@@ -411,7 +407,7 @@ function enter_text_tl(text)
 function enter_text_bl(text)
 {
 	document.getElementById("trans_bl").innerHTML = document.getElementById("textbox").value;
-	translation_line_draw();
+	translation_line_draw_left();
 }
 
 function enter_text_tr(text)

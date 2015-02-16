@@ -63,6 +63,10 @@ div#app_area_wrapper {
 	float:right;
 }
 
+.trans_text {
+   font-family:Verdana;
+}
+
 .trans_text:empty {
    display: none;
 }
