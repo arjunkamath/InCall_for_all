@@ -17,7 +17,12 @@ function connecting_line(){
 function trans_connected(){
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
-		$("#connect_line").velocity({ x2: 400 }, 1000);
+		$("#connect_line").velocity({ x2: 400 }, 1000, function(){
+			$("#user1").attr('xlink:href',"img/K2.png");
+			$("#user2").attr('xlink:href',"img/J2.png");
+		});
+		
+		
 	});
 }
 
@@ -34,6 +39,13 @@ function pma_connecting() {
 }
 
 function translate_connecting() {
+	
+	$("#user1").attr('xlink:href',"img/K1.png");
+	$("#user2").attr('xlink:href',"img/J1.png");
+	
+	$("#user1").velocity({ opacity: 1 }, 0);
+	$("#user2").velocity({ opacity: 1 }, 0);
+	
 	connecting_line();
 }
 
