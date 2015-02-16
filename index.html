@@ -41,6 +41,8 @@
 	<button class="btn btn-default" onclick="enter_text_bl()">Translate BL</button>
 	<button class="btn btn-default" onclick="enter_text_tr()">Translate TR</button>
 	<button class="btn btn-default" onclick="enter_text_br()">Translate BR</button>
+	<button class="btn btn-default" onclick="translation_line_draw()">Translate Line</button>
+	
     <input type="text" name="inputform" id="textbox" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry">	
 		
 	<div class="container">
@@ -64,16 +66,13 @@
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
 
 						<g id="telco_group" transform="translate(10,-87) scale(1,1)">
-
 						<circle id="circle_a" cx="130" cy="-40" r="0" fill="#00285F" stroke-width="0"/>
 						<circle id="circle_b" cx="180" cy="-70" r="0" fill="#00285F" stroke-width="0"/>
 						<circle id="circle_c" cx="180" cy="-35" r="0" fill="#00285F" stroke-width="0"/>
 						<circle id="circle_d" cx="240" cy="-60" r="0" fill="#00285F" stroke-width="0"/>
 						<circle id="circle_e" cx="255" cy="-30" r="0" fill="#00285F" stroke-width="0"/>
 						<circle id="circle_f" cx="230" cy="-30" r="0" fill="#00285F" stroke-width="0"/>
-						
 						</g>
-						
 						
 						<g id="it_group" transform="translate(-10,-45) scale(1,1)">
 						<circle id="circle_g" cx="270" cy="40" r="0" fill="#5fbadd" stroke-width="0"/>
@@ -82,7 +81,6 @@
 						<circle id="circle_j" cx="160" cy="60" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_k" cx="145" cy="30" r="0" fill="#5fbadd" stroke-width="0"/>
 						<circle id="circle_l" cx="170" cy="30" r="0" fill="#5fbadd" stroke-width="0"/>
-
 						</g>
 
 						<line id="connecting_line" x1="-56" y1="-130" x2="-56" y2="-130" opacity="1" stroke="#00285F" stroke-width="8" stroke-linecap="round" stroke-dasharray="30, 25"/>						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8"/>								
@@ -102,20 +100,23 @@
 						<line id="audio_line_right_5" x1="254" y1="-130" x2="254" y2="-130" opacity="0" stroke="#00285F" stroke-width="4" stroke-linecap="round" stroke="black" stroke-width="20"/>
 
 						<circle id="pma_app_drop" cx="203" cy="-130" r="0" fill="#fff" stroke-width="3" stroke="#00285F"/>
-						<circle id="pma_drop" cx="203" cy="-130" r="0" fill="#00a9df" stroke-width="3" stroke="#fff"/>						
+						<circle id="pma_drop" cx="203" cy="-130" r="0" fill="#00a9df" stroke-width="3" stroke="#fff"/>		
+						<line id="connect_line" x1="0" y1="-130" x2="0" y2="-130" opacity="1" stroke="#00285F" stroke-width="8"/>	
+						<line id="trans_vert_line" x1="200" y1="-130" x2="200" y2="-130" opacity="0" stroke="#fff" stroke-width="4"/>	
+						<line id="trans_horiz_line" x1="180" y1="-130" x2="180" y2="-130" opacity="0" stroke="#fff" stroke-width="4"/>						
 						
 						<foreignobject id="translate_area" x="0" y="-70" width="100%" height="250" opacity="0">
 							<body xmlns="http://www.w3.org/1999/xhtml">
 								<div class="trans_left_box">
-									<div id="english_left" style="background-color:#e1e2e3; height:20px; width: 50px; float:right; font-size: 60%; border: 2px solid #fff; color:#87888a; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">English</p></div>
+									<div id="english_left" style="background-color:#e1e2e3; height:20px; width: 50px; float:right; font-size: 60%; border: 2px solid #fff; color:#87888a; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">ENGLISH</p></div>
 									<div id="trans_tl" class="trans_text" style="background-color:#e1e2e3; height:auto; border: 2px solid #fff; border-radius: 5px; font-size: 70%; color:#87888a; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px; margin-top: 16px;"></div>			
-									<div id="spanish_left" style="background-color:#89ba17; height:20px; width: 50px; float:right; font-size: 60%; border: 2px solid #fff; color:#ffffff; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none;"><p align="center">Spanish</p></div>
+									<div id="spanish_left" style="background-color:#89ba17; height:20px; width: 50px; float:right; font-size: 60%; border: 2px solid #fff; color:#ffffff; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none;"><p align="center">SPANISH</p></div>
 									<div id="trans_bl" class="trans_text" style="background-color:#89ba17; height:auto; border: 2px solid #fff; border-radius: 5px;font-size: 70%; padding: 10px; color:#fff; margin-top: 16px;"></div>
 								</div>
 								<div class="trans_right_box">	
-									<div id="spanish_right" style="background-color:#e1e2e3; height:20px; width: 50px; float:left; font-size: 60%; border: 2px solid #fff; color:#87888a; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">Spanish</p></div>
+									<div id="spanish_right" style="background-color:#e1e2e3; height:20px; width: 50px; float:left; font-size: 60%; border: 2px solid #fff; color:#87888a; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">SPANISH</p></div>
 									<div id="trans_tr" class="trans_text" style="background-color:#e1e2e3; height:auto; border: 2px solid #fff; border-radius: 5px; font-size: 70%; color:#87888a; padding: 10px; margin-top: 16px;"></div>
-									<div id="english_right"  style="background-color:#00a9d4; height:20px; width: 50px; float:left; font-size: 60%; border: 2px solid #fff; color:#ffffff; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">English</p></div>
+									<div id="english_right"  style="background-color:#00a9d4; height:20px; width: 50px; float:left; font-size: 60%; border: 2px solid #fff; color:#ffffff; padding: 4px; border-top-left-radius: 7px;border-top-right-radius: 7px; border-bottom-style: none"><p align="center">ENGLISH</p></div>
 									<div id="trans_br" class="trans_text" style="background-color:#00a9d4; height:auto; border: 2px solid #fff; border-radius: 5px; font-size: 70%; color:#ffffff; padding: 10px; margin-top: 16px;"></div>
 								</div>
 							</body>
