@@ -58,6 +58,8 @@ function pma_connecting() {
 
 function translate_connecting() {
 	
+	$("#orange_logo").velocity({ opacity: 1 }, 0);
+	
 	$("#user1").attr('xlink:href',"img/K1.png");
 	$("#user2").attr('xlink:href',"img/J1.png");
 	
