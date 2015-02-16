@@ -1,4 +1,5 @@
 function connecting_line(){
+	
 	function connecting_line_animate(){
 		$("#connecting_line")
 			.velocity({ x2: 400 }, {duration: 1500})
@@ -21,6 +22,13 @@ function trans_connected(){
 }
 
 function pma_connecting() {
+	
+	$("#user1").attr('xlink:href',"img/M1.png");
+	$("#user2").attr('xlink:href',"img/T1.png");
+	
+	$("#user1").velocity({ opacity: 1 }, 0);
+	$("#user2").velocity({ opacity: 1 }, 0);
+	
 	connecting_line();
 	$("#pma_tablet").velocity({ opacity: 1 }, { duration: 0});
 }
@@ -82,6 +90,7 @@ function pma_share(){
 		//$("#pma_app_record").velocity({opacity:0}, 0);
 		$("#envelope").velocity({ opacity: 1 }, 0);
 		$("#envelope").velocity({ x: -50 }, 2000, function(){
+			$("#user1").attr('xlink:href',"img/M2.png");
 			$("#pma_left_line").velocity({ opacity: 1 }, 0);
 			$("#pma_left_line").velocity({ x2: 49 }, 1750);
 
@@ -149,6 +158,7 @@ function pma_connected() {
 		$("#connecting_line").velocity("stop");
 		//$("#connect_line_border").velocity({ x2: 400 }, 1000);
 		$("#connect_line").velocity({ x2: 400 }, 1000, function(){
+			$("#user2").attr('xlink:href',"img/T3.png");
 			$("#circle_share").velocity({ r: 3 }, { queue: false, delay: 0, duration: 250 });
 			$("#circle_share").velocity({ r: 1.5 }, { queue: false, delay: 250, duration: 250 });
 			$("#circle_announce").velocity({ r: 3 }, { queue: false, delay: 500, duration: 250 });
@@ -179,6 +189,7 @@ function pma_push(){
 		//$("#folder_pma").velocity("callout.bounce", 1000);
 		$("#pma_right_line").velocity({ x2: 400 }, 1000, function(){
 			$("#pma_tablet").attr('xlink:href',"img/tablet_pma_logo.svg");
+			$("#user2").attr('xlink:href',"img/T2.png");
 			//$("#circle_announce").velocity({ r: 3 }, { queue: false, duration: 1000 });
 		});
 	});
