@@ -149,13 +149,17 @@ function converge(){
 
 	$("#circle_e").velocity("stop", true);
 	$("#circle_k").velocity("stop", true);
+	$("#circle_i").velocity("stop", true);
+	$("#circle_l").velocity("stop", true);
+	$("#circle_j").velocity("stop", true);
+	$("#circle_g").velocity("stop", true);
 	
 	$("#circle_g").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 	$("#circle_h").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
-	$("#circle_i").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	$("#circle_i").velocity({ translateY: -10 }, { queue: false, duration: 2000 });
 	$("#circle_j").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
 	$("#circle_k").velocity({ translateY: -25 }, { queue: false, duration: 2000 });
-	$("#circle_l").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
+	$("#circle_l").velocity({ translateY: -40 }, { queue: false, duration: 2000 });
 	
 	$("#circle_e")
 	.velocity({ r: 40 }, { queue: false, duration: 2000 })
@@ -164,6 +168,21 @@ function converge(){
 	$("#circle_k")
 	.velocity({ r: 40 }, { queue: false, duration: 2000 })
 	.velocity({ translateY: -50 }, { queue: false, duration: 2000 });
+	
+	$("#circle_l")
+	.velocity({ r: 50 }, { queue: false, duration: 2000 })
+	.velocity({ translateX: -30 }, { queue: false, duration: 2000 });
+	
+	$("#circle_g")
+	.velocity({ r: 50 }, { queue: false, duration: 2000 });
+	
+	$("#circle_i")
+	.velocity({ r: 70 }, { queue: false, duration: 2000 });
+	
+	$("#circle_j")
+	.velocity({ r: 60 }, { queue: false, duration: 2000 });
+	//.velocity({ translateX: 20 }, { queue: false, duration: 2000 });
+	
 	
 	$("#circle_a").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_b").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
