@@ -311,6 +311,100 @@ function pma_record(){
 		animate_pma_record_traffic();
 	});
 
+	$("#record_line_left_1").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_left_2").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_left_3").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_left_4").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_left_5").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_right_1").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_right_2").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_right_3").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_right_4").velocity({opacity:1}, { duration: 0 });
+	$("#record_line_right_5").velocity({opacity:1}, { duration: 0 });
+			
+	function rec_al1(){
+	$("#record_line_left_1")
+	.velocity({y2:-145}, { duration: 1000, loop:2})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_al2(){
+	$("#record_line_left_2")
+	.velocity({y2:-150}, { duration: 2000, loop:1})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_al3(){
+	$("#record_line_left_3")
+	.velocity({y2:-155}, { duration: 1000, loop:2})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_al4(){
+	$("#record_line_left_4")
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_al5(){
+	$("#record_line_left_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_ar1(){
+	$("#record_line_right_1")
+	.velocity({y2:-145}, { duration: 1000, loop:2})
+	.velocity({translateX:-140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_ar2(){
+	$("#record_line_right_2")
+	.velocity({y2:-150}, { duration: 2000, loop:1})
+	.velocity({translateX:-140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_ar3(){
+	$("#record_line_right_3")
+	.velocity({y2:-155}, { duration: 1000, loop:2})
+	.velocity({translateX:-140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_ar4(){
+	$("#record_line_right_4")
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:-140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function rec_ar5(){
+	$("#record_line_right_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:-140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	rec_al1(); rec_al2(); rec_al3(); rec_al4(); rec_al5(); rec_ar1(); rec_ar2(); rec_ar3(); rec_ar4(); rec_ar5();
+	
+	animate_rec_al1 = setInterval(rec_al1, 4030);
+	animate_rec_al2 = setInterval(rec_al2, 4030);
+	animate_rec_al3 = setInterval(rec_al3, 4030);
+	animate_rec_al4 = setInterval(rec_al4, 4030);
+	animate_rec_al5 = setInterval(rec_al5, 4030);
+	animate_rec_ar1 = setInterval(rec_ar1, 4030);
+	animate_rec_ar2 = setInterval(rec_ar2, 4030);
+	animate_rec_ar3 = setInterval(rec_ar3, 4030);
+	animate_rec_ar4 = setInterval(rec_ar4, 4030);
+	animate_rec_ar5 = setInterval(rec_ar5, 4030);
+	
 }
 
 function pma_play(){
@@ -325,69 +419,6 @@ function pma_play(){
 	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000, function(){
 		animate_pma_announce_traffic();
 		
-	});
-	
-	
-}
-
-var announce_traffic_repeat;
-
-function animate_pma_announce_traffic(){
-	
-	$("#pma_announce_traffic").velocity({opacity:1}, { duration: 0 });
-	
-	function announce_traffic_animate(){
-		$("#pma_announce_traffic")
-		.velocity({ cy: -130 }, { duration: 1300 })
-		.velocity({ cy: -40 }, { duration: 0 });		
-	}
-	announce_traffic_animate();
-	
-	announce_traffic_repeat = setInterval(function () {
-		announce_traffic_animate();
-	}, 1300);
-}
-
-
-
-function pma_announce_stop(){
-	
-	//$("#pma_announce_traffic").velocity("stop");
-	
-	clearInterval(announce_traffic_repeat);
-	
-	/* $("#audio_line_left_1").velocity("stop");
-	$("#audio_line_left_2").velocity("stop");
-	$("#audio_line_left_3").velocity("stop");
-	$("#audio_line_left_4").velocity("stop");
-	$("#audio_line_left_5").velocity("stop");
-	$("#audio_line_right_1").velocity("stop");
-	$("#audio_line_right_2").velocity("stop");
-	$("#audio_line_right_3").velocity("stop");
-	$("#audio_line_right_4").velocity("stop");
-	$("#audio_line_right_5").velocity("stop"); */
-}
-
-function pma_record_stop(){
-	
-	clearInterval(record_traffic_repeat);
-	
-}
-
-function pma_announce(){
-
-	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
-	$("#circle_record").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
-	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
-	$("#circle_announce").velocity({ r: 3 }, { duration: 500, easing:"spring" });
-
-	$("#pma_app_share").velocity("transition.fadeOut", 1000);
-	$("#pma_app_play").velocity("transition.fadeOut", 1000);
-	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
-	$("#pma_app_announce").velocity("transition.slideUpBigIn", 1000, function(){
-		
-	animate_pma_announce_traffic();
-	
 	$("#audio_line_left_1").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_2").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_3").velocity({opacity:1}, { duration: 0 });
@@ -398,18 +429,7 @@ function pma_announce(){
 	$("#audio_line_right_3").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_4").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_right_5").velocity({opacity:1}, { duration: 0 });
-	
-	/*
-	$("#audio_line_left_1").velocity({y2:-160}, { duration: 500, loop:true, queue: false});
-	$("#audio_line_left_2").velocity({y2:-150}, { duration: 900, loop:true });
-	$("#audio_line_left_3").velocity({y2:-155}, { duration: 200, loop:true });
-	$("#audio_line_left_4").velocity({y2:-150}, { duration: 400, loop:true });
-	$("#audio_line_right_1").velocity({y2:-160}, { duration: 500, loop:true });
-	$("#audio_line_right_2").velocity({y2:-150}, { duration: 900, loop:true });
-	$("#audio_line_right_3").velocity({y2:-155}, { duration: 200, loop:true });
-	$("#audio_line_right_4").velocity({y2:-150}, { duration: 400, loop:true }); */
-	
-		
+			
 	function al1(){
 	$("#audio_line_left_1")
 	.velocity({y2:-145}, { duration: 1000, loop:2})
@@ -482,25 +502,205 @@ function pma_announce(){
 	
 	al1(); al2(); al3(); al4(); al5(); ar1(); ar2(); ar3(); ar4(); ar5();
 	
-	setInterval(al1, 4030);
-	setInterval(al2, 4030);
-	setInterval(al3, 4030);
-	setInterval(al4, 4030);
-	setInterval(al5, 4030);
-	setInterval(ar1, 4030);
-	setInterval(ar2, 4030);
-	setInterval(ar3, 4030);
-	setInterval(ar4, 4030);
-	setInterval(ar5, 4030);
+	animate_play_al1 = setInterval(al1, 4030);
+	animate_play_al2 = setInterval(al2, 4030);
+	animate_play_al3 = setInterval(al3, 4030);
+	animate_play_al4 = setInterval(al4, 4030);
+	animate_play_al5 = setInterval(al5, 4030);
+	animate_play_ar1 = setInterval(ar1, 4030);
+	animate_play_ar2 = setInterval(ar2, 4030);
+	animate_play_ar3 = setInterval(ar3, 4030);
+	animate_play_ar4 = setInterval(ar4, 4030);
+	animate_play_ar5 = setInterval(ar5, 4030);
+		
+	});
 	
-	/* $("#audio_line_left_2").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
-	$("#audio_line_left_3").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
-	$("#audio_line_left_4").velocity({translateX:-260}, { duration: 2000, queue: false, loop:true});
 	
-	$("#audio_line_right_1").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false });
-	$("#audio_line_right_2").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false });
-	$("#audio_line_right_3").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false });
-	$("#audio_line_right_4").velocity({translateX:260}, { delay: 500, duration: 2000, queue: false }); */
+}
+
+var announce_traffic_repeat;
+
+function animate_pma_announce_traffic(){
+	
+	$("#pma_announce_traffic").velocity({opacity:1}, { duration: 0 });
+	
+	function announce_traffic_animate(){
+		$("#pma_announce_traffic")
+		.velocity({ cy: -130 }, { duration: 1300 })
+		.velocity({ cy: -40 }, { duration: 0 });		
+	}
+	announce_traffic_animate();
+	
+	announce_traffic_repeat = setInterval(function () {
+		announce_traffic_animate();
+	}, 1300);
+}
+
+
+
+function pma_announce_stop(){
+	
+	clearInterval(announce_traffic_repeat);
+	
+	clearInterval(animate_al1);
+	clearInterval(animate_al2);
+	clearInterval(animate_al3);
+	clearInterval(animate_al4);
+	clearInterval(animate_al5);
+	
+	clearInterval(animate_ar1);
+	clearInterval(animate_ar2);
+	clearInterval(animate_ar3);
+	clearInterval(animate_ar4);
+	clearInterval(animate_ar5);
+	
+}
+
+function pma_play_stop(){
+	
+	//borrowed this traffic line from announce
+	clearInterval(announce_traffic_repeat);
+	
+	clearInterval(animate_play_al1);
+	clearInterval(animate_play_al2);
+	clearInterval(animate_play_al3);
+	clearInterval(animate_play_al4);
+	clearInterval(animate_play_al5);
+	
+	clearInterval(animate_play_ar1);
+	clearInterval(animate_play_ar2);
+	clearInterval(animate_play_ar3);
+	clearInterval(animate_play_ar4);
+	clearInterval(animate_play_ar5);
+	
+}
+
+function pma_record_stop(){
+	
+	clearInterval(record_traffic_repeat);
+	
+	clearInterval(animate_rec_al1);
+	clearInterval(animate_rec_al2);
+	clearInterval(animate_rec_al3);
+	clearInterval(animate_rec_al4);
+	clearInterval(animate_rec_al5);
+	
+	clearInterval(animate_rec_ar1);
+	clearInterval(animate_rec_ar2);
+	clearInterval(animate_rec_ar3);
+	clearInterval(animate_rec_ar4);
+	clearInterval(animate_rec_ar5);
+	
+}
+
+function pma_announce(){
+
+	$("#circle_play").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_record").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
+	$("#circle_announce").velocity({ r: 3 }, { duration: 500, easing:"spring" });
+
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_play").velocity("transition.fadeOut", 1000);
+	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
+	$("#pma_app_announce").velocity("transition.slideUpBigIn", 1000, function(){
+		
+	animate_pma_announce_traffic();
+	
+	$("#audio_line_left_1").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_left_2").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_left_3").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_left_4").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_left_5").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_1").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_2").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_3").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_4").velocity({opacity:1}, { duration: 0 });
+	$("#audio_line_right_5").velocity({opacity:1}, { duration: 0 });
+			
+	function al1(){
+	$("#audio_line_left_1")
+	.velocity({y2:-145}, { duration: 1000, loop:2})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function al2(){
+	$("#audio_line_left_2")
+	.velocity({y2:-150}, { duration: 2000, loop:1})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function al3(){
+	$("#audio_line_left_3")
+	.velocity({y2:-155}, { duration: 1000, loop:2})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function al4(){
+	$("#audio_line_left_4")
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function al5(){
+	$("#audio_line_left_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:-144}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function ar1(){
+	$("#audio_line_right_1")
+	.velocity({y2:-145}, { duration: 1000, loop:2})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function ar2(){
+	$("#audio_line_right_2")
+	.velocity({y2:-150}, { duration: 2000, loop:1})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function ar3(){
+	$("#audio_line_right_3")
+	.velocity({y2:-155}, { duration: 1000, loop:2})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function ar4(){
+	$("#audio_line_right_4")
+	.velocity({y2:-150}, { duration: 1000, loop:2})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	function ar5(){
+	$("#audio_line_right_5")
+	.velocity({y2:-145}, { duration: 2000, loop:1})
+	.velocity({translateX:140}, { duration: 4000, queue: false})
+	.velocity({translateX:0}, { delay: 4000, duration: 0, queue: false});
+	}
+	
+	al1(); al2(); al3(); al4(); al5(); ar1(); ar2(); ar3(); ar4(); ar5();
+	
+	animate_al1 = setInterval(al1, 4030);
+	animate_al2 = setInterval(al2, 4030);
+	animate_al3 = setInterval(al3, 4030);
+	animate_al4 = setInterval(al4, 4030);
+	animate_al5 = setInterval(al5, 4030);
+	animate_ar1 = setInterval(ar1, 4030);
+	animate_ar2 = setInterval(ar2, 4030);
+	animate_ar3 = setInterval(ar3, 4030);
+	animate_ar4 = setInterval(ar4, 4030);
+	animate_ar5 = setInterval(ar5, 4030);
+	
 	});
 }
 
