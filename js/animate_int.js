@@ -282,6 +282,22 @@ function pma_push(){
 	});
 }
 
+function animate_pma_record_traffic(){
+	
+	$("#pma_record_traffic").velocity({opacity:1}, { duration: 0 });
+	
+	function record_traffic_animate(){
+		$("#pma_record_traffic")
+		.velocity({ cy: -40 }, { duration: 1300 })
+		.velocity({ cy: -130 }, { duration: 0 });		
+	}
+	record_traffic_animate();
+	
+	record_traffic_repeat = setInterval(function () {
+		record_traffic_animate();
+	}, 1300);
+}
+
 function pma_record(){
 	$("#circle_share").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
 	$("#circle_announce").velocity({ r: 1.5 }, { duration: 500, easing:"spring" });
@@ -291,7 +307,9 @@ function pma_record(){
 	$("#pma_app_share").velocity("transition.fadeOut", 1000);
 	$("#pma_app_play").velocity("transition.fadeOut", 1000);
 	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
-	$("#pma_app_record").velocity("transition.slideUpBigIn", 1000);
+	$("#pma_app_record").velocity("transition.slideUpBigIn", 1000, function(){
+		animate_pma_record_traffic();
+	});
 
 }
 
@@ -304,10 +322,40 @@ function pma_play(){
 	$("#pma_app_share").velocity("transition.fadeOut", 1000);
 	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
 	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
-	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000);
+	$("#pma_app_play").velocity("transition.slideUpBigIn", 1000, function(){
+		animate_pma_announce_traffic();
+		
+	});
+	
+	
 }
 
+var announce_traffic_repeat;
+
+function animate_pma_announce_traffic(){
+	
+	$("#pma_announce_traffic").velocity({opacity:1}, { duration: 0 });
+	
+	function announce_traffic_animate(){
+		$("#pma_announce_traffic")
+		.velocity({ cy: -130 }, { duration: 1300 })
+		.velocity({ cy: -40 }, { duration: 0 });		
+	}
+	announce_traffic_animate();
+	
+	announce_traffic_repeat = setInterval(function () {
+		announce_traffic_animate();
+	}, 1300);
+}
+
+
+
 function pma_announce_stop(){
+	
+	//$("#pma_announce_traffic").velocity("stop");
+	
+	clearInterval(announce_traffic_repeat);
+	
 	/* $("#audio_line_left_1").velocity("stop");
 	$("#audio_line_left_2").velocity("stop");
 	$("#audio_line_left_3").velocity("stop");
@@ -320,22 +368,11 @@ function pma_announce_stop(){
 	$("#audio_line_right_5").velocity("stop"); */
 }
 
-function animate_pma_announce_traffic(){
+function pma_record_stop(){
 	
-	$("#pma_announce_traffic").velocity({opacity:1}, { duration: 0 });
+	clearInterval(record_traffic_repeat);
 	
-	function announce_traffic_animate(){
-		$("#pma_announce_traffic")
-		.velocity({ cy: -130 }, { duration: 1500 })
-		.velocity({ cy: -40 }, { duration: 0 });		
-	}
-	announce_traffic_animate();
-	
-	setInterval(function () {
-		announce_traffic_animate();
-	}, 1500);
 }
-
 
 function pma_announce(){
 
