@@ -711,6 +711,7 @@ function translate_app() {
 
 function enter_text_tl(text)
 {
+	document.getElementById("english_left").className = "trans_after_text_top_left";
 	document.getElementById("trans_tl").innerHTML = document.getElementById("textbox").value;
 }
 
@@ -723,6 +724,7 @@ function enter_text_bl(text)
 
 function enter_text_tr(text)
 {
+	document.getElementById("spanish_right").className = "trans_after_text_top_right";
 	document.getElementById("trans_tr").innerHTML = document.getElementById("textbox").value;
 }
 
