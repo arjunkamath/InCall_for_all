@@ -95,11 +95,11 @@ div#app_area_wrapper {
 }
 
 
-.trans_after_text_right:empty {
+.trans_after_text_bottom_right:empty {
    display: none;
 }
 
-.trans_after_text_right{
+.trans_after_text_bottom_right{
 	background-color:#00a9d4; 
 	height:20px; 
 	width: 50px; 
@@ -126,9 +126,27 @@ div#app_area_wrapper {
 	float:right; 
 	font-size: 60%; 
 	border: 2px solid #fff; 
-	color:#000000; 
+	color:#ffffff; 
 	padding: 4px; 
 	border-radius: 7px;
-
 	font-family:Verdana;
+	clear:both;
+}
+
+.trans_before_text_bottom_rightt:empty {
+   display: none;
+}
+
+.trans_before_text_bottom_right{
+	background-color:#00a9d4; 
+	height:20px; 
+	width: 50px;
+	float:left; 
+	font-size: 60%; 
+	border: 2px solid #fff; 
+	color:#ffffff; 
+	padding: 4px; 
+	border-radius: 7px;
+	font-family:Verdana;
+	clear:both;
 }

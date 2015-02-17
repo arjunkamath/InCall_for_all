@@ -728,6 +728,7 @@ function enter_text_tr(text)
 
 function enter_text_br(text)
 {
+	document.getElementById("english_right").className = "trans_after_text_bottom_right";
 	document.getElementById("trans_br").innerHTML = document.getElementById("textbox").value;
 }
 
