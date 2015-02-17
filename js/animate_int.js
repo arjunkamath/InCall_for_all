@@ -12,8 +12,6 @@ function connecting_line(){
 	}, 1500);
 }
 
-//comment
-
 function trans_connected(){
 	$("#connecting_line").velocity("transition.fadeOut", function(){
 		$("#connecting_line").velocity("stop");
@@ -86,20 +84,20 @@ function telco_cloud_appear(){
 }
 
 function it_cloud_appear(){
-	$("#circle_g").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_g").velocity({ r: 35 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_h").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_i").velocity({ r: 50 }, { duration: 2000, easing: "easeOutCirc" });
-	$("#circle_j").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
+	$("#circle_j").velocity({ r: 35 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_k").velocity({ r: 25 }, { duration: 2000, easing: "easeOutCirc" });
 	$("#circle_l").velocity({ r: 30 }, { duration: 2000, easing: "easeOutCirc" });
 
 	$("#it_text").velocity({ opacity: 1 }, { duration: 1000});	
 
 	//animate IT cloud
-	$("#circle_g").velocity({ r: 35 }, { delay: 3000, duration: 8000, loop:true});
+	$("#circle_g").velocity({ r: 45 }, { delay: 3000, duration: 8000, loop:true});
 	$("#circle_h").velocity({ r: 45 }, { delay: 5000, duration: 6500, loop:true});
 	$("#circle_i").velocity({ r: 45 }, { delay: 1000, duration: 4500, loop:true});
-	$("#circle_j").velocity({ r: 35 }, { delay: 1000, duration: 6500, loop:true});
+	$("#circle_j").velocity({ r: 40 }, { delay: 1000, duration: 6500, loop:true});
 	$("#circle_k").velocity({ r: 30 }, { delay: 1000, duration: 7000, loop:true});
 	$("#circle_l").velocity({ r: 25 }, { delay: 1000, duration: 6500, loop:true});
 }
@@ -158,7 +156,7 @@ function converge(){
 	$("#circle_g").velocity({ translateY: -40 }, { queue: false, duration: 2000 });
 	$("#circle_h").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 	$("#circle_i").velocity({ translateY: -10 }, { queue: false, duration: 2000 });
-	$("#circle_j").velocity({ translateY: -30 }, { queue: false, duration: 2000 });
+	$("#circle_j").velocity({ translateY: -25 }, { queue: false, duration: 2000 });
 	//$("#circle_k").velocity({ translateY: -25 }, { queue: false, duration: 2000 });
 	$("#circle_l").velocity({ translateY: -50 }, { queue: false, duration: 2000 });
 	
@@ -175,7 +173,7 @@ function converge(){
 	.velocity({ translateX: -30 }, { queue: false, duration: 2000 });
 	
 	$("#circle_g")
-	.velocity({ r: 50 }, { queue: false, duration: 2000 })
+	.velocity({ r: 45 }, { queue: false, duration: 2000 })
 	.velocity({ translateX: 10 }, { queue: false, duration: 2000 });
 	
 	$("#circle_i")
@@ -185,8 +183,13 @@ function converge(){
 	.velocity({ r: 50 }, { queue: false, duration: 2000 });
 	
 	$("#circle_j")
-	.velocity({ r: 60 }, { queue: false, duration: 2000 });
-	//.velocity({ translateX: 20 }, { queue: false, duration: 2000 });
+	.velocity({ r: 40 }, { queue: false, duration: 2000 });
+	
+	$("#circle_g").velocity({ r: 45 }, { duration: 5500, loop:true});
+	$("#circle_j").velocity({ r: 45 }, { duration: 6500, loop:true});
+	$("#circle_k").velocity({ r: 45 }, { duration: 7000, loop:true});
+	//$("#circle_i").velocity({ translateY: 10 }, { duration: 6000, loop:true});
+	//$("#circle_l").velocity({ r: 65 }, { duration: 6500, loop:true});
 	
 	
 	$("#circle_a").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
@@ -195,12 +198,44 @@ function converge(){
 	$("#circle_d").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_e").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_f").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
-	/* $("#circle_g").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_g").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_h").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_i").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_j").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	$("#circle_k").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
-	$("#circle_l").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 }); */
+	$("#circle_l").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	
+	//cloud_colour_change();
+	
+}
+
+function cloud_colour_change(){
+	
+	$("#circle_a").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_b").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_c").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_d").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_e").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_f").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_g").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_h").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_i").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_j").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_k").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 });
+	$("#circle_l").velocity({ fill: "#8d92b4" }, { queue: false, duration: 4000 }); 
+	
+	$("#circle_a").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_b").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_c").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_d").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_e").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_f").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_g").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_h").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_i").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_j").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_k").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
+	$("#circle_l").velocity({ fill: "#baddee" }, { queue: false, duration: 2000 });
 	
 }
 
@@ -283,10 +318,24 @@ function pma_announce_stop(){
 	$("#audio_line_right_3").velocity("stop");
 	$("#audio_line_right_4").velocity("stop");
 	$("#audio_line_right_5").velocity("stop"); */
-
-
-
 }
+
+function animate_pma_announce_traffic(){
+	
+	$("#pma_announce_traffic").velocity({opacity:1}, { duration: 0 });
+	
+	function announce_traffic_animate(){
+		$("#pma_announce_traffic")
+		.velocity({ cy: -130 }, { duration: 1500 })
+		.velocity({ cy: -40 }, { duration: 0 });		
+	}
+	announce_traffic_animate();
+	
+	setInterval(function () {
+		announce_traffic_animate();
+	}, 1500);
+}
+
 
 function pma_announce(){
 
@@ -299,6 +348,8 @@ function pma_announce(){
 	$("#pma_app_play").velocity("transition.fadeOut", 1000);
 	$("#pma_app_record").velocity("transition.fadeOut", 1000);	
 	$("#pma_app_announce").velocity("transition.slideUpBigIn", 1000, function(){
+		
+	animate_pma_announce_traffic();
 	
 	$("#audio_line_left_1").velocity({opacity:1}, { duration: 0 });
 	$("#audio_line_left_2").velocity({opacity:1}, { duration: 0 });
