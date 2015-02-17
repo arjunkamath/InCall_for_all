@@ -716,6 +716,7 @@ function enter_text_tl(text)
 
 function enter_text_bl(text)
 {
+	document.getElementById("spanish_left").className = "trans_after_text_bottom_left";
 	document.getElementById("trans_bl").innerHTML = document.getElementById("textbox").value;
 	translation_line_draw_left();
 }
