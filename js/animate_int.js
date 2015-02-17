@@ -21,8 +21,6 @@ function trans_connected(){
 			$("#user1").attr('xlink:href',"img/K2.png");
 			$("#user2").attr('xlink:href',"img/J2.png");
 		});
-		
-		
 	});
 }
 
