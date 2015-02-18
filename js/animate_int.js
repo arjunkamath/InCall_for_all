@@ -750,6 +750,7 @@ function right_press_9() {
 	enter_text_br(text);
 }
 
+var first_left = true;
 
 function enter_text_tl(text)
 {
@@ -757,12 +758,43 @@ function enter_text_tl(text)
 	document.getElementById("spanish_left").className = "trans_after_text_bottom_left";
 	
 	document.getElementById("trans_tl").innerHTML = " ";
+	if(!first_left){
+		document.getElementById("trans_bl").innerHTML = " ";
+		$('#trans_bl').velocity({ height: "0px" }, 0);
+	}
+	first_left = false;
 	
-
-	$('#trans_tl').velocity({ height: ["60px","0px"]}, 2000, function(){
+	var text_string = text.toString();
+	var length_top = text_string.length;
+	var lines = Math.ceil(length_top/36);
+	var top_length = 45 + (lines*10);
+	var bottom_length = 38 + (lines*10);
+	
+	var top_height = top_length + "px"
+	var bottom_height = bottom_length + "px"
+	
+	console.log(text);
+	console.log(text_string);
+	console.log(length_top);
+	console.log(lines);
+	console.log(top_length);
+	//console.log(bottom_length);
+	console.log(top_height);
+	//console.log(bottom_height);
+	
+	
+	//$('#trans_tl').velocity("transition.fadeIn", 200);
+	$('#trans_tl').velocity({ height: [top_height,"2px"]}, 2000, function(){
 		document.getElementById("trans_tl").innerHTML = text;
 		document.getElementById("trans_bl").innerHTML = " ";
-		$('#trans_bl').velocity({ height: ["60px","0px"] }, 2000, function(){
+		
+		var text_string = text.toString();
+		var length_top = text_string.length;
+		var lines = Math.ceil(length_top/36);
+		var bottom_length = 38 + (lines*10);
+		var bottom_height = bottom_length + "px"
+		
+		$('#trans_bl').velocity({ height: [bottom_height,"2px"]}, 2000, function(){
 			document.getElementById("trans_bl").innerHTML = text;
 		});
 		
