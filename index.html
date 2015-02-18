@@ -42,7 +42,7 @@
 	<!-- <button class="btn btn-default" onclick="translate_app()">Translate App</button> -->
 	<button class="btn btn-default" onclick="left_press_1()">Left presses 1</button>
 	<button class="btn btn-default" onclick="left_press_9()">Left presses 9</button>
-	<button class="btn btn-default" onclick="right_press_1()">Right presses 2</button>
+	<button class="btn btn-default" onclick="right_press_2()">Right presses 2</button>
 	<button class="btn btn-default" onclick="right_press_9()">Right presses 9</button>
 	<!-- <button class="btn btn-default" onclick="enter_text_tl()">Translate TL</button>
 	<button class="btn btn-default" onclick="enter_text_bl()">Translate BL</button>
@@ -129,21 +129,23 @@
 						<line id="trans_vert_line" x1="200" y1="-130" x2="200" y2="-130" opacity="0" stroke="#fff" stroke-width="4"/>	
 						<line id="trans_horiz_line" x1="180" y1="-130" x2="180" y2="-130" opacity="0" stroke="#fff" stroke-width="4"/>						
 						
+						<g id="translate_area_left_group">
 						<foreignobject id="translate_area_left" x="0" y="-70" width="50%" height="250" opacity="0">
 							<body xmlns="http://www.w3.org/1999/xhtml">
-								<div class="trans_left_box">
-									<div id="english_left" class="trans_before_text_top_left" ><p align="center">English</p></div>
+								<div id="trans_left_box_div" class="trans_left_box">
+									<div id="english_left" class="trans_before_text_top_left" ><p id="tl_lang" align="center"></p></div>
 									<div id="trans_tl" class="trans_text" style="background-color:#e1e2e3; height:auto; border: 2px solid #fff; font-size: 70%; color:#87888a; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px; margin-top: 18px; border-top-left-radius: 7px; border-bottom-left-radius: 7px;"></div>			
-									<div id="spanish_left" class="trans_before_text_bottom_left"><p align="center">Spanish</p></div>
+									<div id="spanish_left" class="trans_before_text_bottom_left"><p id="bl_lang" align="center"></p></div>
 									<div id="trans_bl" class="trans_text" style="background-color:#89ba17; height:auto; border: 2px solid #fff; font-size: 70%; color:#ffffff; padding: 10px;  margin-top: 0px; border-top-left-radius: 7px; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;"></div>
 								</div>
 						</foreignobject>
+						</g>
 						
 						<foreignobject id="translate_area_right" x="200" y="-70" width="50%" height="250" opacity="0">
 								<div class="trans_right_box">	
-									<div id="spanish_right" class="trans_before_text_top_right"><p align="center">Spanish</p></div>
+									<div id="spanish_right" class="trans_before_text_top_right"><p id="tr_lang" align="center"></p></div>
 									<div id="trans_tr" class="trans_text" style="background-color:#e1e2e3; height:auto; border: 2px solid #fff; font-size: 70%; color:#87888a; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px; margin-top: 18px; border-top-right-radius: 7px; border-bottom-right-radius: 7px;"></div>
-									<div id="english_right" class="trans_before_text_bottom_right"><p align="center">English</p></div>
+									<div id="english_right" class="trans_before_text_bottom_right"><p id="br_lang" align="center"></p></div>
 									<div id="trans_br" class="trans_text" style="background-color:#00a9d4; height:auto; border: 2px solid #fff; font-size: 70%; color:#ffffff; padding: 10px;  margin-top: 0px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px;"></div>
 								</div>
 							</body>

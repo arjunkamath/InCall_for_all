@@ -708,13 +708,20 @@ var trans_app_appeared = false;
 
 function left_press_1() {
 	if (!trans_app_appeared){
-		$("#trans_app").velocity("transition.slideUpBigIn", 1000);
-		trans_app_appeared = true;
+		$("#trans_app").velocity({ opacity: 1 }, 1000, function(){
+			trans_app_appeared = true;
+		});
 	}
 		
-	
-	$('#translate_area_left').velocity({ opacity: 1 }, 0);
-	
+	$('#translate_area_left')
+		.velocity({ opacity: 1 }, 10);
+		
+		$('#english_left').velocity({ height:"23px", width: "50px" },1000, function(){
+			document.getElementById("tl_lang").innerHTML = "English";
+		}); 
+		$('#spanish_left').velocity({ height:"23px", width: "50px" },1000, function(){
+			document.getElementById("bl_lang").innerHTML = "Spanish";
+		});
 }
 
 function left_press_9() {
@@ -723,14 +730,22 @@ function left_press_9() {
 	enter_text_bl(text);
 }
 
-function right_press_1() {
+function right_press_2() {
 	if (!trans_app_appeared){
-		$("#trans_app").velocity("transition.slideUpBigIn", 1000);
-		trans_app_appeared = true;
+		$("#trans_app").velocity({ opacity: 1 }, 1000, function(){
+			trans_app_appeared = true;
+		});
 	}
 	
-	$('#translate_area_right').velocity({ opacity: 1 }, 0);
-	
+	$('#translate_area_right')
+		.velocity({ opacity: 1 }, 10);
+		
+		$('#spanish_right').velocity({ height:"23px", width: "50px" },1000, function(){
+			document.getElementById("tr_lang").innerHTML = "Spanish";
+		}); 
+		$('#english_right').velocity({ height:"23px", width: "50px" },1000, function(){
+			document.getElementById("br_lang").innerHTML = "English";
+		});
 }
 
 function right_press_9() {
@@ -738,7 +753,6 @@ function right_press_9() {
 	enter_text_tr(text);
 	enter_text_br(text);
 }
-
 
 
 function enter_text_tl(text)
