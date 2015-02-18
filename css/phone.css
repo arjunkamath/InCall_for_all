@@ -48,13 +48,13 @@ div#app_area_wrapper {
 	border-radius: 25px;
 }
 
-.trans_left_box {
-	width:46%; 
+div.trans_left_box {
+	width:92%; 
 	float:left;
 }
 
 .trans_right_box {
-	width:46%; 
+	width:92%; 
 	float:right;
 }
 
@@ -165,6 +165,7 @@ div#app_area_wrapper {
 	color:#87888a; 
 	padding: 4px; 
 	border-radius: 7px;
+	/* opacity: 0.6; */
 }
 
 .trans_after_text_top_left{

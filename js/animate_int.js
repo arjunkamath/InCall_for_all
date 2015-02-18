@@ -704,34 +704,66 @@ function pma_announce(){
 	});
 }
 
-function translate_app() {
-	$('#translate_area').velocity({ opacity: 1 }, 0);
-	$("#trans_app").velocity("transition.slideUpBigIn", 1000);
+var trans_app_appeared = false;
+
+function left_press_1() {
+	if (!trans_app_appeared){
+		$("#trans_app").velocity("transition.slideUpBigIn", 1000);
+		trans_app_appeared = true;
+	}
+		
+	
+	$('#translate_area_left').velocity({ opacity: 1 }, 0);
+	
 }
+
+function left_press_9() {
+	var text = document.getElementById("textbox").value;
+	enter_text_tl(text);
+	enter_text_bl(text);
+}
+
+function right_press_1() {
+	if (!trans_app_appeared){
+		$("#trans_app").velocity("transition.slideUpBigIn", 1000);
+		trans_app_appeared = true;
+	}
+	
+	$('#translate_area_right').velocity({ opacity: 1 }, 0);
+	
+}
+
+function right_press_9() {
+	var text = document.getElementById("textbox").value;
+	enter_text_tr(text);
+	enter_text_br(text);
+}
+
+
 
 function enter_text_tl(text)
 {
 	document.getElementById("english_left").className = "trans_after_text_top_left";
-	document.getElementById("trans_tl").innerHTML = document.getElementById("textbox").value;
+	document.getElementById("trans_tl").innerHTML = text;
 }
 
 function enter_text_bl(text)
 {
 	document.getElementById("spanish_left").className = "trans_after_text_bottom_left";
-	document.getElementById("trans_bl").innerHTML = document.getElementById("textbox").value;
+	document.getElementById("trans_bl").innerHTML = text;
 	translation_line_draw_left();
 }
 
 function enter_text_tr(text)
 {
 	document.getElementById("spanish_right").className = "trans_after_text_top_right";
-	document.getElementById("trans_tr").innerHTML = document.getElementById("textbox").value;
+	document.getElementById("trans_tr").innerHTML = text;
 }
 
 function enter_text_br(text)
 {
 	document.getElementById("english_right").className = "trans_after_text_bottom_right";
-	document.getElementById("trans_br").innerHTML = document.getElementById("textbox").value;
+	document.getElementById("trans_br").innerHTML = text;
 }
 
 function disconnected() {
