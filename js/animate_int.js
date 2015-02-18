@@ -783,8 +783,8 @@ function enter_text_tl(text)
 	//console.log(bottom_height);
 	
 	
-	//$('#trans_tl').velocity("transition.fadeIn", 200);
-	$('#trans_tl').velocity({ height: [top_height,"2px"]}, 2000, function(){
+	$('#trans_tl').velocity({opacity: [ 1, "easeInSine", 0 ]});
+	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 2000, function(){
 		document.getElementById("trans_tl").innerHTML = text;
 		document.getElementById("trans_bl").innerHTML = " ";
 		
@@ -794,7 +794,7 @@ function enter_text_tl(text)
 		var bottom_length = 38 + (lines*10);
 		var bottom_height = bottom_length + "px"
 		
-		$('#trans_bl').velocity({ height: [bottom_height,"2px"]}, 2000, function(){
+		$('#trans_bl').velocity({ height: [bottom_height,"0px"]}, 2000, function(){
 			document.getElementById("trans_bl").innerHTML = text;
 		});
 		
