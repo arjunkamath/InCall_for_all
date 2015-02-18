@@ -756,14 +756,18 @@ function enter_text_tl(text)
 	document.getElementById("english_left").className = "trans_after_text_top_left";
 	document.getElementById("spanish_left").className = "trans_after_text_bottom_left";
 	
-	document.getElementById("trans_tl").innerHTML = text;
-	var top_height = $('#trans_tl').outerHeight() + "px";
+	document.getElementById("trans_tl").innerHTML = " ";
+	
 
 	$('#trans_tl').velocity({ height: ["60px","0px"]}, 2000, function(){
-		document.getElementById("trans_bl").innerHTML = text;
-		var bottom_height = $('#trans_bl').outerHeight() + "px";
-		$('#trans_bl').velocity({ height: ["60px","0px"] }, 2000);
+		document.getElementById("trans_tl").innerHTML = text;
+		document.getElementById("trans_bl").innerHTML = " ";
+		$('#trans_bl').velocity({ height: ["60px","0px"] }, 2000, function(){
+			document.getElementById("trans_bl").innerHTML = text;
+		});
 		
+		var top_height = $('#trans_tl').outerHeight() + "px";
+		var bottom_height = $('#trans_bl').outerHeight() + "px";
 		console.log(top_height);
 		console.log(bottom_height);
 	});
