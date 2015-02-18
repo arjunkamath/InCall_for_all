@@ -173,8 +173,9 @@ function converge(){
 	.velocity({ translateX: -30 }, { queue: false, duration: 2000 });
 	
 	$("#circle_g")
-	.velocity({ r: 45 }, { queue: false, duration: 2000 })
-	.velocity({ translateX: 10 }, { queue: false, duration: 2000 });
+	.velocity({ translateX: 10, r:45 }, { queue: false, duration: 1500 });
+	//.velocity({ r: 45 }, { duration: 2000 });
+
 	
 	$("#circle_i")
 	.velocity({ r: 70 }, { queue: false, duration: 2000 });
@@ -184,9 +185,11 @@ function converge(){
 	
 	$("#circle_j")
 	.velocity({ r: 40 }, { queue: false, duration: 2000 });
+
+	$("#circle_g").velocity("stop", {delay:1500, queue: false});
 	
-	$("#circle_g").velocity({ r: 45 }, { duration: 5500, loop:true});
-	$("#circle_j").velocity({ r: 45 }, { duration: 6500, loop:true});
+	$("#circle_g").velocity({ translateX: 15 }, { duration: 5500, loop:true});
+	$("#circle_j").velocity({ translateX: -15 }, { duration: 6500, loop:true});
 	$("#circle_k").velocity({ r: 45 }, { duration: 7000, loop:true});
 	//$("#circle_i").velocity({ translateY: 10 }, { duration: 6000, loop:true});
 	//$("#circle_l").velocity({ r: 65 }, { duration: 6500, loop:true});
@@ -783,7 +786,9 @@ function enter_text_tl(text)
 	//console.log(bottom_height);
 	
 	
-	$('#trans_tl').velocity({opacity: [ 1, "easeInSine", 0 ]});
+	//$('#trans_tl').velocity("transition.expandIn", 500);
+	//$('#trans_tl').velocity("transition.slideDownIn", 500);
+	$('#trans_tl').velocity("transition.perspectiveRightIn", 500);
 	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 2000, function(){
 		document.getElementById("trans_tl").innerHTML = text;
 		document.getElementById("trans_bl").innerHTML = " ";
@@ -794,6 +799,7 @@ function enter_text_tl(text)
 		var bottom_length = 38 + (lines*10);
 		var bottom_height = bottom_length + "px"
 		
+		$('#trans_bl').velocity("transition.perspectiveRightIn", 500);
 		$('#trans_bl').velocity({ height: [bottom_height,"0px"]}, 2000, function(){
 			document.getElementById("trans_bl").innerHTML = text;
 		});
