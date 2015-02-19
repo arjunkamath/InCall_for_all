@@ -869,6 +869,10 @@ function enter_text_tl(text)
 	//$('#trans_tl').velocity("transition.slideDownIn", 500);
 	//$('#trans_tl').velocity("transition.slideRightIn", 500);
 	//$('#trans_tl').velocity("transition.perspectiveRightIn", 500);
+	
+	
+	
+	//$('#trans_tl').animate({opacity: '1'},"fast");
 	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 1000, function(){
 		document.getElementById("trans_tl").innerHTML = text;
 		document.getElementById("trans_bl").innerHTML = " ";
