@@ -22,6 +22,85 @@ function trans_connected(){
 	});
 }
 
+function pma_disconnect(){
+	$("#connect_line").velocity("transition.fadeOut", 2000);
+	$("#user1").velocity({opacity:0.4}, 2000);
+	$("#user2").velocity({opacity:0.4}, 2000);
+	
+	$("#audio_line_left_1").velocity({opacity:0}, 0);
+	$("#audio_line_left_2").velocity({opacity:0}, 0);
+	$("#audio_line_left_3").velocity({opacity:0}, 0);
+	$("#audio_line_left_4").velocity({opacity:0}, 0);
+	$("#audio_line_left_5").velocity({opacity:0}, 0);
+	
+	$("#audio_line_right_1").velocity({opacity:0}, 0);
+	$("#audio_line_right_2").velocity({opacity:0}, 0);
+	$("#audio_line_right_3").velocity({opacity:0}, 0);
+	$("#audio_line_right_4").velocity({opacity:0}, 0);
+	$("#audio_line_right_5").velocity({opacity:0}, 0);
+	
+	$("#record_line_left_1").velocity({opacity:0}, 0);
+	$("#record_line_left_2").velocity({opacity:0}, 0);
+	$("#record_line_left_3").velocity({opacity:0}, 0);
+	$("#record_line_left_4").velocity({opacity:0}, 0);
+	$("#record_line_left_5").velocity({opacity:0}, 0);
+	
+	$("#record_line_right_1").velocity({opacity:0}, 0);
+	$("#record_line_right_2").velocity({opacity:0}, 0);
+	$("#record_line_right_3").velocity({opacity:0}, 0);
+	$("#record_line_right_4").velocity({opacity:0}, 0);
+	$("#record_line_right_5").velocity({opacity:0}, 0);
+	
+	$("#pma_app_share").velocity("transition.fadeOut", 1000);
+	$("#pma_app_play").velocity("transition.fadeOut", 1000);
+	$("#pma_app_announce").velocity("transition.fadeOut", 1000);
+	$("#pma_app_record").velocity("transition.fadeOut", 1000);
+	
+	$("#circle_share").velocity("transition.fadeOut", 1000);
+	$("#circle_announce").velocity("transition.fadeOut", 1000);
+	$("#circle_record").velocity("transition.fadeOut", 1000);
+	$("#circle_play").velocity("transition.fadeOut", 1000);
+	
+	$("#pma_announce_traffic").velocity("transition.fadeOut", 1000);
+	$("#pma_record_traffic").velocity("transition.fadeOut", 1000);
+	$("#pma_drop").velocity("transition.fadeOut", 1000);
+	
+	
+}
+
+function trans_disconnect(){
+	$("#connect_line").velocity("transition.fadeOut", 2000);
+	$("#user1").velocity({opacity:0.4}, 2000);
+	$("#user2").velocity({opacity:0.4}, 2000);
+	
+	$("#trans_app").velocity("transition.fadeOut", 1000);
+	
+	
+	$("#audio_line_left_1").velocity({opacity:0}, 0);
+	$("#audio_line_left_2").velocity({opacity:0}, 0);
+	$("#audio_line_left_3").velocity({opacity:0}, 0);
+	$("#audio_line_left_4").velocity({opacity:0}, 0);
+	$("#audio_line_left_5").velocity({opacity:0}, 0);
+	
+	$("#audio_line_right_1").velocity({opacity:0}, 0);
+	$("#audio_line_right_2").velocity({opacity:0}, 0);
+	$("#audio_line_right_3").velocity({opacity:0}, 0);
+	$("#audio_line_right_4").velocity({opacity:0}, 0);
+	$("#audio_line_right_5").velocity({opacity:0}, 0);
+	
+	$("#record_line_left_1").velocity({opacity:0}, 0);
+	$("#record_line_left_2").velocity({opacity:0}, 0);
+	$("#record_line_left_3").velocity({opacity:0}, 0);
+	$("#record_line_left_4").velocity({opacity:0}, 0);
+	$("#record_line_left_5").velocity({opacity:0}, 0);
+	
+	$("#record_line_right_1").velocity({opacity:0}, 0);
+	$("#record_line_right_2").velocity({opacity:0}, 0);
+	$("#record_line_right_3").velocity({opacity:0}, 0);
+	$("#record_line_right_4").velocity({opacity:0}, 0);
+	$("#record_line_right_5").velocity({opacity:0}, 0);
+}
+
 function translation_line_draw_left(){
 	
 	height = -10 + $('#trans_tl').height();
@@ -786,10 +865,8 @@ function enter_text_tl(text)
 	//console.log(bottom_length);
 	console.log(top_height);
 	//console.log(bottom_height);
-	
-	
 	//$('#trans_tl').velocity("transition.expandIn", 500);
-	$('#trans_tl').velocity("transition.slideDownIn", 500);
+	//$('#trans_tl').velocity("transition.slideDownIn", 500);
 	//$('#trans_tl').velocity("transition.slideRightIn", 500);
 	//$('#trans_tl').velocity("transition.perspectiveRightIn", 500);
 	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 1000, function(){
@@ -802,7 +879,7 @@ function enter_text_tl(text)
 		var bottom_length = 38 + (lines*10);
 		var bottom_height = bottom_length + "px"
 		
-		$('#trans_bl').velocity("transition.perspectiveRightIn", 500);
+		//$('#trans_bl').velocity("transition.perspectiveRightIn", 500);
 		$('#trans_bl').velocity({ height: [bottom_height,"0px"]}, 1000, function(){
 			document.getElementById("trans_bl").innerHTML = text;
 		});
@@ -812,8 +889,6 @@ function enter_text_tl(text)
 		console.log(top_height);
 		console.log(bottom_height);
 	});
-	
-	
 }
 
 function enter_text_bl(text)

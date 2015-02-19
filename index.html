@@ -31,6 +31,7 @@
 	<button class="btn btn-default" onclick="pma_play_stop()">PMA Play Stop</button>
 	<button class="btn btn-default" onclick="pma_record()">PMA Record</button>
 	<button class="btn btn-default" onclick="pma_record_stop()">PMA Record Stop</button>
+	<button class="btn btn-default" onclick="pma_disconnect()">PMA End Call</button>
 	
 	<br>
 	<h3>Translation</h3>
@@ -44,6 +45,7 @@
 	<button class="btn btn-default" onclick="left_press_9()">Left presses 9</button>
 	<button class="btn btn-default" onclick="right_press_2()">Right presses 2</button>
 	<button class="btn btn-default" onclick="right_press_9()">Right presses 9</button>
+	<button class="btn btn-default" onclick="trans_disconnect()">Translator End Call</button>
 	<!-- <button class="btn btn-default" onclick="enter_text_tl()">Translate TL</button>
 	<button class="btn btn-default" onclick="enter_text_bl()">Translate BL</button>
 	<button class="btn btn-default" onclick="enter_text_tr()">Translate TR</button>
@@ -138,10 +140,12 @@
 									<div id="spanish_left" class="trans_before_text_bottom_left"><p id="bl_lang" align="center"></p></div>
 									<div id="trans_bl" class="trans_text" style="background-color:#89ba17; height:0px; width:100%; border: 2px solid #fff; font-size: 70%; color:#ffffff; padding: 10px;  margin-top: 0px; border-top-left-radius: 7px; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; z-index: -1;"></div>
 								</div>
+							</body>
 						</foreignobject>
 						</g>
 						
 						<foreignobject id="translate_area_right" x="200" y="-70" width="50%" height="250" opacity="0">
+							<body xmlns="http://www.w3.org/1999/xhtml">
 								<div class="trans_right_box">	
 									<div id="spanish_right" class="trans_before_text_top_right"><p id="tr_lang" align="center"></p></div>
 									<div id="trans_tr" class="trans_text" style="background-color:#e1e2e3; height:auto; border: 2px solid #fff; font-size: 70%; color:#87888a; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px; margin-top: 21px; border-top-right-radius: 7px; border-bottom-right-radius: 7px;"></div>
