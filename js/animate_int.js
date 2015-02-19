@@ -135,7 +135,7 @@ function pma_share(){
 
 function converge(){
 	
-	console.log('converge_now');
+	console.log('converge');
 
 	$("#telco_text")
 	.velocity({ opacity: 0 }, { duration: 2500})
@@ -713,18 +713,20 @@ function left_press_1() {
 	if (!trans_app_appeared){
 		$("#trans_app").velocity({ opacity: 1 }, 1000, function(){
 			trans_app_appeared = true;
+			
+			$('#translate_area_left')
+			.velocity({ opacity: 1 }, 10);
+		
+			$('#english_left').velocity({ height:"23px", width: "50px" },1000, function(){
+				document.getElementById("tl_lang").innerHTML = "English";
+			}); 
+			$('#spanish_left').velocity({ height:"23px", width: "50px" },1000, function(){
+				document.getElementById("bl_lang").innerHTML = "Spanish";
+			});
 		});
 	}
 		
-	$('#translate_area_left')
-		.velocity({ opacity: 1 }, 10);
-		
-		$('#english_left').velocity({ height:"23px", width: "50px" },1000, function(){
-			document.getElementById("tl_lang").innerHTML = "English";
-		}); 
-		$('#spanish_left').velocity({ height:"23px", width: "50px" },1000, function(){
-			document.getElementById("bl_lang").innerHTML = "Spanish";
-		});
+	
 }
 
 
@@ -787,10 +789,10 @@ function enter_text_tl(text)
 	
 	
 	//$('#trans_tl').velocity("transition.expandIn", 500);
-	//$('#trans_tl').velocity("transition.slideDownIn", 500);
+	$('#trans_tl').velocity("transition.slideDownIn", 500);
 	//$('#trans_tl').velocity("transition.slideRightIn", 500);
-	$('#trans_tl').velocity("transition.perspectiveRightIn", 500);
-	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 2000, function(){
+	//$('#trans_tl').velocity("transition.perspectiveRightIn", 500);
+	$('#trans_tl').velocity({ height: [top_height,"0px"]}, 1000, function(){
 		document.getElementById("trans_tl").innerHTML = text;
 		document.getElementById("trans_bl").innerHTML = " ";
 		
@@ -801,7 +803,7 @@ function enter_text_tl(text)
 		var bottom_height = bottom_length + "px"
 		
 		$('#trans_bl').velocity("transition.perspectiveRightIn", 500);
-		$('#trans_bl').velocity({ height: [bottom_height,"0px"]}, 2000, function(){
+		$('#trans_bl').velocity({ height: [bottom_height,"0px"]}, 1000, function(){
 			document.getElementById("trans_bl").innerHTML = text;
 		});
 		
