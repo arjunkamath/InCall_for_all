@@ -138,6 +138,22 @@ div#app_area_wrapper {
 	clear:both;
 }
 
+.trans_mid_text_bottom_left{
+	background-color:#89ba17; 
+	height:0px; 
+	width: 0px;
+	float:right; 
+	font-size: 60%; 
+	border: 2px solid #fff; 
+	color:#ffffff; 
+	padding: 4px; 
+	border-radius: 7px;
+	font-family:Arial;
+	clear:both;
+	margin-top: -21px;
+}
+
+
 .trans_before_text_bottom_rightt:empty {
    display: none;
 }
@@ -154,6 +170,19 @@ div#app_area_wrapper {
 	border-radius: 7px;
 	font-family:Arial;
 	clear:both;
+}
+
+.trans_mid_text_top_left{
+	background-color:#e1e2e3; 
+	height:0px; 
+	width: 0px; 
+	float:right; 
+	font-size: 60%; 
+	border: 2px solid #fff; 
+	color:#87888a; 
+	padding: 4px; 
+	border-radius: 7px;
+	/* opacity: 0.6; */
 }
 
 .trans_before_text_top_left{
