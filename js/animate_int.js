@@ -1,3 +1,71 @@
+/////
+
+// ACTUAL TRIGGERS //
+
+// MAIN TRIGGERS FOR PMA
+function pma_trigger_connecting(){
+	telco_cloud_appear();
+	pma_connecting();
+	setTimeout(it_cloud_appear, 500);
+	setTimeout(converge, 2000);
+	setTimeout(pma_push, 4000);
+}
+
+function pma_trigger_connected(){
+	pma_connected();
+}
+
+function pma_cloud_share(urllink){
+	pma_share(urllink);
+}
+
+function pma_trigger_announce(){
+	pma_announce();
+}
+
+function pma_trigger_stop_announce(){
+	pma_announce_stop();
+}
+
+function pma_trigger_record(){
+	pma_record();
+}
+
+function pma_trigger_stop_record(){
+	pma_record_stop();
+}
+
+function pma_trigger_play(){
+	pma_play();
+}
+
+function pma_trigger_stop_play(){
+	pma_play_stop();
+}
+
+function pma_trigger_disconnect(){
+	pma_disconnect();
+}
+
+
+// MAIN TRIGGERS FOR TRANSLATOR
+function translator_connecting(){
+	telco_cloud_appear();
+	translate_connecting();
+
+}
+
+function translator_connected(){
+	trans_connected();
+	setTimeout(it_cloud_appear, 500 );
+	setTimeout(converge, 1500);
+	setTimeout(translate_app, 3500);
+}
+
+
+/////
+
+
 function connecting_line(){
 	
 	function connecting_line_animate(){

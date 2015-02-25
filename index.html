@@ -18,8 +18,20 @@
 </head>
 <body>
 	
-	<h3>PMA</h3>
-	<button class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
+	<h3 style="margin-left: 1cm;">Phone Meeting Assistant</h3>
+	
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="pma_trigger_connecting()">1. Make Call</button>
+	<button class="btn btn-default" onclick="pma_trigger_connected()">2. Call Connects</button>
+	<button style="background-color: #00a9d4; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_cloud_share()">3. Cloud Share</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_announce()">4a. Announce Notes</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_stop_announce()">4b. Stop Announcement</button>
+	<button style="background-color: #e32119; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_record()">5a. Record Call</button>
+	<button style="background-color: #e32119; border-color: #fff ; color: #fff" class="btn btn-default" class="btn btn-default" onclick="pma_trigger_stop_record()">5b. Stop Recording</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_play()">6a. Play Recordings</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff"class="btn btn-default" onclick="pma_trigger_stop_play()">6b. Stop Playing Recording</button>
+	<button class="btn btn-default" onclick="pma_trigger_disconnect()">7. Hang Up</button>
+	
+	<!-- <button style="margin-left: 1cm;" class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button class="btn btn-default" onclick="pma_connecting()">Connecting</button>
 	<button class="btn btn-default" onclick="it_cloud_appear()">IT Cloud</button>
 	<button class="btn btn-default" onclick="converge()">Converge</button>
@@ -32,28 +44,37 @@
 	<button class="btn btn-default" onclick="pma_play_stop()">PMA Play Stop</button>
 	<button class="btn btn-default" onclick="pma_record()">PMA Record</button>
 	<button class="btn btn-default" onclick="pma_record_stop()">PMA Record Stop</button>
-	<button class="btn btn-default" onclick="pma_disconnect()">PMA End Call</button>
+	<button class="btn btn-default" onclick="pma_disconnect()">PMA End Call</button> -->
 	
 	<br>
-	<h3>Translation</h3>
-	<button class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
+	<h3 style="margin-left: 1cm;">Translator</h3>
+	<div class="form-group">
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="translator_connecting()">1. Make Call</button>
+	<button class="btn btn-default" onclick="translator_connected()">2. Call Connects</button>
+	<button style="background-color: #89ba17; border-color: #fff ; color: #fff" class="btn btn-default" onclick="left_press_1()">3. A presses 1</button>
+	<button style="background-color: #89ba17; border-color: #fff ; color: #fff" class="btn btn-default" onclick="left_press_9()">4. A presses 9</button>
+	<button style="background-color: #00a9d4; border-color: #fff ; color: #fff" class="btn btn-default" onclick="right_press_2()">5. B presses 2</button>
+	<button style="background-color: #00a9d4; border-color: #fff ; color: #fff" class="btn btn-default" onclick="right_press_9()">6. B presses 9</button>
+	<input type="text" id="textbox" style="height:30px" value="Lorem ipsum dolor sit amet, sanctus pertinax reprimique ut eos, quidam urbanitas at quo, sit dolorum.">	
+	<button class="btn btn-default" onclick="trans_disconnect()">7. Hang Up</button>
+	
+	<!-- <button style="margin-left: 1cm;" class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button class="btn btn-default" onclick="translate_connecting()">Connecting</button>
 	<button class="btn btn-default" onclick="trans_connected()">Translation Connected</button>
 	<button class="btn btn-default" onclick="it_cloud_appear()">IT Cloud</button>
 	<button class="btn btn-default" onclick="converge()">Converge</button>
-	<!-- <button class="btn btn-default" onclick="translate_app()">Translate App</button> -->
 	<button class="btn btn-default" onclick="left_press_1()">Left presses 1</button>
 	<button class="btn btn-default" onclick="left_press_9()">Left presses 9</button>
 	<button class="btn btn-default" onclick="right_press_2()">Right presses 2</button>
 	<button class="btn btn-default" onclick="right_press_9()">Right presses 9</button>
-	<button class="btn btn-default" onclick="trans_disconnect()">Translator End Call</button>
+	<button class="btn btn-default" onclick="trans_disconnect()">Translator End Call</button> -->
 	<!-- <button class="btn btn-default" onclick="enter_text_tl()">Translate TL</button>
 	<button class="btn btn-default" onclick="enter_text_bl()">Translate BL</button>
 	<button class="btn btn-default" onclick="enter_text_tr()">Translate TR</button>
 	<button class="btn btn-default" onclick="enter_text_br()">Translate BR</button> -->
+    
+	</div>
 	
-    <input type="text" name="inputform" id="textbox" value="fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh fgfgh">	
-		
 	<div class="container">
 		<div class="row" style="height:10px"></div>
         <div class="row" style="height:100px">
