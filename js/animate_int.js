@@ -1,14 +1,17 @@
-/////
-
 // ACTUAL TRIGGERS //
 
 // MAIN TRIGGERS FOR PMA
 function pma_trigger_connecting(){
-	telco_cloud_appear();
-	pma_connecting();
-	setTimeout(it_cloud_appear, 500);
-	setTimeout(converge, 2000);
-	setTimeout(pma_push, 4000);
+	
+	high_level_pic_disappear();
+	
+	setTimeout(function(){ 
+		telco_cloud_appear();
+		pma_connecting();
+		setTimeout(it_cloud_appear, 500);
+		setTimeout(converge, 2000);
+		setTimeout(pma_push, 4000);
+	}, 1500);
 }
 
 function pma_trigger_connected(){
@@ -50,9 +53,13 @@ function pma_trigger_disconnect(){
 
 // MAIN TRIGGERS FOR TRANSLATOR
 function translator_connecting(){
-	telco_cloud_appear();
-	translate_connecting();
-
+	
+	high_level_pic_disappear();
+	
+	setTimeout(function(){ 
+		telco_cloud_appear();
+		translate_connecting();
+	}, 1500);
 }
 
 function translator_connected(){
@@ -62,9 +69,7 @@ function translator_connected(){
 	setTimeout(translate_app, 3500);
 }
 
-
 /////
-
 
 function connecting_line(){
 	
@@ -185,27 +190,31 @@ function translation_line_draw_left(){
 	
 }
 
+function high_level_pic_disappear(){
+	$("#high_level").velocity("transition.whirlOut");	
+}
+
 function pma_connecting() {
-	
+		
 	$("#user1").attr('xlink:href',"img/M1.png");
 	$("#user2").attr('xlink:href',"img/T1.png");
 	
-	$("#user1").velocity({ opacity: 1 }, 0);
-	$("#user2").velocity({ opacity: 1 }, 0);
+	$("#user1").velocity({ opacity: 1 }, 700);
+	$("#user2").velocity({ opacity: 1 }, 700);
 	
 	connecting_line();
 	$("#pma_tablet").velocity({ opacity: 1 }, { duration: 0});
 }
 
 function translate_connecting() {
-	
+		
 	$("#orange_logo").velocity({ opacity: 1 }, 0);
 	
 	$("#user1").attr('xlink:href',"img/K1.png");
 	$("#user2").attr('xlink:href',"img/J1.png");
 	
-	$("#user1").velocity({ opacity: 1 }, 0);
-	$("#user2").velocity({ opacity: 1 }, 0);
+	$("#user1").velocity({ opacity: 1 }, 700);
+	$("#user2").velocity({ opacity: 1 }, 700);
 	
 	connecting_line();
 }
@@ -989,8 +998,6 @@ function left_press_9() {
 	//enter_text_bl(text);
 }
 
-
-
 function enter_text_tr(text)
 {
 	document.getElementById("spanish_right").className = "trans_after_text_top_right";
@@ -1091,34 +1098,4 @@ function share_meeting(urllink) {
 	});
 }
 
-/*
-function punos_frame(urllink) {
-	setTimeout(function () {
-	$("#vertical_line")
-		.velocity("transition.slideDownBigIn")
-	}, 1000);
-	
-	var link = 'https://tabin1.punosmobile.com/pma-cloud/#/' + urllink.slice(3);
-	console.log('link');
-	
-	$('#app_area_wrapper').velocity({borderColor: "#00285F"}, 2000);
-
-	var frame = document.getElementById("frame_pma");
-	frame.src = link;
-	frame.style.width = 100+"%"; 
-	frame.style.height = 260+"px";
-	frame.style.opacity = "0";
-	$('#frame_pma').velocity({ opacity: 1 }, 1250);
-
-	var line_1 = document.getElementById("pma_user1_line");
-	line_1.style.width = 100+"%"; 
-	line_1.style.height = 260+"px";
-
-	var line_2 = document.getElementById("pma_user2_line");
-	line_2.style.width = 100+"%"; 
-	line_2.style.height = 260+"px"; 
-
-	console.log('punos frame');
-}
-*/
 
