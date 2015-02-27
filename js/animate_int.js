@@ -6,11 +6,11 @@ function pma_trigger_connecting(){
 	high_level_pic_disappear();
 	
 	setTimeout(function(){ 
-		telco_cloud_appear();
 		pma_connecting();
-		setTimeout(it_cloud_appear, 500);
-		setTimeout(converge, 2000);
-		setTimeout(pma_push, 4000);
+		setTimeout(telco_cloud_appear, 500);
+		setTimeout(it_cloud_appear, 1000);
+		setTimeout(converge, 3500);
+		setTimeout(pma_push, 6500);
 	}, 1500);
 }
 
@@ -57,8 +57,9 @@ function translator_connecting(){
 	high_level_pic_disappear();
 	
 	setTimeout(function(){ 
-		telco_cloud_appear();
 		translate_connecting();
+		setTimeout(telco_cloud_appear, 1500);
+		
 	}, 1500);
 }
 
@@ -78,7 +79,6 @@ function connecting_line(){
 			.velocity({ x2: 400 }, {duration: 1500})
 			.velocity({ x2: -56 }, { duration: 0 });	
 	}
-	connecting_line_animate();
 	
 	setInterval(function () {
 		connecting_line_animate();
