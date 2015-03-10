@@ -58,6 +58,15 @@
 	<input type="text" id="textbox" style="height:30px" value="Lorem ipsum dolor sit amet, sanctus pertinax reprimique ut eos, quidam urbanitas at quo, sit dolorum.">	
 	<button class="btn btn-default" onclick="trans_disconnect()">7. Hang Up</button>
 	
+	<br>
+	<h3 style="margin-left: 1cm;">Ekahau</h3>
+	<div class="form-group">
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="in_factory()">IN FACTORY</button>
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="from_factory()">FROM FACTORY</button>
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="in_warehouse()">IN WAREHOUSE</button>
+	<button style="margin-left: 1cm;" class="btn btn-default" onclick="from_warehouse()">FROM WAREHOUSE</button>
+	
+	
 	<!-- <button style="margin-left: 1cm;" class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button class="btn btn-default" onclick="translate_connecting()">Connecting</button>
 	<button class="btn btn-default" onclick="trans_connected()">Translation Connected</button>
@@ -98,7 +107,12 @@
 				<div class="row nopadding" >
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
 						
-						<image x="-205" y="-200" id="high_level" width="200%" height="200%" opacity="1" xlink:href="img/high_level_pic.png" />
+						<image x="-205" y="-200" id="high_level" width="200%" height="200%" opacity="0" xlink:href="img/high_level_pic.png" />
+						
+						<!-- EKAHAU STUFF -->
+						<image x="0" y="-200" id="ekahau_back" width="100%" height="200%" opacity="1" xlink:href="img/ekahau_back.svg" />
+						
+						<image x="210" y="-100" id="ekahau_package" width="15%" height="15%" opacity="1" xlink:href="img/ekahau_package.svg" />
 						
 						<g id="telco_group" transform="translate(10,-87) scale(1,1)">
 							<circle id="circle_a" cx="130" cy="-40" r="0" fill="#00285F" stroke-width="1" />
