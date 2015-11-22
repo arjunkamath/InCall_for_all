@@ -6,7 +6,6 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="css/vis.css" rel="stylesheet" type="text/css" />
   <link href="css/phone.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
   <script src="js/jquery-1.11.1.min.js"></script>
@@ -18,7 +17,7 @@
 </head>
 <body>
 	
-	<h3 style="margin-left: 1cm;">Phone Meeting Assistant</h3>
+	<h3 style="margin-left: 1cm;">Call Assistant</h3>
 	
 	<button style="margin-left: 1cm;" class="btn btn-default" onclick="pma_trigger_connecting()">1. Make Call</button>
 	<button class="btn btn-default" onclick="pma_trigger_connected()">2. Call Connects</button>
@@ -27,8 +26,8 @@
 	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_stop_announce()">4b. Stop Announcement</button>
 	<button style="background-color: #e32119; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_record()">5a. Record Call</button>
 	<button style="background-color: #e32119; border-color: #fff ; color: #fff" class="btn btn-default" class="btn btn-default" onclick="pma_trigger_stop_record()">5b. Stop Recording</button>
-	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_play()">6a. Play Recordings</button>
-	<button style="background-color: #7b0663; border-color: #fff ; color: #fff"class="btn btn-default" onclick="pma_trigger_stop_play()">6b. Stop Playing Recording</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff" class="btn btn-default" onclick="pma_trigger_play()">6a. Play Recs</button>
+	<button style="background-color: #7b0663; border-color: #fff ; color: #fff"class="btn btn-default" onclick="pma_trigger_stop_play()">6b. Stop Recs</button>
 	<button class="btn btn-default" onclick="pma_trigger_disconnect()">7. Hang Up</button>
 	
 	<!-- <button style="margin-left: 1cm;" class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
@@ -47,7 +46,7 @@
 	<button class="btn btn-default" onclick="pma_disconnect()">PMA End Call</button> -->
 	
 	<br>
-	<h3 style="margin-left: 1cm;">Translator</h3>
+	<h3 style="margin-left: 1cm;">Call Translator</h3>
 	<div class="form-group">
 	<button style="margin-left: 1cm;" class="btn btn-default" onclick="translator_connecting()">1. Make Call</button>
 	<button class="btn btn-default" onclick="translator_connected()">2. Call Connects</button>
@@ -57,15 +56,6 @@
 	<button style="background-color: #00a9d4; border-color: #fff ; color: #fff" class="btn btn-default" onclick="right_press_9()">6. B presses 9</button>
 	<input type="text" id="textbox" style="height:30px" value="Lorem ipsum dolor sit amet, sanctus pertinax reprimique ut eos, quidam urbanitas at quo, sit dolorum.">	
 	<button class="btn btn-default" onclick="trans_disconnect()">7. Hang Up</button>
-	
-	<br>
-	<h3 style="margin-left: 1cm;">Ekahau</h3>
-	<div class="form-group">
-	<button style="margin-left: 1cm;" class="btn btn-default" onclick="in_factory()">IN FACTORY</button>
-	<button style="margin-left: 1cm;" class="btn btn-default" onclick="from_factory()">FROM FACTORY</button>
-	<button style="margin-left: 1cm;" class="btn btn-default" onclick="in_warehouse()">IN WAREHOUSE</button>
-	<button style="margin-left: 1cm;" class="btn btn-default" onclick="from_warehouse()">FROM WAREHOUSE</button>
-	
 	
 	<!-- <button style="margin-left: 1cm;" class="btn btn-default" onclick="telco_cloud_appear()">Telco Cloud</button>
 	<button class="btn btn-default" onclick="translate_connecting()">Connecting</button>
@@ -86,9 +76,6 @@
 	
 	<div class="container">
 		<div class="row" style="height:50px"></div>
-        <div class="row" style="height:100px">
-			<img src="img/logo_ericsson.svg" align="right" height="80" width="80">
-		</div>
 	   <div class="row">
 			<div class="col-xs-2 nopadding" id="usera_area">
 			<div class="row" style="height:80px"></div>
@@ -99,7 +86,7 @@
 				</div>
 				<div class="row" id="pma_frame_gap" style="height:94px"></div>
 				<div class="row">
-					<iframe id="frame_pma" x="0" y="0" width="0" height="0" opacity="0" allowtransparency="true" src="https://tabin1.punosmobile.com/pma-cloud/#/54ca07f1e4b0cfe4ab5ce253" marginwidth="30"></iframe>
+					<iframe id="frame_pma" x="0" y="0" width="0" height="0" opacity="0" allowtransparency="true" src="http://www.google.com" marginwidth="30"></iframe>
 				</div>
 			</div>
 			<div class="col-xs-8 nopadding" id="cloud_area">
@@ -107,7 +94,7 @@
 				<div class="row nopadding" >
 					<svg id="cloud_svg" width="100%" height="600" viewBox="0 0 400 100" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
 						
-						<image x="-205" y="-200" id="high_level" width="200%" height="200%" opacity="0" xlink:href="img/high_level_pic.png" />
+						<image x="-205" y="-200" id="high_level" width="200%" height="200%" opacity="0" xlink:href="img/folder_pma_nologo.svg" />
 						
 						<!-- EKAHAU STUFF -->
 						<image x="0" y="-200" id="ekahau_back" width="100%" height="200%" opacity="1" xlink:href="" />
